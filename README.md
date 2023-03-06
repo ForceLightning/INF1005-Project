@@ -7,5 +7,6 @@
 ├── css                     # CSS files
 ├── js                      # JS files
 ├── *.php                   # PHP files (web pages)
+├─- deploy.php              # Git deployment hook
 └── README.md               # This file
 ```

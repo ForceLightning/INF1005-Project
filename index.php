@@ -22,7 +22,15 @@
             <h1>Hello World!</h1>
         </header>
         <main class="container">
-            <p>Content here</p>
+            <section id="s1">
+                <h2>Section 1</h2>
+                <div class="row">
+                    <article class="col-sm">
+                        <h3>Article header</h3>
+                        <p>Article content</p>
+                    </article>
+                </div>
+            </section>
         </main>
         <?php
             include "footer.inc.php";
