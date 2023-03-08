@@ -21,21 +21,35 @@
             include "nav.inc.php";
         ?>
         
-        <header class="jumbotron text-center">
+        <main class="container contactUs">
             <h1>Contact Us</h1>
-            <h2>People come here to have fun</h2>
-        </header>
-        <main class="container">
-            <section id="s1">
-                <h2>Section 1</h2>
-                <div class="row">
-                    <article class="col-sm">
-                        <h3>Article header</h3>
-                        <p>Article content</p>
-                    </article>
+            <p> Please fill out the form below to get in touch with us.</p>
+
+            <form action="process_contactUs.php" method="post">
+            
+                <div class="form-group">
+                    <label for="fname">First Name:</label>
+                    <input type="text" id="fname" name="fname" placeholder="Enter first name" class="form-control" required>
                 </div>
-            </section>
-        </main>
+                <div class="form-group">
+                    <label for="lname">Last Name:</label>
+                    <input type="text" id="lname" name="lname" placeholder="Enter last name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter email" class="form-control" required>
+                    </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Enter your message here" class="form-control" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </div>
+                
+            </form>
+        </main>  
+        
         <?php
             include "footer.inc.php";
         ?>
