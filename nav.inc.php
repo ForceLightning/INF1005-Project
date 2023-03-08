@@ -11,13 +11,16 @@
                     <a class="nav-link" href="aboutUs.php">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#cats">Facilities</a>
+                    <a class="nav-link" href="#Facilities">Facilities</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#cats">Events</a>
+                    <a class="nav-link" href="#Events">Events</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="register.php">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Login">Login</a>
                 </li>
             </ul>
         </nav>
