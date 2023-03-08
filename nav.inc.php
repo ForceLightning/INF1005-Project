@@ -5,10 +5,10 @@
             </a>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#dogs">Home</a>
+                    <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#cats">About Us</a>
+                    <a class="nav-link" href="aboutUs.php">About Us</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#cats">Facilities</a>
@@ -17,7 +17,7 @@
                     <a class="nav-link" href="#cats">Events</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#cats">Login</a>
+                    <a class="nav-link" href="register.php">Login</a>
                 </li>
             </ul>
         </nav>
