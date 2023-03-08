@@ -12,7 +12,7 @@
         <!-- Custom JS -->
         <!-- TODO: Comment this out after writing main.js -->
         <!-- <script defer src="js/main.js"></script> -->
-        <title>Title Here</title>
+        <title>Mandai Country Club</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
@@ -20,8 +20,22 @@
         <?php 
             include "nav.inc.php";
         ?>
-        <header>
-            <h1>Hello World!</h1>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                <img src ='images/petshop.png' alt="Logo" width="50">
+            </a>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#dogs">Dogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#cats">Cats</a>
+                </li>
+            </ul>
+        </nav>
+        <header class="jumbotron text-center">
+            <h1>Mandai Country Club</h1>
+            <h2>People come here to have fun</h2>
         </header>
         <main class="container">
             <section id="s1">
