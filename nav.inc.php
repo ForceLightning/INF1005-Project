@@ -5,16 +5,19 @@
             </a>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#Home">Home</a>
+                    <a class="nav-link" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#About Us">About Us</a>
+                    <a class="nav-link" href="aboutUs.php">About Us</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#Facilities">Facilities</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#Events">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="register.php">Login</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#Login">Login</a>
