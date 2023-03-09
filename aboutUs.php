@@ -23,18 +23,30 @@
         
         <header class="jumbotron text-center">
             <h1>About Us</h1>
-            <h2>People come here to have fun</h2>
         </header>
         <main class="container">
             <section id="s1">
-                <h2>Section 1</h2>
                 <div class="row">
                     <article class="col-sm">
-                        <h3>Article header</h3>
-                        <p>Article content</p>
+                        <h3>Our Story</h3>
+                        <p>Mandai CC is a vibrant and dynamic hub located in the northern side of Singapore. Established in 1969, the community club has been serving the needs of the residents in the area for over four decades. Today, it is one of the most popular CC in Singapore, offering a wide range of programs and activities that cater to people of all ages and interests.</p>
+                    </article>
+                    <article class="col-sm">
+                        <h3>Vision and Mission</h3>
+                        <p>The mission of Mandai CC is to provide a welcoming and inclusive environment where residents can come together, build relationships, and participate in activities that promote personal growth, social cohesion, and community development. Our vision is to be a leading community hub that fosters a sense of belonging and social connectedness among residents in the Mandai area.</p>
                     </article>
                 </div>
             </section>
+            
+            <section id="s2">
+                <div class="row">
+                    <article class="col-sm">
+                        <h3>What we offer?</h3>
+                        <p>At Mandai CC, we believe that community is everything. That is why we offer a wide variety of programs and services designed to bring people together and foster a strong sense of belonging. Whether you are interested in sports, the arts, or simply meeting new people, you will definitely find something to love at our CC.</p>
+                    </article>
+                </div>
+            </section>
+            
         </main>
         <?php
             include "footer.inc.php";
