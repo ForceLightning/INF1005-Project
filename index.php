@@ -28,10 +28,10 @@
     ?>
 
     <header class="jumbotron text-center">
-        <h1>Mandai Country Club</h1>
+        <h1>Mandai Community Club</h1>
         <h2>People come here to have fun</h2>
     </header>
-    <main class="container">
+    <main>
         <section id="s1">
             <h2>Section 1</h2>
             <div class="row">
