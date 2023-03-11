@@ -1,15 +1,19 @@
 <!-- TODO: Process register here -->
 <html>
-    <head>
-        <?php include "includes.php"; ?>
-        <title>Mandai Country Club</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
+
+<head>
+    <?php include "includes.php"; ?>
+    <title>Mandai Country Club</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
     <?php include "nav.inc.php"; ?>
     <main class="container">
         <?php
-        function save_member_info_to_db() {
+        function save_member_info_to_db()
+        {
             global $fname, $lname, $email, $pwd_hashed, $error_msg, $success;
             $config = parse_ini_file('../../private/project-db-config.ini');
             $conn = new mysqli($config['servername'], $config['username'], $config['password'], $config['dbname']);
@@ -29,19 +33,21 @@
             }
             $conn->close();
         }
-        function sanitize_input($data) {
+        function sanitize_input($data)
+        {
             $data = trim($data);
             $data = stripslashes($data);
             $data = htmlspecialchars($data);
             return $data;
         }
-        function validate_input() {
+        function validate_input()
+        {
             global $fname, $lname, $email, $pwd, $pwd_confirm, $error_msg, $success;
             $success = true;
             // Validate name charset
             // firstly, check fname
-            if(!empty($fname)) {
-                if(!preg_match("/^[a-zA-Z ]*$/", $fname)) {
+            if (!empty($fname)) {
+                if (!preg_match("/^[a-zA-Z ]*$/", $fname)) {
                     $error_msg .= "Only letters and white space allowed for first name.<br>";
                     $success = false;
                 } else {
@@ -49,12 +55,12 @@
                 }
             }
             // check if lname is empty
-            if(empty($lname)) {
+            if (empty($lname)) {
                 $error_msg = "Last name cannot be empty.<br>";
                 $success = false;
             } else {
                 // check if lname contains only letters
-                if(!preg_match("/^[a-zA-Z ]*$/", $lname)) {
+                if (!preg_match("/^[a-zA-Z ]*$/", $lname)) {
                     $error_msg .= "Only letters and white space allowed for last name.<br>";
                     $success = false;
                 } else {
@@ -62,12 +68,12 @@
                 }
             }
             // Validate email
-            if(empty($email)) {
+            if (empty($email)) {
                 $error_msg .= "Email cannot be empty.<br>";
                 $success = false;
             } else {
                 // check if email is valid
-                if(!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                     $error_msg .= "Invalid email format.<br>";
                     $success = false;
                 } else {
@@ -75,7 +81,7 @@
                 }
             }
             // Validate password
-            if(empty($pwd) || empty($pwd_confirm)) {
+            if (empty($pwd) || empty($pwd_confirm)) {
                 $error_msg .= "Password cannot be empty.<br>";
                 $success = false;
             } else if ($pwd != $pwd_confirm) {
@@ -84,7 +90,7 @@
             } else {
                 // check if password is valid
                 // make sure the password has at least 12 characters, 1 uppercase, 1 lowercase, 1 number.
-                if(!preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{12,}$/", $pwd)) {
+                if (!preg_match("/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{12,}$/", $pwd)) {
                     $error_msg .= "Password must be at least 12 characters long, and contain at least 1 uppercase, 1 lowercase, and 1 number.<br>";
                     $success = false;
                 }
@@ -94,7 +100,7 @@
                 save_member_info_to_db();
                 echo "<section>";
                 echo "<h4>Registration successful!</h4>";
-                echo "<p>Email: ". $email . "</p>";
+                echo "<p>Email: " . $email . "</p>";
                 echo "<a href='login.php' class='btn btn-success' role='button' aria-disabled='true'>Return to login</a>";
                 echo "</section>";
             } else {
@@ -107,4 +113,7 @@
         }
         ?>
     </main>
+    <?php include "footer.inc.php"; ?>
+</body>
+
 </html>
