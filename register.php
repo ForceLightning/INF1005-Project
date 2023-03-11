@@ -28,7 +28,7 @@ and open the template in the editor.
     <?php include "nav.inc.php"; ?>
 
     <main class="container">
-        <h1>Member Registration</h1>
+        <h2>Member Registration</h2>
         <p>
             For existing members, please go to the
             <a href="login.php">Login page</a>.
