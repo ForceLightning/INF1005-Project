@@ -95,7 +95,7 @@
                     $success = false;
                 }
             }
-            if ($success) {
+            if ($success && $_SERVER["REQUEST_METHOD"] == "POST") {
                 $pwd_hashed = password_hash($pwd, PASSWORD_DEFAULT);
                 save_member_info_to_db();
                 echo "<section>";
@@ -105,7 +105,8 @@
                 echo "</section>";
             } else {
                 echo "<section>";
-                echo "<h4>Registration failed!</h4>";
+                echo "<h4>Oops!</h4>";
+                echo "<h2>The following errors were detected:</h2>";
                 echo "<p>" . $error_msg . "</p>";
                 echo "<a href='register.php' class='btn btn-danger' role='button' aria-disabled='true'>Return to registration</a>";
                 echo "</section>";
@@ -115,5 +116,3 @@
     </main>
     <?php include "footer.inc.php"; ?>
 </body>
-
-</html>
