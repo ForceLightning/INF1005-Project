@@ -25,11 +25,11 @@
 	<script type="text/javascript">
             function initMap() {
                 var map = new google.maps.Map(document.getElementById('map'), {
-                    center: {lat: 1.4316, lng: 103.7907},
+                    center: {lat: 1.404770, lng: 103.794741},
                              zoom: 16
                     });
                     var marker = new google.maps.Marker({
-                        position: {lat: 1.4316, lng: 103.7907},
+                        position: {lat: 1.404770, lng: 103.794741},
                                    map: map
                     });
             }
