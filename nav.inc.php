@@ -1,4 +1,8 @@
 <!-- TODO: Write navbar here -->
+<!--Google fonts-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kavoon&family=Poppins:wght@300&family=Quicksand:wght@300&family=Rubik&display=swap" rel="stylesheet">
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <a class="navbar-brand" href="#">
         <img src='assets/Logo.png' alt="Logo" width="50">
@@ -7,16 +11,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-            <a class="nav-link" href="index.php">Home</a>
+            <a class="nav-link" href="index.php">HOME</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="aboutUs.php">About Us</a>
+            <a class="nav-link" href="aboutUs.php">ABOUT US</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="facilities.php">Facilities</a>
+            <a class="nav-link" href="facilities.php">FACILITIES</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#Events">Events</a>
+            <a class="nav-link" href="#Events">EVENTS</a>
         </li>
 <!--        <li class="nav-item">
             <a class="nav-link" href="register.php">Register</a>

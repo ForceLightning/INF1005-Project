@@ -1,3 +1,31 @@
-h2 {
-    text-decoration: underline;
+/* fonts*/
+
+h1 {
+    font-family: 'Kavoon', cursive;
 }
+
+h2, h3 {
+    font-family: 'Quicksand', sans-serif;
+}
+
+a {
+    font-family: 'Poppins', sans-serif;
+}
+
+p, h5 {
+   font-family: 'Rubik', sans-serif; 
+}
+
+body {
+background-color: #fffee9;
+}
+
+.container2 {
+    width: max-content;
+    margin: 40px auto;
+    padding: 25px 28px;
+    background: #ffffff;
+    border-radius: 2px;
+    border: 2px solid #302d2d;
+}
+
