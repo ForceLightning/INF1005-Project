@@ -15,45 +15,61 @@
         <title>Contact Us</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-    </head>
-    <body>
         <?php
-            /* 
-             * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-             * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
-             */
                 $fname = $lname = $email = $msg = $errorMsg = "";
                 $success = true;
-                if ($_SERVER["REQUEST_METHOD"] == "POST"){
-                    if (empty($_POST["fname"])){
-                        $errorMsg .= "First name is required.<br>";
-                        $success = false;
-                    } else {
+                # Process only if the form has been submitted via POST
+                if ($_SERVER["REQUEST_METHOD"] == "POST")
+                {
+                    # If first name is empty, user will still be able to proceed
+                    if (!empty($_POST["fname"]))
+                    {
                         $fname = sanitize_input($_POST["fname"]);
                     }
-                    
-                    if (empty($_POST["lname"])){
+                    # If last name is empty, user will not be able to proceed
+                    if (empty($_POST["lname"]))
+                    {
                         $errorMsg .= "Last name is required.<br>";
                         $success = false;
-                    } else {
+                    } 
+                    else 
+                    {
                         $lname = sanitize_input($_POST["lname"]);
                     }
-                    
-                    if (empty($_POST["email"])){
+                    # If email is empty, user will not be able to proceed
+                    if (empty($_POST["email"]))
+                    {
                         $errorMsg .= "Email is required.<br>";
                         $success = false;
-                    } else {
+                    } 
+                    else 
+                    {
                         $email = sanitize_input($_POST["email"]);
     
                         // Additional check to make sure e-mail address is well-formed.
-                        if (!filter_var($email, FILTER_VALIDATE_EMAIL)){
+                        if (!filter_var($email, FILTER_VALIDATE_EMAIL))
+                        {
                             $errorMsg .= "Invalid email format.<br>";
                             $success = false;
                         }
-                    } 
+                    }
                 }
+                else 
+                {
+                   echo"<h2>This page is not meant to run directly.<h2>";
+                   exit();
+                }
+                    
+                    // Helper function that checks input for malicious or unwanted content
+                    function sanitize_input($data)
+                    {  
+                       $data = trim($data); 
+                       $data = stripslashes($data);  
+                       $data = htmlspecialchars($data); 
+                       return $data;
+                    }
                 ?>
-
+    <body>
         <?php
         include "nav.inc.php"
         ?>
@@ -62,17 +78,16 @@
             <?php
             if ($success)
             {
-                echo "<h4>Thank you for contacting us," .$fname."" .$lname."</h4>";
-                echo '<div class="form-group">
-                      <a href="contactUs.php" class="btn btn-success" type="submit">Submit</a>  
-                      </div>';
+                echo "<h3>Your submission is successful!</h3>";
+                echo "<h4>Thank you for contacting us, " .$fname." " .$lname."</h4>";
+                echo "<button onclick='history.go(-1)' class='btn btn-success'>Back</button>";    
             }
             else
             {
                 echo "<h2>Oops!</h2>";
                 echo "<h4>The following errors were detected:</h4>";
                 echo "<p>".$errorMsg."</p>";
-
+                echo "<button onclick='history.go(-1)' class='btn btn-danger'>Return</button>";  
             }
             ?>
         </main>

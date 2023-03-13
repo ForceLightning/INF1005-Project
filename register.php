@@ -27,7 +27,7 @@ and open the template in the editor.
 <body>
     <?php include "nav.inc.php"; ?>
 
-    <main class="container">
+    <main class="container2">
         <h1>Member Registration</h1>
         <p>
             For existing members, please go to the
