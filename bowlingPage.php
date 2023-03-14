@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
 
 <head>
@@ -22,7 +17,7 @@ and open the template in the editor.
     <!-- Custom JS -->
     <!-- TODO: Comment this out after writing main.js -->
     <!-- <script defer src="js/main.js"></script> -->
-    <title>Login</title>
+    <title>Mandai Country Club</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -31,29 +26,21 @@ and open the template in the editor.
     <?php
     include "nav.inc.php";
     ?>
-    <main class="container2">
-        <body class="unique-background-1">
-            <h1>Member Login</h1>
-            <p>
-                For new members, please go to the
-                <a href="register.php">Register page</a>.
-            </p>
-            <form action="process_login.php" method="post">
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input class="form-control" type="email" id="email" name="email" required placeholder="Enter email">
-                </div>
 
-                <div class="form-group">
-                    <label for="pwd">Password:</label>
-                    <input class="form-control" type="password" id="pwd" name="pwd" required placeholder="Enter password">
-                </div>
-
-                <div class="form-group">
-                    <button class="btn btn-primary" type="submit">Log In</button>
-                </div>
-
-            </form>
+    <header class="jumbotron text-center">
+        <h1>Bowling</h1>
+        <h2>bowl here</h2>
+    </header>
+    <main>
+        <section id="s1">
+            <h2>Section 1</h2>
+            <div class="row">
+                <article class="col-sm">
+                    <h3>Article header</h3>
+                    <p>Article content</p>
+                </article>
+            </div>
+        </section>
     </main>
     <?php
     include "footer.inc.php";
