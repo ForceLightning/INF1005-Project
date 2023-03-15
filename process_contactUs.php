@@ -54,11 +54,11 @@
                         }
                     }
                 }
-                else 
-                {
-                   echo"<h2>This page is not meant to run directly.<h2>";
-                   exit();
-                }
+//                else 
+//                {
+//                   echo"<h2>This page is not meant to run directly.<h2>";
+//                   exit();
+//                }
                     
                     // Helper function that checks input for malicious or unwanted content
                     function sanitize_input($data)
