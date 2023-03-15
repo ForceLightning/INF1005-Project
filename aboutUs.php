@@ -49,7 +49,9 @@
                         <p>At Mandai CC, we believe that community is everything. That is why we offer a wide variety of programs and services designed to bring people together and foster a strong sense of belonging. Whether you are interested in sports, the arts, or simply meeting new people, you will definitely find something to love at our CC.</p>
                     </article>
                 </div>
-                <img src="https://via.placeholder.com/400x250.png?text=Facilities" alt="Facilities">
+                <img src="https://via.placeholder.com/350x250.png?text=Facilities" alt="Facilities">
+                <img src="https://via.placeholder.com/350x250.png?text=Events" alt="Facilities">
+                <img src="https://via.placeholder.com/350x250.png?text=Facilities" alt="Facilities">
 		</section>
                 <br>
             
