@@ -85,18 +85,33 @@
             </div>
         </section>
         <section id="s3">
-            <h2 class="section-text">Facilities</h2>
-                <div class="facilities-container">
+            <h2 class="section-text facilities">Facilities</h2>
+                <div class="row facilities-container justify-content-center">
                     <div class="column-home">
                         <div class="overlay">
                         <h2 class="facilities-text-home">Swimming Pool</h2>
                         </div>
-                        <img src="assets/swimming_pool.jpg" alt="swimming-pool-img"/>
+                        <img src="assets/swimming_pool.jpg" alt="swimming-pool-img" class="img"/>
                     </div>
-                    
+                    <div class="column-home">
+                        <div class="overlay">
+                        <h2 class="facilities-text-home">Golf Course</h2>
+                        </div>
+                        <img src="assets/golf_course.jpg" alt="golf-course-img" class="img"/>
+                    </div>   
+                    <div class="column-home">
+                        <div class="overlay">
+                        <h2 class="facilities-text-home">Bowling Alley</h2>
+                        </div>
+                        <img src="assets/bowling_alley.jpg" alt="bowling_alley-img" class="img"/>
+                    </div>   
+                    <div class="column-home">
+                        <div class="overlay">
+                        <h2 class="facilities-text-home">Restaurant</h2>
+                        </div>
+                        <img src="assets/restaurant.jpg" alt="restaurant-img" class="img"/>
+                    </div>
                 </div>
-                </article>
-            </div>
         </section>
     </main>
     <?php
