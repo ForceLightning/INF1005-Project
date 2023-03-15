@@ -1,11 +1,14 @@
 /* fonts*/
 
 h1 {
-    font-family: 'Kavoon', cursive;
+/*    font-family: 'Kavoon', cursive;*/
+    font-family: "bakerville", serif;
+    font-style: bold;
+
 }
 
 h2, h3 {
-    font-family: 'Quicksand', sans-serif;
+    font-family: "Times New Roman", Times, serif;
 }
 
 a {
@@ -13,13 +16,20 @@ a {
 }
 
 p, h5 {
-   font-family: 'Rubik', sans-serif; 
+   font-family: "Garamond", serif;
 }
 
 body {
-background-color: #fffee9;
+background-color: #ffffff;
 }
 
+.hero-header{
+    font-size: 75px;
+}
+
+.hero-subheader{
+    font-size: 40px;
+}
 .container2 {
     width: max-content;
     margin: 40px auto;
@@ -155,4 +165,93 @@ footer {
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
+}
+
+
+/* The hero image */
+.hero-image {
+/*   Position and center the image to scale nicely on all screens */
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.container-maxheight{
+    padding-top: 50px;
+    min-height: 100vh;
+    height: 100%;
+}
+.col-sm{
+    padding-top: 30px;
+}
+
+h2{
+    text-align: center;
+}
+
+.index-desc{
+    text-align: center;
+}
+
+.section-text{
+    padding-top: 20px;
+}
+
+.column-home{
+    position: relative;
+    width: 50%;
+}
+
+.facilities-img-home{
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.overlay{
+    background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0.5) 52%);
+    width: 72%;
+    height: 100%;
+    position: absolute;
+    top: 100%;
+    opacity: 0;
+    transition: 0.35s ease-in-out;
+    overflow: hidden;
+    height: 0;
+/*    border-radius: 15px;*/
+}
+
+.column-home:hover .overlay {
+    opacity: 1;
+    top: 0;
+    height: 100%;
+}
+
+.facilities-text-home{
+    color: white;
+    font-size: 1.8rem;
+    position: absolute;
+    bottom: 5%;
+    right: 50%;
+    transform: translatex(50%);
+    text-align: center;
+}
+
+.facilities-container{
+    position: relative;
 }

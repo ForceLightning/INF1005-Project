@@ -1,7 +1,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kavoon&family=Poppins:wght@300&family=Quicksand:wght@300&family=Rubik&display=swap" rel="stylesheet">
-<nav class="navbar sticky-top navbar-expand-sm navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">
         <img src="assets/Logo.png" alt="Logo" width="50" height="50">
     </a>
