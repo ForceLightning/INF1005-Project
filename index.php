@@ -16,7 +16,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
     <!-- Custom JS -->
     <!-- TODO: Comment this out after writing main.js -->
-    <!-- <script defer src="js/main.js"></script> -->
+    <script defer src="js/main.js"></script>
     <title>Mandai Country Club</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
