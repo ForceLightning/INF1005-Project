@@ -16,7 +16,7 @@
         <!-- Custom JS -->
         <!-- TODO: Comment this out after writing main.js -->
         <!-- <script defer src="js/main.js"></script> -->
-        <title>Facilities</title>
+        <title>Events</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
@@ -26,7 +26,7 @@
         ?>
         
         <header class="jumbotron text-center">
-            <h1>Facilities</h1>
+            <h1>Events</h1>
         </header>
         <main class="container">
             <section id="s2">
@@ -52,8 +52,8 @@
             <section id="s1">
                 <div class="row">
                     <div class="column">
-                        <h3>Golf Course</h3>
-                        <p class="facilities-desc">Mandai Country Club provides gold enthusiast with the best golf courses accompanied by a beautiful scenery for your enjoyment. </P>
+                        <h3>Family Day</h3>
+                        <p class="facilities-desc">Take some time off and bond with your family!</P>
                         <a href="golfPage.php">
                             <button type="button">Find Out More</button>
                         </a>
@@ -64,8 +64,8 @@
                 </div>
                 <div class ="row">
                     <div class="column">
-                        <h3>Swimming Pool</h3>
-                        <p class="facilities-desc">Wanna cool down on a hot day? Mandai Country Club provides one of the best pool facilities in the neighbourhood!</p>
+                        <h3>Safari Adventure</h3>
+                        <p class="facilities-desc">Take a trip down to our mandai zoo to interact with the different animals</p>
                         <a href="swimmingPage.php">
                             <button type="button">Find Out More</button>
                         </a>
@@ -76,8 +76,8 @@
                 </div>
                 <div class ="row">
                     <div class="column">
-                        <h3>Bowling Center</h3>
-                        <p class="facilities-desc">Have a fun family bonding at our bowling alley! </p>
+                        <h3>Christmas Party</h3>
+                        <p class="facilities-desc">Join our christmas party at mandai country club </p>
                         <a href="bowlingPage.php">
                             <button type="button">Find Out More</button>
                         </a>
