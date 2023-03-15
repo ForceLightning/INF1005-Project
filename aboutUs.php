@@ -16,6 +16,7 @@
         <!-- Custom JS -->
         <!-- TODO: Comment this out after writing main.js -->
         <!-- <script defer src="js/main.js"></script> -->
+        <script defer src="js/main.js"></script>
         <title>About Us</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -57,18 +58,49 @@
                             At Mandai Country Club, we offer a wide range of facilities and services for sports, recreation, and entertainment. 
                             Our club features a championship golf course, tennis and squash courts, swimming pools, gymnasium, and a range of fitness and wellness programs. 
                             We also offer a variety of dining options, from casual cafes to fine-dining restaurants, as well as event spaces for weddings, parties, and corporate events. 
-                            In addition to our sports and leisure facilities, we also offer a range of activities and services for families and children. These include kids' camps, playgrounds, and fun zones, as well as educational programs and nature trails that explore the Mandai nature reserve. 
                             At Mandai Country Club, we are committed to providing our members and guests with the best possible experience. 
-                            Whether you're here to play golf, relax by the pool, or enjoy a delicious meal with friends and family, we invite you to come and experience the Mandai difference for yourself.
+                            Whether you're here to play golf, or relax by the pool with your friends and family, we invite you to come and experience the Mandai difference for yourself.
                         </p>
                     </article>
                 </div>
-                <img src="https://via.placeholder.com/350x250.png?text=Facilities" alt="Facilities">
-                <img src="https://via.placeholder.com/350x250.png?text=Events" alt="Facilities">
-                <img src="https://via.placeholder.com/350x250.png?text=Facilities" alt="Facilities">
-		</section>
-                <br>
+            </section>
             
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+                <img src="https://via.placeholder.com/650x250.png?text=Facilities" alt="Facilities" style="width:100%">
+            <div class="text">Facilities</div>
+            </div>
+
+            <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+                <img src="https://via.placeholder.com/650x250.png?text=Facilities" alt="Events" style="width:100%">
+            <div class="text">Events</div>
+            </div>
+
+            <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+                <img src="https://via.placeholder.com/650x250.png?text=Facilities" alt="Facilities" style="width:100%">
+            <div class="text">Facilities</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            
+           
         </main>
         <?php
             include "footer.inc.php";
