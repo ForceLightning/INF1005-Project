@@ -109,6 +109,20 @@
                     <img class="facilities-img" src="https://via.placeholder.com/350x200.png?text=Facilities" alt="Facilities">
                     </div>
                 </div>
+                <div class ="row">
+                    <div class="column">
+                        <h3>Restaurant</h3>
+                        <p class="facilities-desc">Have a fun family gathering at our restaurant! </p>
+                        <a href="restaurantPage.php">
+                            <button>
+                                <span>Find Out More</span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="column">
+                    <img class="facilities-img" src="https://via.placeholder.com/350x200.png?text=Facilities" alt="Facilities">
+                    </div>
+                </div>
             </section>
             
             
