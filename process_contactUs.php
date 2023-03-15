@@ -75,7 +75,7 @@
                        return $data;
                     }
                 ?>
-    <body>
+    <body class="d-flex flex-column min-vh-100"></body>
         <?php
         include "nav.inc.php"
         ?>

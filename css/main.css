@@ -150,7 +150,7 @@ button{
 
 /* Set default styles for the element */
 footer {
-  position: static;
+  position: absolute;
   bottom: 0;
   width: 100%;
 }
@@ -158,7 +158,7 @@ footer {
 /* Set styles for the element when the viewport height is larger than the body height */
 @media (min-height: 100vh) {
   footer {
-    position: absolute;
+    position: static;
   }
 }
 
