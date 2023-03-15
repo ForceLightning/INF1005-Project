@@ -138,6 +138,20 @@ button{
   animation-duration: 1.5s;
 }
 
+/* Set default styles for the element */
+footer {
+  position: static;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Set styles for the element when the viewport height is larger than the body height */
+@media (min-height: 100vh) {
+  footer {
+    position: absolute;
+  }
+}
+
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
