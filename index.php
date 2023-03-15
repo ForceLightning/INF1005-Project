@@ -31,7 +31,7 @@
         <h1>Mandai Community Club</h1>
         <h2>People come here to have fun</h2>
     </header>
-    <main>
+    <main class="container">
         <section id="s1">
             <h2>Section 1</h2>
             <div class="row">
