@@ -20,7 +20,10 @@
             <a class="nav-link" href="facilities.php">FACILITIES</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#Events">EVENTS</a>
+            <a class="nav-link" href="events.php">EVENTS</a>
+        </li>
+        <li class ="nav-item">
+            <a class="nav-link" href="#Bookings">Make a Booking</a>
         </li>
 <!--        <li class="nav-item">
             <a class="nav-link" href="register.php">Register</a>
