@@ -54,21 +54,15 @@
 
               <!-- Full-width images with number and caption text -->
               <div class="mySlides fade">
-                <div class="numbertext">1 / 3</div>
-                <img src="https://via.placeholder.com/650x250.png?text=Facilities" alt="Facilities" style="width:100%">
-                <div class="text">Caption Text</div>
+                <img src="assets/promo_photo1.jpg" alt="promo_photo1" style="width:100%">
               </div>
 
               <div class="mySlides fade">
-                <div class="numbertext">2 / 3</div>
-                <img src="https://via.placeholder.com/650x250.png?text=Facilities" alt="Facilities" style="width:100%">
-                <div class="text">Caption Two</div>
+                <img src="assets/promo_photo2.jpg" alt="promo_photo2" style="width:100%">
               </div>
 
               <div class="mySlides fade">
-                <div class="numbertext">3 / 3</div>
-                <img src="https://via.placeholder.com/650x250.png?text=Facilities" alt="Facilities" style="width:100%">
-                <div class="text">Caption Three</div>
+                <img src="assets/promo_photo3.jpg"  alt="promo_photo3" style="width:100%">
               </div>
 
               <!-- Next and previous buttons -->
@@ -85,18 +79,47 @@
             </div>
         </section>
         <section id="s3">
-            <h2 class="section-text">Facilities</h2>
-                <div class="facilities-container">
+            <h2 class="section-text facilities">Facilities</h2>
+                <div class="row facilities-container">
                     <div class="column-home">
                         <div class="overlay">
                         <h2 class="facilities-text-home">Swimming Pool</h2>
+                        <a class="home-findout-button" href="swimmingPage.php">
+                            <button type="button">Find Out More</button>
+                        </a>
                         </div>
-                        <img src="assets/swimming_pool.jpg" alt="swimming-pool-img"/>
+                        <img src="assets/swimming_pool.jpg" alt="swimming-pool-img" class="img"/>
                     </div>
-                    
+                    <div class="column-home">
+                        <div class="overlay">
+                        <h2 class="facilities-text-home">Golf Course</h2>
+                        <a class="home-findout-button" href="golfPage.php">
+                            <button type="button">Find Out More</button>
+                        </a>
+                        </div>
+                        <img src="assets/golf_course.jpg" alt="golf-course-img" class="img"/>
+                    </div>
                 </div>
-                </article>
-            </div>
+                <div class="row facilities-container justify-content-center mt-2 pb-2">
+                    <div class="column-home">
+                        <div class="overlay">
+                        <h2 class="facilities-text-home">Bowling Alley</h2>
+                        <a class="home-findout-button" href="bowlingPage.php">
+                            <button type="button">Find Out More</button>
+                        </a>
+                        </div>
+                        <img src="assets/bowling_alley.jpg" alt="bowling_alley-img" class="img"/>
+                    </div>   
+                    <div class="column-home">
+                        <div class="overlay">
+                        <h2 class="facilities-text-home">Restaurant</h2>
+                        <a class="home-findout-button" href="restaurantPage.php">
+                            <button class="button-top" type="button">Find Out More</button>
+                        </a>
+                        </div>
+                        <img src="assets/restaurant.jpg" alt="restaurant-img" class="img"/>
+                    </div>
+                </div>
         </section>
     </main>
     <?php

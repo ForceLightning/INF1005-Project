@@ -3,7 +3,7 @@
 h1 {
 /*    font-family: 'Kavoon', cursive;*/
     font-family: "bakerville", serif;
-    font-style: bold;
+    font-weight: bold;
 
 }
 
@@ -207,12 +207,17 @@ h2{
 }
 
 .section-text{
-    padding-top: 20px;
+    margin-top: 30px;
+}
+
+.facilities{
+    margin-top: 40px;
+    margin-bottom: 15px;
 }
 
 .column-home{
     position: relative;
-    width: 50%;
+    float: left;    
 }
 
 .facilities-img-home{
@@ -223,10 +228,15 @@ h2{
     width: 100%;
 }
 
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .overlay{
     background-image: linear-gradient(to top, black, rgba(0, 0, 0, 0.5) 52%);
-    width: 72%;
-    height: 100%;
+    width: 100%;
     position: absolute;
     top: 100%;
     opacity: 0;
@@ -246,12 +256,41 @@ h2{
     color: white;
     font-size: 1.8rem;
     position: absolute;
-    bottom: 5%;
+    bottom: 15%;
     right: 50%;
     transform: translatex(50%);
     text-align: center;
+    object-fit: cover;
 }
 
 .facilities-container{
     position: relative;
+    gap: 10px;  
+    display: flex;
+    justify-content: center;
+}
+
+.home-findout-button{
+    position: absolute;
+    bottom: 5%;
+    right: 50%;
+    transform: translatex(50%);
+    text-align: center;
+    object-fit: cover;
+}
+
+button {
+  /* Variables */
+    color: #e8e8e8;
+    cursor: pointer;
+    font-size: 17px;
+    border: 1px solid #e8e8e8;
+    border-radius: 0.50em;
+    background-color: transparent;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.link-text{
+    color: #000000;
+    font-family: "Garamond", serif;
 }
