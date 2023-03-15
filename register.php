@@ -24,7 +24,7 @@ and open the template in the editor.
 
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <?php include "nav.inc.php"; ?>
 
     <main class="container2">

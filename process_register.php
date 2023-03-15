@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
     <?php include "nav.inc.php"; ?>
     <main class="container">
         <?php
