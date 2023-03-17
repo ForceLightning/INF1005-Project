@@ -19,14 +19,14 @@
         <title>Contact Us</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        
         <style type="text/css">
             #map {
                     height: 400px;
                     width: 100%;
 		}
 	</style>
-	<script type="text/javascript">
+
+<!--	 <script type="text/javascript">
             function initMap() {
                 var map = new google.maps.Map(document.getElementById('map'), {
                     center: {lat: 1.404770, lng: 103.794741},
@@ -39,7 +39,7 @@
             }
 	</script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-        <script src="js/google-map.js"></script>        
+        <script src="js/google-map.js"></script>-->
     </head>
     <body onload="initMap()">
 	
@@ -51,7 +51,9 @@
             <div class="row">
             <div class="col-lg-6">
                 <br><br>
-                <div id="map"></div>
+<!--                <div id="map"></div>-->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15954.503888590922!2d103.8091387!3d1.4007913!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da3c3b81e04209%3A0x99a688cdca67ea90!2sMandai%20Executive%20Golf%20Course!5e0!3m2!1sen!2ssg!4v1679038851154!5m2!1sen!2ssg" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
             </div>
             <div class="col-lg-6">
             <h1>Contact Us</h1>
