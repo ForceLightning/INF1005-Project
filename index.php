@@ -29,7 +29,7 @@
 
     <header>
         <div class="hero-image">
-              <img class="img-fluid" src="assets/country_club_home.jpg" alt="home-page-img"/>
+              <img class="img" src="assets/country_club_home.jpg" alt="home-page-img"/>
         </div>
         <div class ="hero-text">
             <h1 class="hero-header">Mandai Community Club</h1>
