@@ -12,11 +12,15 @@
     <?php include "nav.inc.php"; ?>
     <main class="container">
         <?php
+        require "vendor/autoload.php";
+        $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+        $dotenv->load();
+        $branch = $_ENV['BRANCH'];
         function save_member_info_to_db()
         {
-            global $fname, $lname, $email, $pwd_hashed, $error_msg, $success;
-            $config = parse_ini_file('../../private/project-db-config.ini');
-            $conn = new mysqli($config['servername'], $config['username'], $config['password'], $config['dbname']);
+            global $fname, $lname, $email, $pwd_hashed, $error_msg, $success, $branch;
+            $config = parse_ini_file('../../private/project-db-config.ini', true);
+            $conn = new mysqli($config[$branch]['servername'], $config[$branch]['username'], $config[$branch]['password'], $config[$branch]['dbname']);
             if ($conn->connect_error) {
                 $error_msg = "Connection failed: " . $conn->connect_error . "<br>";
                 $success = false;
