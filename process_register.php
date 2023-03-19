@@ -99,22 +99,23 @@
                     $success = false;
                 }
             }
-            if ($success && $_SERVER["REQUEST_METHOD"] == "POST") {
-                $pwd_hashed = password_hash($pwd, PASSWORD_DEFAULT);
-                save_member_info_to_db();
-                echo "<section>";
-                echo "<h4>Registration successful!</h4>";
-                echo "<p>Email: " . $email . "</p>";
-                echo "<a href='login.php' class='btn btn-success' role='button' aria-disabled='true'>Return to login</a>";
-                echo "</section>";
-            } else {
-                echo "<section>";
-                echo "<h4>Oops!</h4>";
-                echo "<h2>The following errors were detected:</h2>";
-                echo "<p>" . $error_msg . "</p>";
-                echo "<a href='register.php' class='btn btn-danger' role='button' aria-disabled='true'>Return to registration</a>";
-                echo "</section>";
-            }
+        }
+        validate_input();
+        if ($success && $_SERVER["REQUEST_METHOD"] == "POST") {
+            $pwd_hashed = password_hash($pwd, PASSWORD_DEFAULT);
+            save_member_info_to_db();
+            echo "<section>";
+            echo "<h4>Registration successful!</h4>";
+            echo "<p>Email: " . $email . "</p>";
+            echo "<a href='login.php' class='btn btn-success' role='button' aria-disabled='true'>Return to login</a>";
+            echo "</section>";
+        } else {
+            echo "<section>";
+            echo "<h4>Oops!</h4>";
+            echo "<h2>The following errors were detected:</h2>";
+            echo "<p>" . $error_msg . "</p>";
+            echo "<a href='register.php' class='btn btn-danger' role='button' aria-disabled='true'>Return to registration</a>";
+            echo "</section>";
         }
         ?>
     </main>
