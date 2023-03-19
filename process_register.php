@@ -100,6 +100,11 @@
                 }
             }
         }
+        $fname = $_POST["fname"];
+        $lname = $_POST["lname"];
+        $email = $_POST["email"];
+        $pwd = $_POST["pwd"];
+        $pwd_confirm = $_POST["pwd_confirm"];
         validate_input();
         if ($success && $_SERVER["REQUEST_METHOD"] == "POST") {
             $pwd_hashed = password_hash($pwd, PASSWORD_DEFAULT);
