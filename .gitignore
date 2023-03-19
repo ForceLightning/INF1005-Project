@@ -95,3 +95,9 @@ $RECYCLE.BIN/
 #
 # Deployment script
 deploy.php
+
+# Composer vendor
+vendor/**
+
+# PHP dotenv
+.env
