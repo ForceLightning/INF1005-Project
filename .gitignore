@@ -98,3 +98,6 @@ deploy.php
 
 # Composer vendor
 vendor/**
+
+# PHP dotenv
+.env
