@@ -25,7 +25,7 @@
                 $error_msg = "Connection failed: " . $conn->connect_error . "<br>";
                 $success = false;
             } else {
-                $stmt = $conn->prepare("INSERT INTO membership (fname, lname, email, password VALUES (?, ?, ?, ?)");
+                $stmt = $conn->prepare("INSERT INTO membership (fname, lname, email, password) VALUES (?, ?, ?, ?)");
                 $stmt->bind_param("ssss", $fname, $lname, $email, $pwd_hashed);
                 if ($stmt->execute()) {
                     $success = true;
