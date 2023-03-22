@@ -20,7 +20,7 @@
                     <a class="nav-link" href="facilities.php">FACILITIES</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#events">EVENTS</a>
+                    <a class="nav-link" href="events.php">EVENTS</a>
                 </li>
             </ul>
                     
