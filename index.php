@@ -32,7 +32,7 @@
               <img class="img" src="assets/country_club_home.jpg" alt="home-page-img"/>
         </div>
         <div class ="hero-text">
-            <h1 class="hero-header">Mandai Community Club</h1>
+            <h1 class="hero-header">Mandai Country Club</h1>
             <h2 class="hero-subheader">People come here to have fun</h2>
         </div>
     </header>
@@ -100,7 +100,7 @@
                         <img src="assets/golf_course.jpg" alt="golf-course-img" class="img"/>
                     </div>
                 </div>
-                <div class="row facilities-container justify-content-center mt-2 pb-2">
+                <div class="row facilities-container mt-2 pb-2">
                     <div class="column-home">
                         <div class="overlay">
                         <h2 class="facilities-text-home">Bowling Alley</h2>
