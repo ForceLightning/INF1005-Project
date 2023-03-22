@@ -100,7 +100,7 @@
                         <img src="assets/golf_course.jpg" alt="golf-course-img" class="img"/>
                     </div>
                 </div>
-                <div class="row facilities-container justify-content-center mt-2 pb-2">
+                <div class="row facilities-container mt-2 pb-2">
                     <div class="column-home">
                         <div class="overlay">
                         <h2 class="facilities-text-home">Bowling Alley</h2>
