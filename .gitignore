@@ -92,3 +92,12 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/netbeans,visualstudiocode,macos,windows#
+#
+# Deployment script
+deploy.php
+
+# Composer vendor
+vendor/**
+
+# PHP dotenv
+.env

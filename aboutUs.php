@@ -16,11 +16,12 @@
         <!-- Custom JS -->
         <!-- TODO: Comment this out after writing main.js -->
         <!-- <script defer src="js/main.js"></script> -->
+        <script defer src="js/main.js"></script>
         <title>About Us</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
-    <body>
+    <body class="d-flex flex-column min-vh-100">
         <?php 
             include "nav.inc.php";
         ?>
@@ -33,11 +34,18 @@
                 <div class="row">
                     <article class="col-sm">
                         <h3>Our Story</h3>
-                        <p>Mandai CC is a vibrant and dynamic hub located in the northern side of Singapore. Established in 1969, the community club has been serving the needs of the residents in the area for over four decades. Today, it is one of the most popular CC in Singapore, offering a wide range of programs and activities that cater to people of all ages and interests.</p>
+                        <p>
+                            Established in 1988, Mandai Country Club was originally a modest club catering to the needs of the local community. 
+                            Over the years, the club has grown and evolved into a world-class destination for sports, recreation, and entertainment. 
+                            Today, we are proud to be one of the most popular country clubs in Singapore, offering a wide range of facilities and services for members and guests of all ages.
+                        </p>
                     </article>
                     <article class="col-sm">
                         <h3>Vision and Mission</h3>
-                        <p>The mission of Mandai CC is to provide a welcoming and inclusive environment where residents can come together, build relationships, and participate in activities that promote personal growth, social cohesion, and community development. Our vision is to be a leading community hub that fosters a sense of belonging and social connectedness among residents in the Mandai area.</p>
+                        <p>
+                            Our vision at Mandai Country Club is to be the leading leisure and recreational destination in Singapore, known for our commitment to quality, innovation, and sustainability. We strive to provide our members and guests with a welcoming and inclusive environment, where they can relax, socialize, and pursue their passions. 
+                            Our mission is to create memorable experiences for our members and guests, by offering top-quality facilities, activities, and services that cater to their diverse interests and needs. We are committed to delivering exceptional value and customer satisfaction, while promoting environmental stewardship and social responsibility.
+                        </p>
                     </article>
                 </div>
             </section>
@@ -46,13 +54,53 @@
                 <div class="row">
                     <article class="col-sm">
                         <h3>What we offer?</h3>
-                        <p>At Mandai CC, we believe that community is everything. That is why we offer a wide variety of programs and services designed to bring people together and foster a strong sense of belonging. Whether you are interested in sports, the arts, or simply meeting new people, you will definitely find something to love at our CC.</p>
+                        <p>
+                            At Mandai Country Club, we offer a wide range of facilities and services for sports, recreation, and entertainment. 
+                            Our club features a championship golf course, tennis and squash courts, swimming pools, gymnasium, and a range of fitness and wellness programs. 
+                            We also offer a variety of dining options, from casual cafes to fine-dining restaurants, as well as event spaces for weddings, parties, and corporate events. 
+                            At Mandai Country Club, we are committed to providing our members and guests with the best possible experience. 
+                            Whether you're here to play golf, or relax by the pool with your friends and family, we invite you to come and experience the Mandai difference for yourself.
+                        </p>
                     </article>
                 </div>
-                <img src="https://via.placeholder.com/400x250.png?text=Facilities" alt="Facilities">
-		</section>
-                <br>
+            </section>
             
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+                <img src="https://via.placeholder.com/650x250.png?text=Facilities" alt="Facilities" style="width:100%">
+            <div class="text">Facilities</div>
+            </div>
+
+            <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+                <img src="https://via.placeholder.com/650x250.png?text=Facilities" alt="Events" style="width:100%">
+            <div class="text">Events</div>
+            </div>
+
+            <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+                <img src="https://via.placeholder.com/650x250.png?text=Facilities" alt="Facilities" style="width:100%">
+            <div class="text">Facilities</div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+            <!-- The dots/circles -->
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+            
+           
         </main>
         <?php
             include "footer.inc.php";
