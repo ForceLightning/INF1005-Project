@@ -32,7 +32,7 @@
               <img class="img" src="assets/country_club_home.jpg" alt="home-page-img"/>
         </div>
         <div class ="hero-text">
-            <h1 class="hero-header">Mandai Community Club</h1>
+            <h1 class="hero-header">Mandai Country Club</h1>
             <h2 class="hero-subheader">People come here to have fun</h2>
         </div>
     </header>
