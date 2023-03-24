@@ -49,4 +49,5 @@
             echo json_encode($error);
         }
     }
+    get_bookings_from_db();
 ?>
