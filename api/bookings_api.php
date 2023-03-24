@@ -1,5 +1,5 @@
 <?php
-    require "../vendor/autoload.php";
+    require "vendor/autoload.php";
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
     $dotenv->load();
     $branch = $_ENV['BRANCH'];
@@ -7,7 +7,7 @@
     function get_bookings_from_db()
     {
         global $bookings, $branch;
-        $config = parse_ini_file('../../private/project-db-config.ini', true);
+        $config = parse_ini_file('../../../private/project-db-config.ini', true);
         $conn = new mysqli($config[$branch]['servername'], $config[$branch]['username'], $config[$branch]['password'], $config[$branch]['dbname']);
         if ($conn->connect_error) {
             $error_msg = "Connection failed: " . $conn->connect_error . "<br>";
