@@ -13,7 +13,7 @@
             $error_msg = "Connection failed: " . $conn->connect_error . "<br>";
             $success = false;
         } else {
-            $stmt = $conn->prepare("SELECT (booking_id, location_name, time_start, time_end, booked) FROM BOOKINGS WHERE time_end > NOW() AND time_end < NOW() + INTERVAL 7 DAY ORDER BY time_start ASC");
+            $stmt = $conn->prepare("SELECT booking_id, location_name, time_start, time_end, booked FROM bookings WHERE time_end > NOW() AND time_end < NOW() + INTERVAL 7 DAY ORDER BY time_start ASC");
             if ($stmt->execute()) {
                 $success = true;
                 $result = $stmt->get_result();
