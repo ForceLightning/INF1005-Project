@@ -207,6 +207,7 @@ h2{
     text-align: center;
 }
 
+
 .index-desc{
     text-align: center;
 }
@@ -590,3 +591,29 @@ div.container {
 /*
 End of awards img in about us 
 */
+
+.events-desc {
+    text-align: center;
+    padding: 30px;
+}
+
+.events-heading{
+    text-align: center;
+    margin-top: 200px;
+}
+
+.events-button{
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 17px;
+    height: 50px;
+    width: 130px;
+    border: 1px solid #000000;
+    background-color: #000000;
+    margin-left: 200px;
+}
+
+.events-button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
