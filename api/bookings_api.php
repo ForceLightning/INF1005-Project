@@ -1,6 +1,6 @@
 <?php
     require "../vendor/autoload.php";
-    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . "/../");
     $dotenv->load();
     $branch = $_ENV['BRANCH'];
     header("Content-Type: application/json; charset=UTF-8");
