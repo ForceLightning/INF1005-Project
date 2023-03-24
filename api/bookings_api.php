@@ -3,6 +3,7 @@
     $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
     $dotenv->load();
     $branch = $_ENV['BRANCH'];
+    header("Content-Type: application/json; charset=UTF-8");
     function get_bookings_from_db()
     {
         global $bookings, $branch;
