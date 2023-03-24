@@ -30,6 +30,10 @@
                         $bookings[$row["booking_id"]] = $booking;
                     }
                     echo json_encode($bookings);
+                } else {
+                    echo json_encode(array(
+                        "error" => "No bookings found."
+                    ));
                 }
             } else {
                 $error_msg = "Execute Failed: (" . $stmt->errno . ") " . $stmt->error . "<br>";
