@@ -52,38 +52,57 @@
             <section id="s1">
                 <div class="row">
                     <div class="column">
-                        <h3>Family Day</h3>
-                        <p class="facilities-desc">Take some time off and bond with your family!</P>
+                        <h3>Pool Party</h3>
+                        <p class="facilities-desc">
+                        Join us for a splashing good time at our annual Pool Party at Mandai Country Club! 
+                        Get ready to soak up the sun and enjoy a day of swimming, food, drinks, and entertainment with DJ Drew Feig.
+                        Our beautifully landscaped pool area will be transformed into a summer oasis, complete with fun inflatables and games for all ages. 
+                        You can relax on our luxurious poolside loungers, take a dip in our sparkling pool, or enjoy a refreshing drink from our Mandai Restaurant.
+                        Don't forget to bring your sunscreen, towels, and swimsuits! 
+                        This is an event you won't want to miss, so mark your calendars and join us for a fun-filled day by the pool.
+                        </P>
                         <a href="golfPage.php">
                             <button type="button">Find Out More</button>
                         </a>
                     </div>
                     <div class="column">
-                    <img class="facilities-img" src="https://via.placeholder.com/350x200.png?text=Facilities" alt="Facilities">
+                    <img class="facilities-img" src="assets\pool_party_poster.png" width="100%" alt="Pool Party">
                     </div>
                 </div>
                 <div class ="row">
                     <div class="column">
-                        <h3>Safari Adventure</h3>
-                        <p class="facilities-desc">Take a trip down to our mandai zoo to interact with the different animals</p>
+                        <h3>Happy Hour</h3>
+                        <p class="facilities-desc">
+                        Join us for a fun-filled Happy Hour at our Mandai country club Restaurant that is awarded 5 stars rating for its service! 
+                        Relax and unwind with your friends and colleagues while enjoying discounted drinks and delicious appetizers. 
+                        Whether you're winding down after a long day at work or looking for a fun night out, our Happy Hour has something for everyone.
+                        The Happy Hour event will take place from 5 pm to 8 pm every Fridays, and we guarantee that you won't want to miss it. So, gather your friends and come on down to the country club for a night of fun, laughter, and great company. 
+                        We can't wait to see you there!
+                        </p>
                         <a href="swimmingPage.php">
                             <button type="button">Find Out More</button>
                         </a>
                     </div>
                     <div class="column">
-                    <img class="facilities-img" src="https://via.placeholder.com/350x200.png?text=Facilities" alt="Facilities">
+                    <img class="facilities-img" src="assets\happy_hour_poster.png" width="100%" alt="Happy Hour">
                     </div>
                 </div>
                 <div class ="row">
                     <div class="column">
-                        <h3>Christmas Party</h3>
-                        <p class="facilities-desc">Join our christmas party at mandai country club </p>
+                        <h3>Family Day at the Zoo</h3>
+                        <p class="facilities-desc">
+                        Join us for a family day at the Zoo, brought to you by Mandai Country Club! 
+                        We've teamed up with the Mandai Zoo to provide a fun-filled day for members and their families.
+                        We'll be offering a free shuttle service to and from the zoo. This means you can sit back, relax, and enjoy the ride to the Mandai Zoo without worrying about traffic or parking.
+                        This is a great opportunity to spend quality time with your family and create memories that will last a lifetime. 
+                        So don't miss out on this special event – register today and get ready for a wild adventure at the Mandai Zoo!
+                        </p>
                         <a href="bowlingPage.php">
                             <button type="button">Find Out More</button>
                         </a>
                     </div>
                     <div class="column">
-                    <img class="facilities-img" src="https://via.placeholder.com/350x200.png?text=Facilities" alt="Facilities">
+                    <img class="facilities-img" src="assets\zoo_poster.png" width="100%" alt="Zoo">
                     </div>
                 </div>
             </section>

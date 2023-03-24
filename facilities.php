@@ -5,6 +5,11 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity= "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <!-- Custom CSS -->
         <link rel="stylesheet" href="css/main.css">
+        <!-- font awesome cdn link  -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <!-- swiper js cdn link -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script> 
         <!--Google fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,57 +26,56 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body class="d-flex flex-column min-vh-100"></body>
-        <?php 
-            include "nav.inc.php";
-        ?>
-        
-        <header class="jumbotron text-center">
-            <h1>Facilities</h1>
-        </header>
-        <main class="container">
-            <section id="s2">
-<!--                <div class="row">
-                    <article class="col-sm">
-                        <h3>What we offer?</h3>
-                        <p>At Mandai CC, we believe that community is everything. That is why we offer a wide variety of programs and services designed to bring people together and foster a strong sense of belonging. Whether you are interested in sports, the arts, or simply meeting new people, you will definitely find something to love at our CC.</p>
-                    </article>
-                </div>-->
-                <!-- Slideshow container -->
-        <div class="slideshow-container">
+    <?php
+    include "nav.inc.php";
+    ?>
 
-          <!-- Full-width images with number and caption text -->
-          <div class="mySlides fade">
-            <div class="numbertext">1 / 3</div>
-            <img src="https://via.placeholder.com/650x250.png?text=Facilities" alt="Facilities" style="width:100%">
-            <div class="text">Caption Text</div>
-          </div>
-
-          <div class="mySlides fade">
-            <div class="numbertext">2 / 3</div>
-            <img src="https://via.placeholder.com/650x250.png?text=Facilities" alt="Facilities" style="width:100%">
-            <div class="text">Caption Two</div>
-          </div>
-
-          <div class="mySlides fade">
-            <div class="numbertext">3 / 3</div>
-            <img src="https://via.placeholder.com/650x250.png?text=Facilities" alt="Facilities" style="width:100%">
-            <div class="text">Caption Three</div>
-          </div>
-
-          <!-- Next and previous buttons -->
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    <header>
+        <div class="hero-image">
+            <img class="img-fluid" src="assets/facilities_hero.jpg" alt="home-page-img"/>
         </div>
-        <br>
-
-        <!-- The dots/circles -->
-        <div style="text-align:center">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
+        <div class ="hero-text">
+            <h1 class="hero-header">Facilities</h1>
         </div>
-		</section>
-            
+    </header>
+
+    <main class="container">
+<!--        <section id="s2">
+             Slideshow container 
+            <div class="slideshow-container">
+
+                 Full-width images with number and caption text 
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="https://via.placeholder.com/650x250.png?text=Facilities" alt="Facilities" style="width:100%">
+                    <div class="text">Caption Text</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="https://via.placeholder.com/650x250.png?text=Facilities" alt="Facilities" style="width:100%">
+                    <div class="text">Caption Two</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="https://via.placeholder.com/650x250.png?text=Facilities" alt="Facilities" style="width:100%">
+                    <div class="text">Caption Three</div>
+                </div>
+
+                 Next and previous buttons 
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <br>
+
+             The dots/circles 
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>-->
+
             <section id="s1">
                 <div class="row">
                     <div class="column">
@@ -82,7 +86,7 @@
                         </a>
                     </div>
                     <div class="column">
-                    <img class="facilities-img" src="https://via.placeholder.com/350x200.png?text=Facilities" alt="Facilities">
+                        <img class="facilities-img" src="https://via.placeholder.com/350x200.png?text=Facilities" alt="Facilities">
                     </div>
                 </div>
                 <div class ="row">
@@ -94,7 +98,7 @@
                         </a>
                     </div>
                     <div class="column">
-                    <img class="facilities-img" src="https://via.placeholder.com/350x200.png?text=Facilities" alt="Facilities">
+                        <img class="facilities-img" src="https://via.placeholder.com/350x200.png?text=Facilities" alt="Facilities">
                     </div>
                 </div>
                 <div class ="row">
@@ -106,7 +110,7 @@
                         </a>
                     </div>
                     <div class="column">
-                    <img class="facilities-img" src="https://via.placeholder.com/350x200.png?text=Facilities" alt="Facilities">
+                        <img class="facilities-img" src="https://via.placeholder.com/350x200.png?text=Facilities" alt="Facilities">
                     </div>
                 </div>
                 <div class ="row">
@@ -120,17 +124,88 @@
                         </a>
                     </div>
                     <div class="column">
-                    <img class="facilities-img" src="https://via.placeholder.com/350x200.png?text=Facilities" alt="Facilities">
+                        <img class="facilities-img" src="https://via.placeholder.com/350x200.png?text=Facilities" alt="Facilities">
                     </div>
                 </div>
+                <!-- gallery -->
+                <section class="gallery" id="gallery">
+
+                    <h1 class="heading">our gallery</h1>
+
+                    <div class="swiper gallery-slider">
+
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide slide">
+                                <img src="assets/galleryimg_food.jpg" alt="">
+                                <div class="icon">
+                                    <i class="fas fa-magnifying-glass-plus"></i>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide slide">
+                                <img src="assets/galleryimg_flower.jpg" alt="">
+                                <div class="icon">
+                                    <i class="fas fa-magnifying-glass-plus"></i>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide slide">
+                                <img src="assets/galleryimg_wine.jpg" alt="">
+                                <div class="icon">
+                                    <i class="fas fa-magnifying-glass-plus"></i>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide slide">
+                                <img src="assets/galleryimg_pool.jpg" alt="">
+                                <div class="icon">
+                                    <i class="fas fa-magnifying-glass-plus"></i>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide slide">
+                                <img src="assets/galleryimg_golf.jpg" alt="">
+                                <div class="icon">
+                                    <i class="fas fa-magnifying-glass-plus"></i>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide slide">
+                                <img src="assets/galleryimg_couple.jpg" alt="">
+                                <div class="icon">
+                                    <i class="fas fa-magnifying-glass-plus"></i>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide slide">
+                                <img src="assets/galleryimg_swimmingpool.jpg" alt="">
+                                <div class="icon">
+                                    <i class="fas fa-magnifying-glass-plus"></i>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide slide">
+                                <img src="assets/galleryimg_girl.jpg" alt="">
+                                <div class="icon">
+                                    <i class="fas fa-magnifying-glass-plus"></i>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </section>
+                </div>
             </section>
-            
-            
-                <br>
-            
-        </main>
-        <?php
+
+
+            <br>
+
+            </main>
+            <?php
             include "footer.inc.php";
-        ?>
-    </body>
-</html>
+            ?>
+            </body>
+            </html>
