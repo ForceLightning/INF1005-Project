@@ -574,19 +574,14 @@ clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
 /*
  awards img in about us 
 */
-.col-4 {
-    margin-left: 100px;
-}
 div.polaroid {
-  width: 70%;
+  width: 100%;
   background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 25px;
+/*  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
 }
 
 div.container {
   text-align: center;
-  padding: 10px 20px;
 }
 /*
 End of awards img in about us 
@@ -614,6 +609,21 @@ End of awards img in about us
 }
 
 .events-button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.contact-button{
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 17px;
+    height: 50px;
+    width: 130px;
+    border: 1px solid #000000;
+    background-color: #000000;
+}
+
+.contact-button:hover {
     background-color: #ffffff;
     color: #000000;
 }

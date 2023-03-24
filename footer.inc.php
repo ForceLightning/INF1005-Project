@@ -33,7 +33,7 @@
                     
 		</div>
 		<div class="col-md-4">
-                    <h5 class="mb-3">Contact Us</h5>
+                    <h5 class="mb-3"><a href="contactUs.php" class="link-text">Contact Us</a></h5>
 			<p class=" mb-3">444 Mandai Road, Singapore 779564</p>
 			<p class=" mb-3">Phone: 6457 9874</p>
 			<p class=" mb-3">Email: mandai@cc.com</p>
