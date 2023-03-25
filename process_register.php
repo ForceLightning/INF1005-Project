@@ -12,10 +12,7 @@
     <?php include "includes/nav.inc.php"; ?>
     <main class="container">
         <?php
-        require "vendor/autoload.php";
-        $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-        $dotenv->load();
-        $branch = $_ENV['BRANCH'];
+        require __DIR__ . "/includes/util.php";
         function save_member_info_to_db()
         {
             global $fname, $lname, $email, $pwd_hashed, $error_msg, $success, $branch;
@@ -36,13 +33,6 @@
                 $stmt->close();
             }
             $conn->close();
-        }
-        function sanitize_input($data)
-        {
-            $data = trim($data);
-            $data = stripslashes($data);
-            $data = htmlspecialchars($data);
-            return $data;
         }
         function validate_input()
         {
