@@ -1,6 +1,6 @@
 <?php
 global $branch;
-require __DIR__ . "/vendor/autoload.php";
+require __DIR__ . "../vendor/autoload.php";
 $dotenv = Dotenv\Dotenv::createImmutable($_SERVER['DOCUMENT_ROOT']);
 $dotenv->load();
 $branch = $_ENV['BRANCH'];
