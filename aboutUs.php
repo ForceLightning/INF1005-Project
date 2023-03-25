@@ -33,7 +33,7 @@
     </head>
 <body class="d-flex flex-column min-vh-100" onload="initMap()">
     <?php 
-        include "nav.inc.php";
+        include "includes/nav.inc.php";
     ?>
 
 <header id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -224,7 +224,7 @@
     
 </main>
         <?php
-            include "footer.inc.php";
+            include "includes/footer.inc.php";
         ?>
     </body>
 </html>

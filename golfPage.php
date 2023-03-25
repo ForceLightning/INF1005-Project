@@ -23,7 +23,7 @@
     </head>
     <body class="d-flex flex-column min-vh-100">
         <?php 
-            include "nav.inc.php";
+            include "includes/nav.inc.php";
         ?>
         
         <header>
@@ -108,7 +108,7 @@
            
         </main>
         <?php
-            include "footer.inc.php";
+            include "includes/footer.inc.php";
         ?>
     </body>
 </html>

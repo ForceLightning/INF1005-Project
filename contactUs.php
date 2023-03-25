@@ -44,7 +44,7 @@
     <body onload="initMap()">
 	
         <?php 
-            include "nav.inc.php";
+            include "includes/nav.inc.php";
         ?>
         
         <main class="container contactUs">
@@ -86,7 +86,7 @@
         </main>  
         
         <?php
-            include "footer.inc.php";
+            include "includes/footer.inc.php";
         ?>
     </body>
 </html>
