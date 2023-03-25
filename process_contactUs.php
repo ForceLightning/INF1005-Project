@@ -105,6 +105,7 @@ function sanitize_input($data)
     $data = htmlspecialchars($data);
     return $data;
 }
+save_contact_form_to_db();
 ?>
 
 <body class="d-flex flex-column min-vh-100"></body>
