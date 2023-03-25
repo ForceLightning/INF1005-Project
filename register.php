@@ -28,6 +28,12 @@ and open the template in the editor.
     <?php include "includes/nav.inc.php"; ?>
 
     <main class="container2">
+        <?php
+        session_start();
+        if (!isset($_SESSION["member_id"])) {
+            header("Location: login.php");
+        }
+        ?>
         <h1>Member Registration</h1>
         <p>
             For existing members, please go to the
