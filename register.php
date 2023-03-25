@@ -25,7 +25,7 @@ and open the template in the editor.
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-    <?php include "nav.inc.php"; ?>
+    <?php include "includes/nav.inc.php"; ?>
 
     <main class="container2">
         <h1>Member Registration</h1>
@@ -66,7 +66,7 @@ and open the template in the editor.
         </form>
     </main>
     <?php
-    include "footer.inc.php";
+    include "includes/footer.inc.php";
     ?>
 </body>
 

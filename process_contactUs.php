@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <?php include "includes.php"; ?>
+    <?php include "includes/header.inc.php"; ?>
     <title>Contact Us</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -92,7 +92,7 @@ save_contact_form_to_db();
 
 <body class="d-flex flex-column min-vh-100"></body>
 <?php
-include "nav.inc.php"
+include "includes/nav.inc.php"
     ?>
 <main class="container">
     <hr>
@@ -119,7 +119,7 @@ include "nav.inc.php"
 <br>
 
 <?php
-include "footer.inc.php";
+include "includes/footer.inc.php";
 ?>
 
 
