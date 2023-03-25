@@ -28,6 +28,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="events.php">EVENTS</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactUs.php">CONTACT US</a>
+                </li>
             </ul>
                     
             <ul class="navbar-nav navbar-right">

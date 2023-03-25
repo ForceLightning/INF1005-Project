@@ -86,14 +86,16 @@
             {
                 echo "<h3>Your submission is successful!</h3>";
                 echo "<h4>Thank you for contacting us, " .$fname." " .$lname."</h4>";
-                echo "<button onclick='history.go(-1)' class='btn btn-success'>Back</button>";    
+                echo "<button onclick='history.go(-1)' class='contact-button'>Back</button>";   
+                                   
+
             }
             else
             {
                 echo "<h2>Oops!</h2>";
                 echo "<h4>The following errors were detected:</h4>";
                 echo "<p>".$errorMsg."</p>";
-                echo "<button onclick='history.go(-1)' class='btn btn-danger'>Return</button>";  
+                echo "<button onclick='history.go(-1)' class='contact-button'>Return</button>";  
             }
             ?>
         </main>
