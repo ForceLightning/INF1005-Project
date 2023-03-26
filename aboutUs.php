@@ -1,25 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity= "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <!-- Custom CSS -->
-        <link rel="stylesheet" href="css/main.css">
-        <!--Google fonts-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Kavoon&family=Poppins:wght@300&family=Quicksand:wght@300&family=Rubik&display=swap" rel="stylesheet">
-        <!-- JQuery JS -->
-        <script defer src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
-        <!-- Bootstrap JS -->
-        <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-        <!-- Custom JS -->
-        <script defer src="js/main.js"></script>
-        <!-- Popper.js -->
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
-        integrity="sha384-DmZQ/+gZ+PxmjJqnBU+WmC9yD9XoGJfBTP1lg+J1PX2B0th+ak53M0Hh7EIoehkD"
-        crossorigin="anonymous">
-        </script>
+        <?php include "includes/header.inc.php"; ?>
         <title>About Us</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,42 +18,40 @@
         include "includes/nav.inc.php";
     ?>
 
-<header id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="img-fluid" src="assets/country_club_home.jpg" alt="home-page-img"/>
-      <div class ="hero-text">
-        <h1 class="hero-header">About Us</h1>
-        <h2 class="hero-subheader">Mandai Country Club</h2>
-      </div> 
+<header>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="assets/country_club_home.jpg" alt="home-page-img" />
+                <div class="hero-text">
+                    <h1 class="hero-header">About Us</h1>
+                    <h2 class="hero-subheader">Mandai Country Club</h2>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="assets/golf_course.jpg" alt="second-slide" />
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="assets/bowling_alley.jpg" alt="third-slide" />
+            </div>
+        </div>
+        <!-- Left and right controls -->
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
     </div>
-
-    <div class="carousel-item">
-      <img class="img-fluid" src="assets/golf_course.jpg" alt="second-slide">
-    </div>
-
-    <div class="carousel-item">
-      <img class="img-fluid" src="assets/bowling_alley.jpg" alt="third-slide">
-    </div>
-  </div>
-
-  <!-- Left and right controls -->
-  <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
 </header>
 
 <main class="container">

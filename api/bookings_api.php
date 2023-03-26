@@ -1,12 +1,10 @@
 <?php
-    require "../vendor/autoload.php";
-    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . "/../");
-    $dotenv->load();
-    $branch = $_ENV['BRANCH'];
+    require_once "../includes/util.php";
     header("Content-Type: application/json; charset=UTF-8");
     function get_bookings_from_db()
     {
         global $bookings, $branch;
+        $success = true;
         $config = parse_ini_file('../../../private/project-db-config.ini', true);
         $conn = new mysqli($config[$branch]['servername'], $config[$branch]['username'], $config[$branch]['password'], $config[$branch]['dbname']);
         if ($conn->connect_error) {
