@@ -3,6 +3,7 @@ require_once "../includes/util.php";
 header("Content-Type: application/json; charset=UTF-8");
 session_start();
 
+// Insert bookings in the database.
 function insert_bookings() {
     global $user_bookings, $branch;
     $success = true;
@@ -21,7 +22,7 @@ function insert_bookings() {
             if ($stmt->execute()) {
                 $result = $stmt->get_result();
                 if ($result->num_rows == 0) {
-                    $error_msg[] = "Booking " . $user_bookings[$i] . " is no longer valid.";
+                    $error_msg[] = "Booking " . $user_bookings[$i][$booking_id] . " is no longer valid.";
                     $success = false;
                     break;
                 } 
