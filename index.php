@@ -35,7 +35,6 @@
         </div>
         <div class ="hero-text">
             <h1 class="hero-header">Mandai Country Club</h1>
-            <h2 class="hero-subheader">People come here to have fun</h2>
         </div>
     </header>
     <main class="container container-maxheight">
@@ -50,36 +49,6 @@
         
         <section id="s2">
             <h2 class="section-text">Our Offers</h2>
-            
-<!--             Slideshow container 
-            <div class="slideshow-container">
-
-               Full-width images with number and caption text 
-              <div class="mySlides fade">
-                <img src="assets/promo_photo1.jpg" alt="promo_photo1" style="width:100%">
-              </div>
-
-              <div class="mySlides fade">
-                <img src="assets/promo_photo2.jpg" alt="promo_photo2" style="width:100%">
-              </div>
-
-              <div class="mySlides fade">
-                <img src="assets/promo_photo3.jpg"  alt="promo_photo3" style="width:100%">
-              </div>
-
-               Next and previous buttons 
-              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-              <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-            <br>
-
-             The dots/circles 
-            <div style="text-align:center">
-              <span class="dot" onclick="currentSlide(1)"></span>
-              <span class="dot" onclick="currentSlide(2)"></span>
-              <span class="dot" onclick="currentSlide(3)"></span>
-            </div>-->
-            
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
