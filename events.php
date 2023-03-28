@@ -25,12 +25,17 @@
             include "includes/nav.inc.php";
         ?>
         
-        <header class="jumbotron text-center">
-            <h1>Events</h1>
+         <header>
+            <div class="hero-image">
+              <img class="img" src="assets/event_hero.jpg" alt="golf-page-img"/>
+        </div>
+        <div class ="hero-text">
+            <h1 class="hero-header">Events</h1>
+        </div>
         </header>
-        <main class="container">
+        <main class="container container-maxheight">
             
-            <section id="s1">
+            <section id="events-s1">
                 <div class="row">
                     <div class="column">
                         <h3 class="events-heading">Pool Party</h3>
@@ -42,9 +47,6 @@
                         Don't forget to bring your sunscreen, towels, and swimsuits! 
                         This is an event you won't want to miss, so mark your calendars and join us for a fun-filled day by the pool.
                         </P>
-                        <a href="golfPage.php">
-                            <button type="button" class="events-button">Find Out More</button>
-                        </a>
                     </div>
                     <div class="column">
                     <img class="events-img" src="assets\pool_party_poster.png" width="100%" alt="Pool Party">
@@ -63,9 +65,6 @@
                         The Happy Hour event will take place from 5 pm to 8 pm every Fridays, and we guarantee that you won't want to miss it. So, gather your friends and come on down to the country club for a night of fun, laughter, and great company. 
                         We can't wait to see you there!
                         </p>
-                        <a href="swimmingPage.php">
-                            <button type="button" class="events-button">Find Out More</button>
-                        </a>
                     </div>
                 </div>
                 <div class ="row">
@@ -78,9 +77,6 @@
                         This is a great opportunity to spend quality time with your family and create memories that will last a lifetime. 
                         So don't miss out on this special event – register today and get ready for a wild adventure at the Mandai Zoo!
                         </p>
-                        <a href="bowlingPage.php">
-                            <button type="button" class="events-button">Find Out More</button>
-                        </a>
                     </div>
                     <div class="column">
                     <img class="events-img" src="assets\zoo_poster.png" width="100%" alt="Zoo">

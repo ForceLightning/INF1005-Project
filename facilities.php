@@ -39,7 +39,7 @@
         </div>
     </header>
 
-    <main class="container">
+    <main class="container container-maxheight">
 <!--        <section id="s2">
              Slideshow container 
             <div class="slideshow-container">
