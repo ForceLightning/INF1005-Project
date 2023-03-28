@@ -14,7 +14,7 @@ function insert_bookings() {
         $success = false;
     } else {
         for ($i = 0; $i < count($user_bookings); $i++) {
-            $stmt = $conn->prepare("SELECT * FROM bookings WHERE booking_id = ? AND time_end > NOW() AND DATE(time_end) < CURDATE() + INTERVAL 7 DAY AND booked = 0");
+            $stmt = $conn->prepare("SELECT * FROM bookings WHERE booking_id = ? AND time_end > NOW() AND booked = 0 AND DATE(time_end) BETWEEN CURDATE() AND CURDATE() + INTERVAL 7 DAY");
             $booking_id = $user_bookings[$i];
             // check that all booking_ids are valid
             $stmt->bind_param("i", $booking_id);
