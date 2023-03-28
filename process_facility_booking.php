@@ -139,8 +139,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "<a href='facility_booking.php' class='btn btn-primary'>Back to bookings</a>";
         } else {
             echo "<h4>Bookings successful!</h4>";
-            for ($i = 0; $i < count($bookings); $i++) {
-                echo "<p>" . $bookings[$i]["facility_name"] . " on " . $bookings[$i]["date"] . " from " . $bookings[$i]["start_time"] . " to " . $bookings[$i]["end_time"] . "</p>";
+            if (isset($bookings)) {
+                for ($i = 0; $i < count($bookings); $i++) {
+                    echo "<p>" . $bookings[$i]["facility_name"] . " on " . $bookings[$i]["date"] . " from " . $bookings[$i]["start_time"] . " to " . $bookings[$i]["end_time"] . "</p>";
+                }
             }
             // var_dump($bookings);
         }
