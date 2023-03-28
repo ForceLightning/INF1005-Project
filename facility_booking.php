@@ -5,9 +5,10 @@
  */
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
     <head>
+        <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/facility_booking.css">
         <?php include_once "includes/header.inc.php"; ?>
         <!-- custom JS, in local files -->
@@ -18,9 +19,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
-    <body class="d-flex flex-column min-vh-100">
+    <body class="d-flex flex-column min-vh-100">        
         <?php include_once "includes/nav.inc.php"; ?>
         <main class="container">
+            <div class="row">
+                <h1>Facility Bookings</h1>
+            </div>
             <section>
                 <!-- facility portion -->
                 <div class="facility-row row" id="facility-cards">
