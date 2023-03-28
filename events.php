@@ -24,15 +24,14 @@
             include "includes/nav.inc.php";
         ?>
         
-<!--        <header>
+        <header>
             <div class="hero-image">
-                  <img class="img" src="assets/country_club_home.jpg" alt="home-page-img"/>
+                  <img class="img" src="assets/event_hero.jpg" alt="home-page-img"/>
             </div>
             <div class ="hero-text">
-                <h1 class="hero-header">Mandai Country Club</h1>
-                <h2 class="hero-subheader">People come here to have fun</h2>
+                <h1 class="hero-header">Events</h1>
             </div>
-        </header>-->
+        </header>
         
         <!-- Event Button Months Filter -->
         <div id="myBtnContainer">
