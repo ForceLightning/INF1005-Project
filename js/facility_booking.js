@@ -119,17 +119,34 @@ function displayBookingSlots(bookingSlots) {
         let testPrime = test.cloneNode(true);
         //change the class to make it appear
         testPrime.setAttribute("class", "");
-        let timeslotgroup = testPrime.childNodes[1].children;
+        let timeslotgroup = testPrime.children[0].children;
         startTimeList = [];
         endTimeList = [];
+        let i =0;
         // Add the timeslots to the facility card
         for (let timeslot of timeslots) {
-// Create a new timeslot element
-// /           let timeslotElement = document.createElement("div");
-//            timeslotElement.classList.add("timeslot-white", "d-sm-inline-block", "btn", "btn-sm", "bg-available-status", "w-100");
+            // Create a new timeslot element
+            // /let timeslotElement = document.createElement("div");
+            // timeslotElement.classList.add("timeslot-white", "d-sm-inline-block", "btn", "btn-sm", "bg-available-status", "w-100");
             let startTime = timeslot["time_start"].split(/[- :]/);
             var start = new bookingSlot(new Date(startTime[0], startTime[1] - 1, startTime[2], startTime[3], startTime[4], startTime[5]), timeslot["booked"]);
             startTimeList.push(start);
+            
+            if(i< timeslotgroup.length){
+                if(timeslot["booked"]=== 0){
+                    if (!timeslotgroup[i].children[0].classList.contains("available")) {
+                        timeslotgroup[i].children[0].classList.toggle("available");
+                    }
+
+                }
+                else if(timeslot["booked"] === 1){
+                    timeslotgroup[i].children[0].setAttribute("disabled", "");
+                    if (!timeslotgroup[i].children[0].classList.contains("disabled")) {
+                        timeslotgroup[i].children[0].classList.toggle("disabled");
+                    }
+
+                }
+            }
             let endTime = timeslot["time_end"].split(/[- :]/);
             var end = new Date(endTime[0], endTime[1] - 1, endTime[2], endTime[3], endTime[4], endTime[5]);
             var start = new bookingSlot(new Date(endTime[0], endTime[1] - 1, endTime[2], endTime[3], endTime[4], endTime[5]), timeslot["booked"]);
@@ -139,17 +156,29 @@ function displayBookingSlots(bookingSlots) {
 //            timeslotElement.innerHTMLx = timeslotText;
 //            // Add the timeslot element to the facility card
 //            timeslotContainer.appendChild(timeslotElement);
+            ++i;
         }
-        //console.log(timeslotgroup.length);
-        for (let i = 0; i < timeslotgroup.length; i++) {
-            //if its booked, change the class to not be able to be selected? or make it disappear?
-            if (startTimeList[i].availability === 0) {
-                //timeslotgroup[i].setAttribute("class", "d-none");
-                //timeslotgroup[i].classList.toggle("d-none");
-                timeslotgroup[i].children[0].setAttribute("disabled", "");
-                timeslotgroup[i].children[0].classList.toggle("disabled");
-            }
-        }
+//        console.log(i);
+
+//        //console.log(timeslotgroup.length);
+//        for (let i = 0; i < timeslotgroup.length; i++) {
+//            //if its booked, change the class to not be able to be selected? or make it disappear?
+//            if (startTimeList[i].availability === 1) {
+//                //timeslotgroup[i].setAttribute("class", "d-none");
+//                //timeslotgroup[i].classList.toggle("d-none");
+//                //to access the timeslot-white class underneath
+//                timeslotgroup[i].children[0].setAttribute("disabled", "");
+//                if (!timeslotgroup[i].children[0].classList.contains("disabled")) {
+//                    timeslotgroup[i].children[0].classList.toggle("disabled");
+//                }
+//            }
+//            else{
+//                if (!timeslotgroup[i].children[0].classList.contains("available")) {
+//                    timeslotgroup[i].children[0].classList.toggle("available");
+//                }
+//            }
+//                
+//        }
 
         // add the facility card to the page
         document.getElementById("facility-cards").appendChild(facilityCard);
@@ -212,21 +241,21 @@ function addListeners(facilityElements, timeSlotElements) {
                 //console.log(selectedTimeSlots); // test
             });
         }
-        //data input portion
-        //getting attribute from the clicked button
-        const booking_id = selectionGroup.getAttribute('booking-id');
-        //checking if the data already exists in the array
-        const index = selectedTimeSlots.indexOf(booking_id);
-        if (index === -1) {
-            selectedTimeSlots.push(booking_id); //add to the array if not already selected
-            document.getElementById('selectedTimeSlots').value = selectedTimeSlots.join(",");
-            //timeSlot.setAttribute("value", selectedTimeSlots);
-        } else {
-            selectedTimeSlots.splice(index, 1); //remove from the array if already selected
-            document.getElementById('selectedTimeSlots').value = selectedTimeSlots.join(",");
-            //timeSlot.setAttribute("value", selectedTimeSlots);
-        }
-        //console.log(selectedTimeSlots); // test
+//        //data input portion
+//        //getting attribute from the clicked button
+//        const booking_id = selectionGroup.getAttribute('booking-id');
+//        //checking if the data already exists in the array
+//        const index = selectedTimeSlots.indexOf(booking_id);
+//        if (index === -1) {
+//            selectedTimeSlots.push(booking_id); //add to the array if not already selected
+//            document.getElementById('selectedTimeSlots').value = selectedTimeSlots.join(",");
+//            //timeSlot.setAttribute("value", selectedTimeSlots);
+//        } else {
+//            selectedTimeSlots.splice(index, 1); //remove from the array if already selected
+//            document.getElementById('selectedTimeSlots').value = selectedTimeSlots.join(",");
+//            //timeSlot.setAttribute("value", selectedTimeSlots);
+//        }
+//        //console.log(selectedTimeSlots); // test
     });
 
 }
