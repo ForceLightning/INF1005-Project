@@ -105,7 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         http_response_code(400);
     }
-} else if (isset($_SESSION["temp_bookings"])) {
+} else if (isset($_SESSION["temp_bookings"]) && isset($_SESSION["member_id"])) {
     $user_bookings = $_SESSION["temp_bookings"];
     insert_bookings();
     unset($_SESSION["temp_bookings"]);
