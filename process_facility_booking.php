@@ -36,7 +36,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
     </head>
     <body>   
         <?php
-        include "nav.inc.php";
+        include "includes/nav.inc.php";
         ?>
         <main>
             <?php
@@ -48,10 +48,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             $success = true;
             //the single facility selected
 //            $selectedFacility = $selectedTimeSlots = "";
+            $selectedTimeSlots = $_POST['timeslot'];
             
-            $selectedFacility = sanitize_input($_POST["facility"]);
+            $selectedFacility = sanitize_input($_POST['facility']);
             //the array of time slots selected
-            $selectedTimeSlots = sanitize_input($_POST["timeslot"]);
 
             
 //            $timeslots = $_POST['timeslot-white'];
@@ -162,7 +162,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
             ?>
         </main>
         <?php
-        include "footer.inc.php";
+        include "includes/footer.inc.php";
         ?>
     </body>
 </html>
