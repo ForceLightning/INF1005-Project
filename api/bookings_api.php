@@ -11,21 +11,23 @@
             $error_msg = "Connection failed: " . $conn->connect_error . "<br>";
             $success = false;
         } else {
-            $stmt = $conn->prepare("SELECT booking_id, location_name, time_start, time_end, booked FROM bookings WHERE time_end > NOW() AND time_end < NOW() + INTERVAL 7 DAY ORDER BY time_start ASC");
+            $stmt = $conn->prepare("SELECT booking_id, location_id, location_name, time_start, time_end, booked FROM bookings WHERE time_end > NOW() AND time_end < NOW() + INTERVAL 7 DAY ORDER BY location_id, time_start ASC");
             if ($stmt->execute()) {
                 $success = true;
                 $result = $stmt->get_result();
-                // create a map of bookings
+                // create a map of location => bookings
                 $bookings = array();
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
                         $booking = array(
+                            "location_id" => $row["location_id"],
                             "location_name" => $row["location_name"],
                             "time_start" => $row["time_start"],
                             "time_end" => $row["time_end"],
                             "booked" => $row["booked"]
                         );
-                        $bookings[$row["booking_id"]] = $booking;
+                        // add the booking to the array of bookings for the location
+                        $bookings[$row["location_id"]][] = $booking;
                     }
                     echo json_encode($bookings);
                 } else {
