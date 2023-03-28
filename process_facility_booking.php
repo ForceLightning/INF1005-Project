@@ -1,4 +1,5 @@
 <?php
+ob_start();
 include_once "includes/util.php";
 session_start();
 
@@ -99,6 +100,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         } else {
             $_SESSION["temp_bookings"] = $user_bookings;
             header("Location: login.php");
+            exit();
         }
     } else {
         http_response_code(400);
