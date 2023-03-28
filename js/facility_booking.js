@@ -62,7 +62,7 @@ function getBookingSlots(debug) {
 function displayBookingSlots(bookingSlots) {
     for (let location_id of Object.keys(bookingSlots)) {
         // Get the timeslots for this location
-        let timeslots = bookingSlots[location_id];
+        let timeslots = bookingSlots[location_id]["bookings"];
         // Create a facility card for the location
         let facilityCard = document.createElement("div");
         facilityCard.classList.add("facility-card", "col-lg-4", "col-md-6", "mb-3");
@@ -73,6 +73,7 @@ function displayBookingSlots(bookingSlots) {
             <div class="col-xl-6 col-lg-6 col-md-6 mb-0">
             <div>` + bookingSlots[location_id][0]["location_name"] + `</div>
             <hr>
+            <div>` + bookingSlots[location_id][0]["description"] + `</div>
             </div>
             </div>
             </div>
