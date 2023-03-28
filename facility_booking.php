@@ -30,22 +30,6 @@
             <section id="timeslots">
                 <div class="timeslot-row row">
                 </div>
-                <form id="booking-form" action="process_facility_booking.php" method="post" novalidate>
-                    <!--used to pass in the array of timings selected in js into process_facility_booking-->
-                    <!-- hidden input fields to store selected facility and timeslot -->
-                    <div class="form-group">
-                        <input class="form-control" type="hidden" name="facility" id="selectedFacility" value="1000">
-                    </div>
-
-                    <div class="form-group">
-                        <input class="form-control" type="hidden" name="timeslot" id="selectedTimeSlots" value="1200">
-                    </div>
-
-                    <div class="form-group">
-                        <input class="form-control" type="hidden" name="booking-slots" id="booking-slots">
-                    </div>
-
-                </form>
             </section>
 
 
@@ -146,11 +130,13 @@
                     <div class="form-group">
                         <input class="form-control" type="hidden" name="facility" id="selectedFacility" value="1000">
                     </div>
-
                     <div class="form-group">
                         <input class="form-control" type="hidden" name="timeslot" id="selectedTimeSlots" value="1200">
+                    </div>               
+                    <div class="form-group">
+                        <input class="form-control" type="hidden" name="booking-slots" id="booking-slots">
                     </div>
-
+                    
                     <div class="form-group">
                         <button class="btn btn-primary" type="submit">Submit</button>
                     </div>
