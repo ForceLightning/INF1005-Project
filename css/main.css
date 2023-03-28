@@ -785,6 +785,8 @@ filter: brightness(70%);
 /*Event months*/
 .filterDiv {
   float: left;
+  background-color: #2196F3;
+  color: #ffffff;
   width: 200px;
   line-height: 100px;
   text-align: center;
@@ -812,6 +814,7 @@ filter: brightness(70%);
 
 .events-button2:hover {
   background-color: #ddd;
+  color: black;
 }
 
 .events-button2.active {
