@@ -66,8 +66,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['member_id'] = $member_id;
             if (isset($_SESSION["temp_bookings"])) {
                 header("Location: process_facility_booking.php");
+            } else {
+                header("Location: index.php");
             }
-            header("Location: index.php");
         }
     }
 }

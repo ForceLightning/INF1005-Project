@@ -6,7 +6,7 @@ include_once "includes/util.php";
 session_start();
 
 function insert_bookings() {
-    global $user_bookings, $branch;
+    global $user_bookings, $branch, $bookings;
     $success = true;
     $config = parse_ini_file('../../private/project-db-config.ini', true);
     $conn = new mysqli($config[$branch]['servername'], $config[$branch]['username'], $config[$branch]['password'], $config[$branch]['dbname']);
@@ -14,29 +14,39 @@ function insert_bookings() {
         $error_msg[] = "Connection failed: " . $conn->connect_error;
         $success = false;
     } else {
+        $bookings = array();
         for ($i = 0; $i < count($user_bookings); $i++) {
             $stmt = $conn->prepare("SELECT * FROM bookings WHERE booking_id = ? AND time_end > NOW() AND time_end < NOW() + INTERVAL 7 DAY AND booked = 0");
             $booking_id = $user_bookings[$i];
-            $booking_id = sanitize_input($booking_id);
             // check that all booking_ids are valid
-            $conn->begin_transaction();
-            try {
-                $stmt->bind_param("i", $booking_id);
-                if ($stmt->execute()) {
-                    $result = $stmt->get_result();
-                    if ($result->num_rows == 0) {
-                        $error_msg[] = "Booking " . $user_bookings[$i] . " is no longer valid.";
-                        $success = false;
-                        break;
-                    } 
-                } else {
-                    $error_msg[] = "Execute Failed: (" . $stmt->errno . ") " . $stmt->error;
+            $stmt->bind_param("i", $booking_id);
+            if ($stmt->execute()) {
+                $result = $stmt->get_result();
+                if ($result->num_rows == 0) {
+                    $error_msg[] = "Booking " . $user_bookings[$i] . " is no longer valid.";
                     $success = false;
                     break;
+                } else {
+                    for ($j = 0; $j < $result->num_rows; $j++) {
+                        $start_time = new DateTime($result->fetch_assoc()["time_start"]);
+                        $end_time = new DateTime($result->fetch_assoc()["time_end"]);
+                        $date = $start_time->format("Y-m-d");
+                        $start_time = $start_time->format("H:i");
+                        $end_time = $end_time->format("H:i");
+                        $bookings[] = array(
+                            "facility_name" => $result->fetch_assoc()["facility_name"],
+                            "booking_id" => $result->fetch_assoc()["booking_id"],
+                            "date" => $date,
+                            "start_time" => $start_time,
+                            "end_time" => $end_time
+
+                        );
+                    }
                 }
-            } catch (mysqli_sql_exception $e) {
-                $conn->rollback();
-                throw $e;
+            } else {
+                $error_msg[] = "Execute Failed: (" . $stmt->errno . ") " . $stmt->error;
+                $success = false;
+                break;
             }
         }
     }
@@ -124,9 +134,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "<section>";
         echo "<h2>Booking Summary</h2>";
         if (isset($error_msg)) {
+            echo "<h4>Booking failed!</h4>";
             echo "<p>" . implode("<br>", $error_msg) . "</p>";
+            echo "<a href='facility_booking.php' class='btn btn-primary'>Back to bookings</a>";
         } else {
-            echo "<p>Bookings successful!</p>";
+            echo "<h4>Bookings successful!</h4>";
+            for ($i = 0; $i < count($bookings); $i++) {
+                echo "<p>" . $bookings[$i]["facility_name"] . " on " . $bookings[$i]["date"] . " from " . $bookings[$i]["start_time"] . " to " . $bookings[$i]["end_time"] . "</p>";
+            }
         }
         echo "</section>";
         ?>
