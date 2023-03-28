@@ -45,7 +45,7 @@
                             For assistance: <br>
                             Call: (65)6457 9874 | Email: mandai@cc.com
                         </p>
-                        <a href="facilities-booking.php">
+                        <a href="facility-booking.php">
                             <button type="button" class="facilities-button">Make a Booking</button>
                         </a>
                     </div>
@@ -59,13 +59,13 @@
             <div class="swiper mySwiper swiperFacilities">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="assets/golf-course-1.jpg" alt="promo_photo1">
+                        <img class="img-fluid" src="assets/golf-course-1.jpg" alt="promo_photo1">
                     </div>
                     <div class="swiper-slide">
-                        <img src="assets/golf-course-2.jpg" alt="promo_photo1">
+                        <img class="img-fluid" src="assets/golf-course-2.jpg" alt="promo_photo1">
                     </div>
                     <div class="swiper-slide">
-                        <img src="assets/golf-course-3.jpg" alt="promo_photo1">
+                        <img class="img-fluid" src="assets/golf-course-3.jpg" alt="promo_photo1">
                     </div>
                 </div>
                 <div class="swiper-button-next"></div>
