@@ -19,49 +19,75 @@
         <title>Events</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+            
     </head>
     <body class="d-flex flex-column min-vh-100">
         <?php 
             include "includes/nav.inc.php";
         ?>
-<!--        <header>
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-         Indicators 
-        <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></li>
-            <li data-target="#myCarousel" data-slide-to="1" aria-label="Slide 2"></li>
-            <li data-target="#myCarousel" data-slide-to="2" aria-label="Slide 3"></li>
-        </ol>
-         Wrapper for slides 
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="d-block w-100" src="assets/country_club_home.jpg" alt="home-page-img" />
-                <div class="hero-text">
-                    <h1 class="hero-header">Events</h1>
-                    <h2 class="hero-subheader">Mandai Country Club</h2>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="assets/golf_course.jpg" alt="second-slide" />
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="assets/bowling_alley.jpg" alt="third-slide" />
-            </div>
-        </div>
-         Left and right controls 
-        <button class="carousel-control-next" type="button" data-target="#myCarousel" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </button>
-        <button class="carousel-control-prev" type="button" data-target="#myCarousel" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </button>
-    </div>
-</header>-->
 
-        <main class="container">
-            
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('now')"> On-going</button>
+  <button class="btn" onclick="filterSelection('april')"> April</button>
+  <button class="btn" onclick="filterSelection('june')"> June</button>
+  <button class="btn" onclick="filterSelection('august')"> August</button>
+</div>
+
+<div class="container">
+  <img class="filterDiv now" src="assets\happy_hour_poster.png"/>
+  <img class="filterDiv april" src="assets\bowling_night_poster.png"/>
+  <img class="filterDiv april" src="assets\hari_raya_poster.png"/>
+  <img class="filterDiv june" src="assets\zoo_poster.png"/>
+  <img class="filterDiv august" src="assets\pool_party_poster.png"/>
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+        <main class="container">  
             <section id="events-s1">
                 <div class="row">
                     <div class="column">
@@ -173,7 +199,6 @@
                     </a>
                     </div>
                 </div>
-                
             </section>
             
             
