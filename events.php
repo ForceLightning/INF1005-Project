@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity= "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -14,82 +14,95 @@
         <!-- Bootstrap JS -->
         <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
         <!-- Custom JS -->
-        <!-- TODO: Comment this out after writing main.js -->
-        <!-- <script defer src="js/main.js"></script> -->
+        <script defer src="js/main.js"></script>
         <title>Events</title>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-            
+        <meta name="viewport" content="width=device-width, initial-scale=1">           
     </head>
     <body class="d-flex flex-column min-vh-100">
         <?php 
             include "includes/nav.inc.php";
         ?>
+        
+<!--        <header>
+            <div class="hero-image">
+                  <img class="img" src="assets/country_club_home.jpg" alt="home-page-img"/>
+            </div>
+            <div class ="hero-text">
+                <h1 class="hero-header">Mandai Country Club</h1>
+                <h2 class="hero-subheader">People come here to have fun</h2>
+            </div>
+        </header>-->
+        
+        <!-- Event Button Months Filter -->
+        <div id="myBtnContainer">
+          <button class="events-button2 active" onclick="filterSelection('all')"> Show All</button>
+          <button class="events-button2" onclick="filterSelection('now')"> On-going</button>
+          <button class="events-button2" onclick="filterSelection('april')"> April</button>
+          <button class="events-button2" onclick="filterSelection('may')"> May</button>
+          <button class="events-button2" onclick="filterSelection('june')"> June</button>
+        </div>
 
-<div id="myBtnContainer">
-  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-  <button class="btn" onclick="filterSelection('now')"> On-going</button>
-  <button class="btn" onclick="filterSelection('april')"> April</button>
-  <button class="btn" onclick="filterSelection('june')"> June</button>
-  <button class="btn" onclick="filterSelection('august')"> August</button>
-</div>
-
-<div class="container">
-  <img class="filterDiv now" src="assets\happy_hour_poster.png"/>
-  <img class="filterDiv april" src="assets\bowling_night_poster.png"/>
-  <img class="filterDiv april" src="assets\hari_raya_poster.png"/>
-  <img class="filterDiv june" src="assets\zoo_poster.png"/>
-  <img class="filterDiv august" src="assets\pool_party_poster.png"/>
-</div>
-
-<script>
-filterSelection("all")
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("filterDiv");
-  if (c == "all") c = "";
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-  }
-}
-
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-  }
-}
-
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);     
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
-</script>
-
+        <div class="container">
+          <a href="#Drinks"><img class="filterDiv now" src="assets\happy_hour_poster.png" alt="happy_hour"/></a>
+          <a href="#Bowling"><img class="filterDiv april" src="assets\bowling_night_poster.png" alt="bowling_night"/></a>
+          <a href="#Bazaar"><img class="filterDiv april" src="assets\hari_raya_poster.png" alt="hari_raya"/></a>
+          <a href="#Pool"><img class="filterDiv may" src="assets\pool_party_poster.png" alt="pool_party"/></a>
+          <a href="#Zoo"><img class="filterDiv june" src="assets\zoo_poster.png" alt="Zoo"/></a>
+        </div>
+        <!-- End of Event Button Months Filter -->
+        
+        <!-- About Events Content -->
         <main class="container">  
             <section id="events-s1">
-                <div class="row">
+                <!-- Zoo -->
+                <div class ="row" id="Zoo">
+                    <div class="column">
+                        <h3 class="events-heading">Family Day at the Zoo</h3>
+                        <p class="events-desc">
+                        Join us for a family day at the Zoo, brought to you by Mandai Country Club! 
+                        We've teamed up with the Mandai Zoo to provide a fun-filled day for members and their families.
+                        We'll be offering a free shuttle service to and from the zoo. This means you can sit back, relax, and enjoy the ride to the Mandai Zoo without worrying about traffic or parking.
+                        This is a great opportunity to spend quality time with your family and create memories that will last a lifetime. 
+                        So don't miss out on this special event – register today and get ready for a wild adventure at the Mandai Zoo!
+                        </p>
+                        <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdVuy9VMf1q7QDPX0LFBc43ErzjweIxUd3U3wbQ9icKhFpHBg/viewform?usp=sf_link">
+                            <button type="button" class="events-button">Reserve Now</button>
+                        </a>
+                    </div>
+                    <div class="column">
+                        <a target="_blank" href="assets\zoo_poster.png">
+                        <img class="events-img" src="assets\zoo_poster.png" width="100%" alt="Zoo">
+                    </a>
+                    </div>
+                </div>
+                <!-- End of Zoo -->
+                
+                <!-- Happy Hour -->
+                <div class ="row" id="Drinks">
+                    <div class="column">
+                        <a target="_blank" href="assets\happy_hour_poster.png">
+                        <img class="events-img" src="assets\happy_hour_poster.png" width="100%" alt="Happy Hour">
+                    </a>
+                    </div>
+                    <div class="column">
+                        <h3 class="events-heading">Happy Hour</h3>
+                        <p class="events-desc2">
+                        Join us for a fun-filled Happy Hour at our Mandai country club Restaurant that is awarded 5 stars rating for its service! 
+                        Relax and unwind with your friends and colleagues while enjoying discounted drinks and delicious appetizers. 
+                        Whether you're winding down after a long day at work or looking for a fun night out, our Happy Hour has something for everyone.
+                        The Happy Hour event will take place from 5 pm to 8 pm every Fridays, and we guarantee that you won't want to miss it. So, gather your friends and come on down to the country club for a night of fun, laughter, and great company. 
+                        We can't wait to see you there!
+                        </p>
+                        <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfaCz2IdEE34U9bTpbRrs21ub8wCAn7NoS10H61FRY4cc9W5Q/viewform?usp=sf_link">
+                            <button type="button" class="events-button">Reserve Now</button>
+                        </a>
+                    </div>
+                </div>
+                <!-- End of Happy Hour -->
+                
+                <!-- Pool Party -->
+                <div class="row" id="Pool">
                     <div class="column">
                         <h3 class="events-heading">Pool Party</h3>
                         <p class="events-desc">
@@ -100,68 +113,28 @@ for (var i = 0; i < btns.length; i++) {
                         Don't forget to bring your sunscreen, towels, and swimsuits! 
                         This is an event you won't want to miss, so mark your calendars and join us for a fun-filled day by the pool.
                         </P>
-                        <a href="SwimmingPage.php">
-                            <button type="button" class="events-button">Find Out More</button>
+                        <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeoFWgNXgxK4B-Mk5sSlNMdyrhVSqilZUe058Mu6UYsayirAg/viewform?usp=sf_link">
+                            <button type="button" class="events-button">Reserve Now</button>
                         </a>
                     </div>
                     <div class="column">
-                    <a target="_blank" href="assets\pool_party_poster.png">
-                    <img class="events-img" src="assets\pool_party_poster.png" width="100%" alt="Pool Party">
-                    </a>
-                    </div>
-                </div>
-                
-                <div class ="row">
-                    <div class="column">
-                    <a target="_blank" href="assets\happy_hour_poster.png">
-                    <img class="events-img" src="assets\happy_hour_poster.png" width="100%" alt="Happy Hour">
-                    </a>
-                    </div>
-                    <div class="column">
-                        <h3 class="events-heading">Happy Hour</h3>
-                        <p class="events-desc">
-                        Join us for a fun-filled Happy Hour at our Mandai country club Restaurant that is awarded 5 stars rating for its service! 
-                        Relax and unwind with your friends and colleagues while enjoying discounted drinks and delicious appetizers. 
-                        Whether you're winding down after a long day at work or looking for a fun night out, our Happy Hour has something for everyone.
-                        The Happy Hour event will take place from 5 pm to 8 pm every Fridays, and we guarantee that you won't want to miss it. So, gather your friends and come on down to the country club for a night of fun, laughter, and great company. 
-                        We can't wait to see you there!
-                        </p>
-                        <a href="restaurantPage.php">
-                            <button type="button" class="events-button">Find Out More</button>
+                        <a target="_blank" href="assets\pool_party_poster.png">
+                            <img class="events-img" src="assets\pool_party_poster.png" width="100%" alt="Pool Party">
                         </a>
                     </div>
                 </div>
-                
-                <div class ="row">
+                <!-- End of Pool Party -->
+               
+                <!-- Bowling Night -->
+               <div class ="row" id="Bowling">
                     <div class="column">
-                        <h3 class="events-heading">Family Day at the Zoo</h3>
-                        <p class="events-desc">
-                        Join us for a family day at the Zoo, brought to you by Mandai Country Club! 
-                        We've teamed up with the Mandai Zoo to provide a fun-filled day for members and their families.
-                        We'll be offering a free shuttle service to and from the zoo. This means you can sit back, relax, and enjoy the ride to the Mandai Zoo without worrying about traffic or parking.
-                        This is a great opportunity to spend quality time with your family and create memories that will last a lifetime. 
-                        So don't miss out on this special event – register today and get ready for a wild adventure at the Mandai Zoo!
-                        </p>
-                        <a href="index.php">
-                            <button type="button" class="events-button">Find Out More</button>
-                        </a>
-                    </div>
-                    <div class="column">
-                    <a target="_blank" href="assets\zoo_poster.png">
-                    <img class="events-img" src="assets\zoo_poster.png" width="100%" alt="Zoo">
-                    </a>
-                    </div>
-                </div>
-                
-               <div class ="row">
-                    <div class="column">
-                    <a target="_blank" href="assets\bowling_night_poster.png">
-                    <img class="events-img" src="assets\bowling_night_poster.png" width="100%" alt="Happy Hour">
+                        <a target="_blank" href="assets\bowling_night_poster.png">
+                        <img class="events-img" src="assets\bowling_night_poster.png" width="100%" alt="Happy Hour">
                     </a>
                     </div>
                     <div class="column">
                         <h3 class="events-heading">Bowling Night</h3>
-                        <p class="events-desc">
+                        <p class="events-desc2">
                         We are excited to announce our upcoming event at Mandai Country Club: Bowling Night! Get ready for an evening of friendly competition, good food, and great company.
                         Join us at our Mandai bowling alley where you can show off your skills and enjoy a fun-filled night with family and friends. 
                         Whether you're a seasoned pro or new to the game, there's no better way to spend your evening than bowling with Mandai Country Club.
@@ -170,13 +143,15 @@ for (var i = 0; i < btns.length; i++) {
                         Don't miss out on this exciting event! Make sure to register early to secure your spot. 
                         We can't wait to see you at Mandai Country Club's Bowling Night!
                         </p>
-                        <a href="BowlingPage.php">
-                            <button type="button" class="events-button">Find Out More</button>
+                        <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfwtzsoFaWlIe7n_cgtrt98nl-PgbRRGQ0GR0FTWGYFeZmkFQ/viewform">
+                            <button type="button" class="events-button">Reserve Now</button>
                         </a>
                     </div>
                 </div>
+                <!-- End of Bowling Night -->
                 
-                <div class ="row">
+                <!-- Hari Raya -->
+                <div class ="row" id="Bazaar">
                     <div class="column">
                         <h3 class="events-heading">Hari Raya Bazaar</h3>
                         <p class="events-desc">
@@ -190,24 +165,27 @@ for (var i = 0; i < btns.length; i++) {
                         See you there!
                         </p>
                         <a href="index.php">
-                            <button type="button" class="events-button">Find Out More</button>
+                            <button type="button" class="events-button">Reserve Now</button>
                         </a>
                     </div>
                     <div class="column">
-                    <a target="_blank" href="assets\hari_raya_poster.png">
-                    <img class="events-img" src="assets\hari_raya_poster.png" width="100%" alt="Zoo">
+                        <a target="_blank" href="assets\hari_raya_poster.png">
+                        <img class="events-img" src="assets\hari_raya_poster.png" width="100%" alt="Zoo">
                     </a>
                     </div>
                 </div>
+                <!-- End of Hari Raya -->
             </section>
+            <!-- End of About Events Content -->
             
-            
+<!-- Page will scroll to top, when you click it -->
+
+
                 <br>
             
         </main>
         <?php
             include "includes/footer.inc.php";
-        ?>
-        
+        ?>   
     </body>
 </html>
