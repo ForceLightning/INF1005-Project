@@ -18,7 +18,7 @@ $(document).ready(function () {
     const dateCardElements = document.querySelectorAll('.date-card');
 
     //to store the values to be passed into the database
-    const bookingSlots = getBookingSlots(true);
+    const bookingSlots = getBookingSlots(false);
     // TODO: Iterate through the dict that maps location_id => timeslots
     // and add the timeslots to the corresponding facility card
 //    let jsonString = ' "bookings" : [' +
