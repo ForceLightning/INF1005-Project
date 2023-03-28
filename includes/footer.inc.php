@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <!--Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">

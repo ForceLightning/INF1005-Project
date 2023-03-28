@@ -1,5 +1,5 @@
 <!-- TODO: Process register here -->
-<html>
+<html lang="en">
 
 <head>
     <?php include "includes/header.inc.php"; ?>
