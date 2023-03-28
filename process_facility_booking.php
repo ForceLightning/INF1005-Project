@@ -39,7 +39,6 @@ function insert_bookings() {
                             "date" => $date,
                             "start_time" => $start_time,
                             "end_time" => $end_time
-
                         );
                     }
                 }
@@ -113,42 +112,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
     http_response_code(405);
 }
-
 ?>
 <!DOCTYPE html>
 <html>
 
-<head>
-    <?php include_once "includes/header.inc.php"; ?>
-    <title>Bookings</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+    <head>
+        <?php include_once "includes/header.inc.php"; ?>
+        <title>Bookings</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
 
-<body>
-    <?php
-    include "includes/nav.inc.php";
-    ?>
-    <main>
+    <body>
         <?php
-        echo "<section>";
-        echo "<h2>Booking Summary</h2>";
-        if (isset($error_msg)) {
-            echo "<h4>Booking failed!</h4>";
-            echo "<p>" . implode("<br>", $error_msg) . "</p>";
-            echo "<a href='facility_booking.php' class='btn btn-primary'>Back to bookings</a>";
-        } else {
-            echo "<h4>Bookings successful!</h4>";
-            for ($i = 0; $i < count($bookings); $i++) {
-                echo "<p>" . $bookings[$i]["facility_name"] . " on " . $bookings[$i]["date"] . " from " . $bookings[$i]["start_time"] . " to " . $bookings[$i]["end_time"] . "</p>";
-            }
-        }
-        echo "</section>";
+        include "includes/nav.inc.php";
         ?>
-    </main>
-    <?php
-    include "includes/footer.inc.php";
-    ?>
-</body>
+        <main>
+            <?php
+            echo "<section>";
+            echo "<h2>Booking Summary</h2>";
+            if (isset($error_msg)) {
+                echo "<h4>Booking failed!</h4>";
+                echo "<p>" . implode("<br>", $error_msg) . "</p>";
+                echo "<a href='facility_booking.php' class='btn btn-primary'>Back to bookings</a>";
+            } else {
+                echo "<h4>Bookings successful!</h4>";
+                for ($i = 0; $i < count($bookings); $i++) {
+                    echo "<p>" . $bookings[$i]["facility_name"] . " on " . $bookings[$i]["date"] . " from " . $bookings[$i]["start_time"] . " to " . $bookings[$i]["end_time"] . "</p>";
+                }
+            }
+            echo "</section>";
+            ?>
+        </main>
+        <?php
+        include "includes/footer.inc.php";
+        ?>
+    </body>
 
 </html>
