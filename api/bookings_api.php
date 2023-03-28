@@ -11,7 +11,7 @@
             $error_msg = "Connection failed: " . $conn->connect_error . "<br>";
             $success = false;
         } else {
-            $stmt = $conn->prepare("SELECT booking_id, location_id, location_name, time_start, time_end, booked FROM bookings WHERE time_end > NOW() AND time_end < NOW() + INTERVAL 7 DAY ORDER BY location_id, time_start ASC");
+            $stmt = $conn->prepare("SELECT b.booking_id, b.location_id, b.location_name, b.time_start, b.time_end, b.booked, f.description FROM bookings as b JOIN facilities as f ON b.location_id = f.facility_id WHERE time_end > NOW() AND time_end < NOW() + INTERVAL 7 DAY ORDER BY location_id, time_start ASC");
             if ($stmt->execute()) {
                 $success = true;
                 $result = $stmt->get_result();
@@ -27,7 +27,8 @@
                             "booked" => $row["booked"]
                         );
                         // add the booking to the array of bookings for the location
-                        $bookings[$row["location_id"]][] = $booking;
+                        $bookings[$row["location_id"]]["bookings"][] = $booking;
+                        $bookings[$row["location_id"]]["description"] = $row["description"];
                     }
                     echo json_encode($bookings);
                 } else {
