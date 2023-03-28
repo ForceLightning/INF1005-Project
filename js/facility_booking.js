@@ -31,9 +31,9 @@ $(document).ready(function () {
     const form = document.querySelector('#booking-form');
     form.addEventListener('submit', (event) => {
         event.preventDefault(); // prevent the form from submitting normally
-        const formData = new FormData(form); // create a FormData object from the form
-        formData.append('facility', selectedFacility); // add the selectedFacility value to the form data
-        formData.append('timeslot', JSON.stringify(selectedTimeSlots)); // add the selectedTimeSlots array to the form data
+        const formData = new FormData(event.target, event.submitter); // create a FormData object from the form
+        // formData.append('facility', selectedFacility); // add the selectedFacility value to the form data
+        formData.append('booking-slots', JSON.stringify(selectedTimeSlots)); // add the selectedTimeSlots array to the form data
         fetch('process_facility_booking.php', {
             method: 'POST',
             body: formData
@@ -76,7 +76,7 @@ function bookingSlot(date, availability) {
 
 function displayBookingSlots(bookingSlots) {
     for (let location_id of Object.keys(bookingSlots)) {
-// Get the timeslots for this location
+        // Get the timeslots for this location
         let timeslots = bookingSlots[location_id]["bookings"];
         // Create a facility card for the location
         let facilityCard = document.createElement("div");
@@ -106,7 +106,7 @@ function displayBookingSlots(bookingSlots) {
             var start = new Date(startTime[0], startTime[1] - 1, startTime[2], startTime[3], startTime[4], startTime[5]);
             let endTime = timeslot["time_end"].split(/[- :]/);
             var end = new Date(endTime[0], endTime[1] - 1, endTime[2], endTime[3], endTime[4], endTime[5]);
-            var timeslotText = start.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'}) + " - " + end.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
+            var timeslotText = start.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + " - " + end.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
             timeslotElement.setAttribute("booking-id", timeslot["booking_id"]);
             timeslotElement.innerHTML = timeslotText;
             // Add the timeslot element to the facility card
@@ -180,6 +180,7 @@ function addListeners(facilityElements, timeSlotElements) {
                 //store the value of the facility
                 selectedFacility = selectionGroup.getAttribute('facility-name');
                 document.getElementById('selectedFacility').value = selectedFacility;
+                $(".form-group").filter("[facility-id!=" + selectionGroup.getAttribute('location-id') + "]").addClass("d-none");
                 $("[facility-id=" + selectionGroup.getAttribute('location-id') + "]").toggleClass("d-none");
             }
         });
