@@ -188,7 +188,7 @@ footer {
 .hero-text {
   text-align: center;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -210,10 +210,12 @@ h2{
 
 .index-desc{
     text-align: center;
+    font-size: 18px;
 }
 
 .section-text{
     margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 .facilities{
@@ -575,6 +577,13 @@ clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
 .swiper-pagination-bullet-active{
     color: white;
 }
+
+.mySwiper{
+    width: 1000px;
+    height: 500px;
+    margin-bottom: 20px;
+}
+
 /*html,
     body {
       position: relative;
@@ -821,3 +830,40 @@ filter: brightness(70%);
   color: white;
 }
 /*End of event months*/
+.facilities-heading{
+    margin-top:20px;
+}
+
+.facilities-button{
+    color: #53524E;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    width: 300px;
+    border: none;
+    background-color: #DED8D1;
+    margin-top:20px;
+}
+
+.facilities-button:hover{
+    background-color: #CEC3B2
+}
+
+hr{
+    height: 2px;
+    width: 250px;
+    margin-left:0px;
+    background: #53524E;
+}
+
+.facilities-desc{
+    font-size: 18px;
+}
+
+.facilities-info-row{
+    margin-top: 50px;
+}
+
+.s2-facilities{
+    margin-top:50px;
+}
