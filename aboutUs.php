@@ -29,32 +29,47 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="assets/country_club_home.jpg" alt="home-page-img" />
+                <div class="header_contrast">
+                    <img class="d-block w-100" src="assets/promo_photo1.jpg" alt="home-page-img" />
+                </div>
                 <div class="hero-text">
                     <h1 class="hero-header">About Us</h1>
-                    <h2 class="hero-subheader">Mandai Country Club</h2>
+                    <h2 class="hero-subheader"><a href="#TH" class='a-about'>The Heritage</a></h2>
                 </div>
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="assets/golf_course.jpg" alt="second-slide" />
+                <div class="header_contrast">
+                    <img class="d-block w-100" src="assets/promo_photo2.jpg" alt="second-slide" />
+                </div>
+                <div class="hero-text">
+                    <h1 class="hero-header">About Us</h1>
+                    <h2 class="hero-subheader"><a href="#VM" class='a-about'>Vision & Mission</a></h2>
+                </div>
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="assets/bowling_alley.jpg" alt="third-slide" />
+                <div class="header_contrast">
+                    <img class="d-block w-100" src="assets/promo_photo3.jpg" alt="third-slide" />
+                </div>
+                <div class="hero-text">    
+                    <h1 class="hero-header">About Us</h1>
+                    <h2 class="hero-subheader"><a href="#AA" class='a-about'>Awards & Accolades</a></h2>
+                </div>
             </div>
         </div>
         <!-- Left and right controls -->
+        <button class="carousel-control-prev" type="button" data-target="#myCarousel" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Prev</span>
+        </button>
+        
         <button class="carousel-control-next" type="button" data-target="#myCarousel" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
         </button>
-        <button class="carousel-control-prev" type="button" data-target="#myCarousel" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </button>
     </div>
 </header>
 
-<main class="container container-maxheight">
+<main class="container container-maxheight" id="TH">
     <section id="s1">
         <div class="row">
             <article class="col-sm">
@@ -91,7 +106,7 @@
 
 
     <section id="s2">
-    <h2 class="section-text">Vision and Mission</h2>       
+    <h2 class="section-text" id="VM">Vision and Mission</h2>       
         <p class="index-desc">
             Our vision at Mandai Country Club is to be the leading leisure and recreational destination in Singapore, known for our commitment to quality, innovation, and sustainability. We strive to provide our members and guests with a welcoming and inclusive environment, where they can relax, socialize, and pursue their passions. 
             Our mission is to create memorable experiences for our members and guests, by offering top-quality facilities, activities, and services that cater to their diverse interests and needs. We are committed to delivering exceptional value and customer satisfaction, while promoting environmental stewardship and social responsibility.
@@ -101,7 +116,7 @@
     
     
     <section id="s3">
-    <h2 class="section-text">Awards and Accolades</h2>     
+    <h2 class="section-text" id="AA">Awards and Accolades</h2>     
     <div class="row justify-content-center mt-2 pb-2">
     <div class="col-4">
     <div class="polaroid">
@@ -143,65 +158,7 @@
     </div>
     </section>
     
-    
-<!--     <section id="s3">
-            <h2 class="section-text facilities">Awards & Accolades</h2>
-                <div class="row facilities-container">
-                    <div class="column-home">
-                        <img src="assets/award.jpg" alt="swimming-pool-img" class="award-img"/>
-                    </div>
-                    <div class="column-home">
-                        <img src="assets/award2.png" alt="golf-course-img" class="award-img"/>
-                    </div>
-                </div>
-                <div class="row facilities-container mt-2 pb-2">
-                    <div class="column-home">
-                        <img src="assets/award3.png" alt="bowling_alley-img" class="award-img"/>
-                    </div>   
-                    <div class="column-home">
-                        <img src="assets/award4.png" alt="restaurant-img" class="award-img"/>
-                    </div>
-                </div>
-        </section>-->
-    
-            <main class="container contactUs">
-            <div class="row">
-            <div class="col-lg-6">
-                <br><br>
-<!--                <div id="map"></div>-->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15954.503888590922!2d103.8091387!3d1.4007913!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da3c3b81e04209%3A0x99a688cdca67ea90!2sMandai%20Executive%20Golf%20Course!5e0!3m2!1sen!2ssg!4v1679038851154!5m2!1sen!2ssg" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-            </div>
-            <div class="col-lg-6">
-            <h1>Contact Us</h1>
-            <p> Please fill out the form below to get in touch with us.</p>
-
-            <form action="process_contactUs.php" method="post">
-            
-                <div class="form-group">
-                    <label for="fname">First Name:</label>
-                    <input type="text" id="fname" name="fname" placeholder="Enter first name" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="lname">Last Name:</label>
-                    <input type="text" id="lname" name="lname" placeholder="Enter last name" class="form-control" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" placeholder="Enter email" class="form-control" required>
-                    </div>
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message" placeholder="Enter your message here" class="form-control" required></textarea>
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="contact-button">Submit</button>
-                </div>
-              
-                
-            </form>
-            </main>
-    
+   
 </main>
         <?php
             include "includes/footer.inc.php";
