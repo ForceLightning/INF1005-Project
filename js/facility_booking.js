@@ -180,7 +180,7 @@ function addListeners(facilityElements, timeSlotElements) {
                 //store the value of the facility
                 selectedFacility = selectionGroup.getAttribute('facility-name');
                 document.getElementById('selectedFacility').value = selectedFacility;
-                $(".form-group").filter("[facility-id!=" + selectionGroup.getAttribute('location-id') + "]").addClass("d-none");
+                $(".timeslot-group").filter("[facility-id!=" + selectionGroup.getAttribute('location-id') + "]").addClass("d-none");
                 $("[facility-id=" + selectionGroup.getAttribute('location-id') + "]").toggleClass("d-none");
             }
         });

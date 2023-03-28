@@ -6,7 +6,7 @@ include_once "includes/util.php";
 session_start();
 
 function insert_bookings() {
-    global $user_bookings, $branch, $bookings;
+    global $user_bookings, $branch, $bookings, $error_msg;
     $success = true;
     $config = parse_ini_file('../../private/project-db-config.ini', true);
     $conn = new mysqli($config[$branch]['servername'], $config[$branch]['username'], $config[$branch]['password'], $config[$branch]['dbname']);
