@@ -5,6 +5,9 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity= "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <!-- Custom CSS -->
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>        
         <!--Google fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +26,7 @@
     </head>
     <body class="d-flex flex-column min-vh-100">
         <?php 
-            include "nav.inc.php";
+            include "includes/nav.inc.php";
         ?>
         
         <header>
@@ -68,47 +71,49 @@
                         </p>
                     </article>
                 </div>
-            </section>
-            
-            <!-- Slideshow container -->
-            <div class="slideshow-container">
+                <link rel="stylesheet" href="css/main.css>
+                <script src="script.js"></script>
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
 
-            <!-- Full-width images with number and caption text -->
-            <div class="mySlides fade">
-            <div class="numbertext">1 / 3</div>
-                <img src="https://via.placeholder.com/650x250.png?text=Facilities" alt="Facilities" style="width:100%">
-            <div class="text">Facilities</div>
-            </div>
+                <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+                <!DOCTYPE html>
+                <html lang="en">
 
-            <div class="mySlides fade">
-            <div class="numbertext">2 / 3</div>
-                <img src="https://via.placeholder.com/650x250.png?text=Facilities" alt="Events" style="width:100%">
-            <div class="text">Events</div>
-            </div>
+                    <head>
+                        <meta charset="utf-8" />
+                        <title>Swiper demo</title>
+<!--                        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />-->
+                        <!-- Link Swiper's CSS -->
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
 
-            <div class="mySlides fade">
-            <div class="numbertext">3 / 3</div>
-                <img src="https://via.placeholder.com/650x250.png?text=Facilities" alt="Facilities" style="width:100%">
-            <div class="text">Facilities</div>
-            </div>
+                    <body>
+                        <!-- Swiper -->
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="assets/golf_course.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/golf_course.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/golf_course.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="assets/golf_course.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-pagination"></div>
+                        </div>
 
-            <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div>
-            <br>
+                </div>
+             
 
-            <!-- The dots/circles -->
-            <div style="text-align:center">
-              <span class="dot" onclick="currentSlide(1)"></span>
-              <span class="dot" onclick="currentSlide(2)"></span>
-              <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
-            
-           
         </main>
         <?php
-            include "footer.inc.php";
+            include "includes/footer.inc.php";
         ?>
     </body>
 </html>

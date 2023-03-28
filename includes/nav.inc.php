@@ -17,7 +17,7 @@
                     <a class="nav-link" href="aboutUs.php">ABOUT US</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link dropbtn" href="facilities.php" onmouseover="Dropdown()">FACILITIES</a>
+                    <a class="nav-link dropbtn" href="facilities.php" onmouseover="Dropdown()" onmouseout="Dropdown()">FACILITIES</a>
                     <div id="myDropdown" class="dropdown-content">
                     <a class="nav-link" href="golfPage.php">Golf Course</a>
                     <a class="nav-link" href="bowlingPage.php">Bowling Alley</a>
@@ -27,6 +27,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="events.php">EVENTS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactUs.php">CONTACT US</a>
                 </li>
             </ul>
                     

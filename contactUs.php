@@ -44,7 +44,7 @@
     <body onload="initMap()">
 	
         <?php 
-            include "nav.inc.php";
+            include "includes/nav.inc.php";
         ?>
         
         <main class="container contactUs">
@@ -78,7 +78,7 @@
                     <textarea id="message" name="message" placeholder="Enter your message here" class="form-control" required></textarea>
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-primary" type="submit">Submit</button>
+                    <button type="submit" class="contact-button">Submit</button>
                 </div>
               
                 
@@ -86,7 +86,7 @@
         </main>  
         
         <?php
-            include "footer.inc.php";
+            include "includes/footer.inc.php";
         ?>
     </body>
 </html>

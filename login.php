@@ -1,3 +1,10 @@
+<?php
+include_once "includes/util.php";
+session_start();
+if (isset($_SESSION['member_id'])) {
+    header("Location: index.php");
+}
+?>
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -29,7 +36,7 @@ and open the template in the editor.
 
 <body class="d-flex flex-column min-vh-100">
     <?php
-    include "nav.inc.php";
+    include "includes/nav.inc.php";
     ?>
     <main class="container2">
         <body class="unique-background-1">
@@ -56,7 +63,7 @@ and open the template in the editor.
             </form>
     </main>
     <?php
-    include "footer.inc.php";
+    include "includes/footer.inc.php";
     ?>
 </body>
 

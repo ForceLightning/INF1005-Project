@@ -571,22 +571,54 @@ clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
 .swiper-button-prev::after{
     font-size: 2rem;
 }
+/*html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }*/
+
+/*golf page swiper*
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
 /*
  awards img in about us 
 */
-.col-4 {
-    margin-left: 100px;
-}
 div.polaroid {
-  width: 70%;
+  width: 100%;
   background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 25px;
+/*  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
 }
 
 div.container {
   text-align: center;
-  padding: 10px 20px;
 }
 /*
 End of awards img in about us 
@@ -616,4 +648,90 @@ End of awards img in about us
 .events-button:hover {
     background-color: #ffffff;
     color: #000000;
+}
+
+.contact-button{
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 17px;
+    height: 50px;
+    width: 130px;
+    border: 1px solid #000000;
+    background-color: #000000;
+}
+
+.contact-button:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* room */
+
+.facilitiesmain{
+    margin: 40px 0;
+}
+.facility{
+    margin: 45px 0;
+    padding-bottom: 25px;
+    background: var(--dark);
+    color: #fff;
+}
+.facility-text{
+    padding: 5px 20px;
+}
+.facility-text h3{
+    font-size: 24px;
+}
+.facility-text ul{
+    list-style-type: none;
+    margin: 15px 0;
+}
+.facility-text ul li{
+    padding: 7px 0;
+}
+.facility-text ul li i{
+    color: var(--white);
+    margin-right: 10px;
+}
+
+.facility-image{
+    overflow: hidden;
+}
+.facility-image img{
+    transition: var(--transition);
+}
+.facility-image:hover img{
+    transform: scale(1.1);
+}
+@media (min-width: 900px){
+    .facilitiesmain-container{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .facility{
+        flex: 0 0 calc(50% - 20px);
+        margin: 10px;
+    }
+}
+@media(min-width: 1370px){
+    .facilitiesmain-container{
+        flex-direction: column;
+    }
+    .facility{
+        display: flex;
+        padding-bottom: 0;
+        margin: 5px 0;
+    }
+    .facility-image{
+        flex: 1;
+    }
+    .facility-image img{
+        height: 100%;
+    }
+    .facility-text{
+        flex: 1;
+    }
+    .facility:nth-child(even){
+        flex-direction: row-reverse;
+    }
 }
