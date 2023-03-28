@@ -110,11 +110,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     ?>
     <main>
         <?php
+        echo "<section>";
+        echo "<h2>Booking Summary</h2>";
         if (isset($error_msg)) {
             echo "<p>" . implode("<br>", $error_msg) . "</p>";
         } else {
             echo "<p>Bookings successful!</p>";
         }
+        echo "</section>";
         ?>
     </main>
     <?php
