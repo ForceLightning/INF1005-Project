@@ -14,6 +14,8 @@
     <script defer src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <!-- Bootstrap JS -->
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>  
     <!-- Custom JS -->
     <!-- TODO: Comment this out after writing main.js -->
     <script defer src="js/main.js"></script>
@@ -49,10 +51,10 @@
         <section id="s2">
             <h2 class="section-text">Our Offers</h2>
             
-            <!-- Slideshow container -->
+<!--             Slideshow container 
             <div class="slideshow-container">
 
-              <!-- Full-width images with number and caption text -->
+               Full-width images with number and caption text 
               <div class="mySlides fade">
                 <img src="assets/promo_photo1.jpg" alt="promo_photo1" style="width:100%">
               </div>
@@ -65,17 +67,33 @@
                 <img src="assets/promo_photo3.jpg"  alt="promo_photo3" style="width:100%">
               </div>
 
-              <!-- Next and previous buttons -->
+               Next and previous buttons 
               <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
               <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div>
             <br>
 
-            <!-- The dots/circles -->
+             The dots/circles 
             <div style="text-align:center">
               <span class="dot" onclick="currentSlide(1)"></span>
               <span class="dot" onclick="currentSlide(2)"></span>
               <span class="dot" onclick="currentSlide(3)"></span>
+            </div>-->
+            
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/promo_photo1.jpg" alt="promo_photo1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/promo_photo2.jpg" alt="promo_photo1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/promo_photo3.jpg" alt="promo_photo1">
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
         </section>
         <section id="s3">

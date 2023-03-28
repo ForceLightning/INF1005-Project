@@ -44,13 +44,13 @@ var swiper = new Swiper('.gallery-slider', {
     },
     breakpoints: {
         0: {
-            slidesPerView: 1,
+            slidesPerView: 1
         },
         768: {
-            slidesPerView: 3,
+            slidesPerView: 3
         },
         991: {
-            slidesPerView: 4,
+            slidesPerView: 4
         },
     },
 });
@@ -65,6 +65,7 @@ var swiper = new Swiper(".mySwiper", {
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
+        
       },
       navigation: {
         nextEl: ".swiper-button-next",

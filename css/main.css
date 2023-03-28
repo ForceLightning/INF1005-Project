@@ -557,19 +557,23 @@ clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
     height: 5rem;
     width: 5rem;
     line-height: 5rem;
-    background: var(--white);
-    color: var(--black);
+    background: transparent;
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover{
-    background: var(--primary);
+    background: transparent;
     color: var(--white);
 }
 
 .swiper-button-next::after,
 .swiper-button-prev::after{
     font-size: 2rem;
+    color: white;
+}
+
+.swiper-pagination-bullet-active{
+    color: white;
 }
 /*html,
     body {
