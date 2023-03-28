@@ -14,7 +14,7 @@ function insert_bookings() {
         $success = false;
     } else {
         for ($i = 0; $i < count($user_bookings); $i++) {
-            $stmt = $conn->prepare("SELECT * FROM bookings WHERE booking_id = ? AND time_end > NOW() AND time_end < NOW() + INTERVAL 7 DAY AND booked = 0");
+            $stmt = $conn->prepare("SELECT * FROM bookings WHERE booking_id = ? AND time_end > NOW() AND DATE(time_end) < CURDATE() + INTERVAL 7 DAY AND booked = 0");
             $booking_id = $user_bookings[$i];
             // check that all booking_ids are valid
             $stmt->bind_param("i", $booking_id);
@@ -37,7 +37,6 @@ function insert_bookings() {
                             "date" => $date,
                             "start_time" => $start_time,
                             "end_time" => $end_time
-
                         );
                     }
                 }
@@ -115,17 +114,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
     http_response_code(405);
 }
-
 ?>
 <!DOCTYPE html>
 <html>
 
-<head>
-    <?php include_once "includes/header.inc.php"; ?>
-    <title>Bookings</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+    <head>
+        <?php include_once "includes/header.inc.php"; ?>
+        <title>Bookings</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
 
 <body>
     <?php
