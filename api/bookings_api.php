@@ -28,7 +28,7 @@
                         // add the booking to the array of bookings for the location
                         $bookings[$row["location_id"]]["bookings"][] = $booking;
                         $bookings[$row["location_id"]]["description"] = $row["description"];
-                        $bookings[$row["location_name"]]["bookings"][] = $row["location_name"];
+                        $bookings[$row["location_name"]]["bookings"] = $row["location_name"];
                     }
                     echo json_encode($bookings);
                 } else {
