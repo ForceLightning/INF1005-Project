@@ -11,7 +11,27 @@ $(document).ready(function () {
     //to store the values to be passed into the database
     const selectedTimeSlots = [];
     const selectedFacility = "";
-    
+
+    const bookingSlots = getBookingSlots(true);
+    // TODO: Iterate through the dict that maps location_id => timeslots
+    // and add the timeslots to the corresponding facility card
+    for (let location_id of Object.keys(bookingSlots)) {
+        // Get the timeslots for this location
+        let timeslots = bookingSlots[location_id];
+        // Get the facility card for this location
+        let facilityCard = document.getElementById(location_id);
+        // Add the timeslots to the facility card
+        for (let timeslot of timeslots) {
+            // Create a new timeslot element
+            let timeslotElement = document.createElement("div");
+            timeslotElement.classList.add("timeslot-white");
+            timeslotElement.setAttribute("data-timeslot", timeslot);
+            timeslotElement.innerHTML = timeslot;
+            // Add the timeslot element to the facility card
+            facilityCard.appendChild(timeslotElement);
+        }
+    }
+
     //add event listeners to the facility cards
     facilityElements.forEach((element) => {
         //element.classList.toggle('selected');
@@ -19,7 +39,7 @@ $(document).ready(function () {
             //check if the clicked element is a child of the facility card element
             if (event.target.closest('.facility-card')) {
                 facilityElements.forEach((card) => {
-                    if(card.classList.contains('selected') && card !== element){
+                    if (card.classList.contains('selected') && card !== element) {
                         card.classList.remove('selected');
                     }
                 });
@@ -62,7 +82,7 @@ $(document).ready(function () {
             //console.log(selectedTimeSlots); // test
         });
     });
-    
+
     const form = document.querySelector('#booking-form');
     form.addEventListener('submit', (event) => {
         event.preventDefault(); // prevent the form from submitting normally
@@ -73,18 +93,28 @@ $(document).ready(function () {
             method: 'POST',
             body: formData
         })
-        .then(response => {
-            if (response.ok) {
-                console.log('Form data submitted successfully');
-                // do something here, such as redirect to a thank you page
-                window.location.href = 'process_facility_booking.php';
-            } else {
-                console.error('Error submitting form data');
-            }
-        })
-        .catch(error => {
-            console.error(error);
-        });
+            .then(response => {
+                if (response.ok) {
+                    console.log('Form data submitted successfully');
+                    // do something here, such as redirect to a thank you page
+                    window.location.href = 'process_facility_booking.php';
+                } else {
+                    console.error('Error submitting form data');
+                }
+            })
+            .catch(error => {
+                console.error(error);
+            });
     });
 
 });
+
+function getBookingSlots(debug) {
+    const url = debug ? "api/bookings_api.json" : "api/bookings_api.php";
+    let bookingSlots = {};
+    $.get(url, function (data) {
+        bookingSlots = data;
+        console.log(bookingSlots);
+    });
+    return bookingSlots;
+}
