@@ -31,6 +31,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="contactUs.php">CONTACT US</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="facility_booking.php">FACILITY BOOKING</a>
+                </li>
             </ul>
                     
             <ul class="navbar-nav navbar-right">
