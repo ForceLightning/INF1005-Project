@@ -6,7 +6,6 @@
         <!-- Custom CSS -->
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-
         <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>        
         <!--Google fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -107,8 +106,6 @@
                             <div class="swiper-button-prev"></div>
                             <div class="swiper-pagination"></div>
                         </div>
-
-                </div>
              
 
         </main>
