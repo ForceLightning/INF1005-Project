@@ -3,14 +3,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/javascript.js to edit this template
  */
 
+let selectedTimeSlots = [];
+let selectedFacility = "";
+
 $(document).ready(function () {
     //getting all facility elements 
     const facilityElements = document.querySelectorAll('.facility-card');
     //getting all timeslot elements
     const timeSlotElements = document.querySelectorAll('.timeslot-white');
     //to store the values to be passed into the database
-    const selectedTimeSlots = [];
-    const selectedFacility = "";
 
     const bookingSlots = getBookingSlots(true);
     // TODO: Iterate through the dict that maps location_id => timeslots
@@ -67,6 +68,7 @@ function displayBookingSlots(bookingSlots) {
         let facilityCard = document.createElement("div");
         facilityCard.classList.add("facility-card", "col-lg-4", "col-md-6", "mb-3");
         facilityCard.setAttribute("facility-name", bookingSlots[location_id]["location_name"]);
+        facilityCard.setAttribute("location-id", location_id);
         facilityCard.innerHTML = `
             <div class="text-black-50">
             <div class="row">
@@ -79,7 +81,7 @@ function displayBookingSlots(bookingSlots) {
             </div>
         `;
         let timeslotContainer = document.createElement("div");
-        timeslotContainer.classList.add("timeslot-group", "col-xl-4", "col-lg-6", "col-sm-6", "col-xs-6", "mb-2");
+        timeslotContainer.classList.add("timeslot-group", "col-xl-4", "col-lg-6", "col-sm-6", "col-xs-6", "mb-2", "d-none");
         timeslotContainer.setAttribute("facility-id", location_id);
         // Add the timeslots to the facility card
         for (let timeslot of timeslots) {
@@ -99,6 +101,7 @@ function displayBookingSlots(bookingSlots) {
         // add the facility card to the page
         document.getElementById("facility-cards").appendChild(facilityCard);
         document.getElementsByClassName("timeslot-row")[0].appendChild(timeslotContainer);
+        // $("[facility-id=" + location_id + "]").toggleClass("d-none");
     }
 }
 
@@ -122,6 +125,7 @@ function addListeners(facilityElements, timeSlotElements) {
                 //store the value of the facility
                 selectedFacility = selectionGroup.getAttribute('facility-name');
                 document.getElementById('selectedFacility').value = selectedFacility;
+                $("[facility-id=" + selectionGroup.getAttribute('location-id') + "]").toggleClass("d-none");
 
             }
         });
@@ -138,11 +142,11 @@ function addListeners(facilityElements, timeSlotElements) {
 
             //data input portion
             //getting attribute from the clicked button
-            const timeSlot = selectionGroup.getAttribute('data-timeslot');
+            const booking_id = selectionGroup.getAttribute('booking-id');
             //checking if the data already exists in the array
-            const index = selectedTimeSlots.indexOf(timeSlot);
+            const index = selectedTimeSlots.indexOf(booking_id);
             if (index === -1) {
-                selectedTimeSlots.push(timeSlot); //add to the array if not already selected
+                selectedTimeSlots.push(booking_id); //add to the array if not already selected
                 document.getElementById('selectedTimeSlots').value = selectedTimeSlots.join(",");
                 //timeSlot.setAttribute("value", selectedTimeSlots);
             } else {
