@@ -15,7 +15,7 @@ include "includes/nav.inc.php";
 
 <header>
     <div class="hero-image">
-        <img class="img-fluid" src="assets/facilities_hero_golf.jpg" alt="home-page-img" />
+        <img class="img" src="assets/facilities_hero_golf.jpg" alt="home-page-img" />
     </div>
     <div class="hero-text">
         <h1 class="hero-header">Facilities</h1>
