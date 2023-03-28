@@ -141,7 +141,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "<h4>Bookings successful!</h4>";
             if (isset($bookings)) {
                 for ($i = 0; $i < count($bookings); $i++) {
-                    echo "<p>" . $bookings[$i]["facility_name"] . " on " . $bookings[$i]["date"] . " from " . $bookings[$i]["start_time"] . " to " . $bookings[$i]["end_time"] . "</p>";
+                    echo "<p>" . $bookings[$i]["facility_name"] . " on " . $bookings[$i]["date"] . " at " . $bookings[$i]["start_time"] . "</p>";
                 }
             }
             // var_dump($bookings);
