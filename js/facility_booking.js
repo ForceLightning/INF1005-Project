@@ -9,6 +9,9 @@ let selectedDate = "";
 
 let startTimeList = [];
 let endTimeList = [];
+
+let timeslotBlueprint;
+
 $(document).ready(function () {
 //getting all facility elements 
     const facilityElements = document.querySelectorAll('.facility-card');
@@ -16,7 +19,7 @@ $(document).ready(function () {
     const timeSlotElements = document.querySelectorAll('.timeslot-white');
     //getting all date elements
     const dateCardElements = document.querySelectorAll('.date-card');
-
+    timeslotBlueprint = document.querySelector("#timeslotBlueprint");
     //to store the values to be passed into the database
     const bookingSlots = getBookingSlots(false);
     // TODO: Iterate through the dict that maps location_id => timeslots
@@ -48,7 +51,6 @@ function getBookingSlots(debug) {
     let bookingSlots = {};
     $.get(url, function (data) {
         bookingSlots = data;
-        console.log(bookingSlots);
         displayBookingSlots(bookingSlots);
         //getting all facility elements 
         const facilityElements = document.querySelectorAll('.facility-card');
@@ -82,7 +84,7 @@ function displayBookingSlots(bookingSlots) {
             <div>
                 <img src="` + bookingSlots[location_id]["image_url"] + `" class="img">
             </div>
-            <div class="col-xl-6 col-lg-6 col-md-6 mb-0">
+            <div>
             <div>` + bookingSlots[location_id]["location_name"] + `</div>
             <hr>
             <div>` + bookingSlots[location_id]["description"] + `</div>
@@ -190,15 +192,28 @@ function displayBookingSlots(bookingSlots) {
 function updateTimeslots(parentNode, facilityID, day) {
     let offset = 0;
     let iter = 0;
-    console.log(day);
+
     if (parseInt(day) === 1) {
         let now = new Date();
         //-8 static value, as that is the start of the day 
         let offset = now.toLocaleTimeString('en-US', {hour12: false}).split(/[- :]/)[0] - 8;
         offset = Math.max(0, offset);
         offset = Math.floor(offset / 2);
-        let blueprint = document.getElementById("timeslotBlueprint");
+        var blueprint = timeslotBlueprint;
         blueprint.setAttribute("class", "");
+        //updating the row dates
+        let dateRow = blueprint.children[0];
+
+        for (let i = 0; i < 6; i++) {
+            //console.log(startTimeList[i * 5].date.toLocaleDateString());
+            const dayOfMonth = startTimeList[i * 5].date.getDate(); // get the day of the month as a number
+            //const monthOfYear = startTimeList[i * 5].date.getMonth() + 1; // get the month of the year as a number (add 1 to make it 1-indexed)
+            const monthsOfYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            const monthOfYear = monthsOfYear[startTimeList[i * 5].date.getMonth()];
+            const formattedDate = `${dayOfMonth} ${monthOfYear}`; // concatenate the numbers in the desired format
+
+            dateRow.children[i].children[0].innerHTML = formattedDate;
+        }
         let timeslotRow = blueprint.children[1];
         let timeslotGroup = timeslotRow.children;
         for (let i = 0; i < 5; i++) {
@@ -253,8 +268,20 @@ function updateTimeslots(parentNode, facilityID, day) {
 
         //calculate based off the day and facility to obtain array position
         iter = (facilityID - 1) * 30 + (day - 1) * 5;
-        let blueprint = document.getElementById("timeslotBlueprint");
+        let blueprint = timeslotBlueprint;
         blueprint.setAttribute("class", "");
+        //updating the row dates
+        let dateRow = blueprint.children[0];
+        for (let i = 0; i < 6; i++) {
+            const dayOfMonth = startTimeList[i * 5].date.getDate(); // get the day of the month as a number
+            //const monthOfYear = startTimeList[i * 5].date.getMonth() + 1; // get the month of the year as a number (add 1 to make it 1-indexed)
+            const monthsOfYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            const monthOfYear = monthsOfYear[startTimeList[i * 5].date.getMonth()];
+            const formattedDate = `${dayOfMonth} ${monthOfYear}`; // concatenate the numbers in the desired format
+
+            dateRow.children[i].children[0].innerHTML = formattedDate;
+        }
+
         let timeslotRow = blueprint.children[1];
         let timeslotGroup = timeslotRow.children;
 
@@ -320,7 +347,6 @@ function addListeners(facilityElements, timeSlotElements, dateCardElements) {
                 //$("[facility-id=" + selectionGroup.getAttribute('location-id') + "]").toggleClass("d-none");
                 //$(".form-group").filter("[facility-id!=" + selectionGroup.getAttribute('location-id') + "]").addClass("d-none");
                 //$("[facility-id=" + selectionGroup.getAttribute('location-id') + "]").toggleClass("d-none");
-                console.log(selectionGroup.parentNode);
                 //if the timeslots is currently not under the selected facility
                 if (selectionGroup.querySelector("#timeslotBlueprint") === null) {
                     //update the timeslots
@@ -328,11 +354,11 @@ function addListeners(facilityElements, timeSlotElements, dateCardElements) {
                     unselectDays();
                 } else { //if the timeslots are currently under the selected facility
                     //if it is invisible
-                    if (selectionGroup.querySelector("#timeslotBlueprint").classList.contains("d-none")) {
+                    if (timeslotBlueprint.classList.contains("d-none")) {
                         //update the timeslots
                         updateTimeslots(selectionGroup, selectionGroup.getAttribute('location-id'), 1);
                         //make it appear
-                        selectionGroup.querySelector("#timeslotBlueprint").classList.remove("d-none");
+                        timeslotBlueprint.classList.remove("d-none");
                         unselectDays();
 
 
@@ -340,11 +366,10 @@ function addListeners(facilityElements, timeSlotElements, dateCardElements) {
                         //update the timeslots
                         updateTimeslots(selectionGroup, selectionGroup.getAttribute('location-id'), 1);
                         //hide the timeslots
-                        selectionGroup.querySelector("#timeslotBlueprint").classList.toggle("d-none");
+                        timeslotBlueprint.classList.toggle("d-none");
                         unselectDays();
                     }
                 }
-                console.log(selectionGroup.querySelector("#timeslotBlueprint").querySelector(".date-row").children);
             }
         });
     });
@@ -399,11 +424,18 @@ function addListeners(facilityElements, timeSlotElements, dateCardElements) {
     dateCardElements.forEach((element) => {
         element.addEventListener('click', (event) => {
             event.stopPropagation();
+
+            var same = true;
             //check if the clicked element is a child of the facility card element
             dateCardElements.forEach((card) => {
-                if (card.classList.contains('selected') && card !== element) {
-                    card.classList.remove('selected');
+                //if the element clicked was already clicked previously, do not unselect the options selected
+                if (same === true) {
+                    if (card.classList.contains('selected') && card !== element) {
+                        same = false;
+                    }
                 }
+                card.classList.remove('selected');
+
             });
             //visual feedback portion
             const selectionGroup = event.target.closest('.date-card');
@@ -411,11 +443,13 @@ function addListeners(facilityElements, timeSlotElements, dateCardElements) {
             selectionGroup.classList.toggle('selected');
             //store the value of the facility
             selectedDate = selectionGroup.getAttribute('date-data');
-            console.log(selectionGroup.parentNode);
-            updateTimeslots(selectionGroup.parentNode.parentNode.parentNode.parentNode,
-                    selectionGroup.parentNode.parentNode.parentNode.parentNode.getAttribute('location-id'),
-                    selectionGroup.getAttribute('day'));
-            //document.getElementById('selectedFacility').value = selectedFacility;
+            //console.log(selectionGroup.parentNode);
+            if (same === false) {
+                updateTimeslots(selectionGroup.parentNode.parentNode.parentNode.parentNode,
+                        selectionGroup.parentNode.parentNode.parentNode.parentNode.getAttribute('location-id'),
+                        selectionGroup.getAttribute('day'));
+            }
+            ////document.getElementById('selectedFacility').value = selectedFacility;
             //$(".form-group").filter("[facility-id!=" + selectionGroup.getAttribute('location-id') + "]").addClass("d-none");
             //$("[facility-id=" + selectionGroup.getAttribute('location-id') + "]").toggleClass("d-none");
         });
@@ -424,12 +458,11 @@ function addListeners(facilityElements, timeSlotElements, dateCardElements) {
 
 function unselectDays() {
     //set all the days to unselected
-    for (let i = 0; i < document.querySelector("#timeslotBlueprint").querySelector(".date-row").children.length; i++) {
-        let element = document.querySelector("#timeslotBlueprint").querySelector(".date-row").children[i];
+    for (let i = 0; i < timeslotBlueprint.querySelector(".date-row").children.length; i++) {
+        let element = timeslotBlueprint.querySelector(".date-row").children[i];
         //if the 1st element isnt selected, make it selected, default to selected
         if (i === 0) {
             if (!element.children[0].classList.contains("selected")) {
-                console.log(element.children[0]);
                 element.children[0].classList.toggle("selected");
             }
 
@@ -439,5 +472,9 @@ function unselectDays() {
             }
         }
     }
+
+    //reset the booking ids stored
+    document.querySelector("#selectedTimeSlots").setAttribute("value", "");
+
 }
 
