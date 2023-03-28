@@ -356,6 +356,9 @@ li:hover::after {
   padding-right: 5px;
 }
 
+.navbar-light .navbar-nav .nav-link {
+  color: rgba(0, 0, 0, 0.8);
+}
 /* About us heritage gallery */
 div.gallery {
   margin: 5px;
