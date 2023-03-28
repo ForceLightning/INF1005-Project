@@ -3,6 +3,12 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to c
 Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
 */
 
+.timeslot-white.available {
+  background-color: #f8f9fa; /* change the background color */
+  border: 1px solid #14EB74; /* add a border */
+  color: #14EB74; /* change the text color */
+}
+
 .timeslot-white.selected {
   background-color: #f8f9fa; /* change the background color */
   border: 1px solid #007bff; /* add a border */
@@ -10,7 +16,22 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
 }
 
 
+.timeslot-white.disabled {
+  background-color: #f8f9fa; /* change the background color */
+  border: 1px solid #EE1123; /* add a border */
+  color: #EE1123; /* change the text color */
+}
+
+
+
 .facility-card.selected {
+  background-color: #f8f9fa; /* change the background color */
+  border: 1px solid #007bff; /* add a border */
+  color: #007bff; /* change the text color */
+}
+
+
+.date-card.selected {
   background-color: #f8f9fa; /* change the background color */
   border: 1px solid #007bff; /* add a border */
   color: #007bff; /* change the text color */

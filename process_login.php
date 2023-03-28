@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . "/includes/util.php";
-
+session_start();
 function validate_input()
 {
     global $email, $pwd, $error_msg, $success;
@@ -62,10 +62,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($success) {
         check_login();
         if ($success) {
-            session_start();
             $_SESSION['email'] = $email;
             $_SESSION['member_id'] = $member_id;
-            header("Location: index.php");
+            if (isset($_SESSION["temp_bookings"])) {
+                header("Location: process_facility_booking.php");
+            } else {
+                header("Location: index.php");
+            }
         }
     }
 }
