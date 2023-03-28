@@ -641,6 +641,10 @@ End of awards img in about us
     text-align: left;
     padding: 30px;
 }
+.events-desc2 {
+    text-align: right;
+    padding: 30px;
+}
 
 .events-heading{
     text-align: center;
@@ -794,8 +798,6 @@ filter: brightness(70%);
 /*Event months*/
 .filterDiv {
   float: left;
-  background-color: #2196F3;
-  color: #ffffff;
   width: 200px;
   line-height: 100px;
   text-align: center;
@@ -813,7 +815,7 @@ filter: brightness(70%);
 }
 
 /* Style the buttons */
-.btn {
+.events-button2 {
   border: none;
   outline: none;
   padding: 12px 16px;
@@ -821,11 +823,11 @@ filter: brightness(70%);
   cursor: pointer;
 }
 
-.btn:hover {
+.events-button2:hover {
   background-color: #ddd;
 }
 
-.btn.active {
+.events-button2.active {
   background-color: black;
   color: white;
 }

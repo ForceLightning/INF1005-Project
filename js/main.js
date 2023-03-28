@@ -95,8 +95,8 @@ window.onclick = function(event) {
     }
   }
 }
-
-filterSelection("all");
+/*Event months filter*/
+filterSelection("all")
 function filterSelection(c) {
   var x, i;
   x = document.getElementsByClassName("filterDiv");
@@ -138,4 +138,4 @@ for (var i = 0; i < btns.length; i++) {
     this.className += " active";
   });
 }
-
+/*End of event months filter*/
