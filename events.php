@@ -24,15 +24,15 @@
         <?php 
             include "includes/nav.inc.php";
         ?>
-        <header>
+<!--        <header>
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <!-- Indicators -->
+         Indicators 
         <ol class="carousel-indicators">
             <li data-target="#myCarousel" data-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></li>
             <li data-target="#myCarousel" data-slide-to="1" aria-label="Slide 2"></li>
             <li data-target="#myCarousel" data-slide-to="2" aria-label="Slide 3"></li>
         </ol>
-        <!-- Wrapper for slides -->
+         Wrapper for slides 
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img class="d-block w-100" src="assets/country_club_home.jpg" alt="home-page-img" />
@@ -48,7 +48,7 @@
                 <img class="d-block w-100" src="assets/bowling_alley.jpg" alt="third-slide" />
             </div>
         </div>
-        <!-- Left and right controls -->
+         Left and right controls 
         <button class="carousel-control-next" type="button" data-target="#myCarousel" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
@@ -58,8 +58,8 @@
             <span class="sr-only">Previous</span>
         </button>
     </div>
-</header>
-        
+</header>-->
+
         <main class="container">
             
             <section id="s1">
@@ -79,13 +79,17 @@
                         </a>
                     </div>
                     <div class="column">
+                    <a target="_blank" href="assets\pool_party_poster.png">
                     <img class="events-img" src="assets\pool_party_poster.png" width="100%" alt="Pool Party">
+                    </a>
                     </div>
                 </div>
                 
                 <div class ="row">
                     <div class="column">
+                    <a target="_blank" href="assets\happy_hour_poster.png">
                     <img class="events-img" src="assets\happy_hour_poster.png" width="100%" alt="Happy Hour">
+                    </a>
                     </div>
                     <div class="column">
                         <h3 class="events-heading">Happy Hour</h3>
@@ -117,13 +121,17 @@
                         </a>
                     </div>
                     <div class="column">
+                    <a target="_blank" href="assets\zoo_poster.png">
                     <img class="events-img" src="assets\zoo_poster.png" width="100%" alt="Zoo">
+                    </a>
                     </div>
                 </div>
                 
                <div class ="row">
                     <div class="column">
+                    <a target="_blank" href="assets\bowling_night_poster.png">
                     <img class="events-img" src="assets\bowling_night_poster.png" width="100%" alt="Happy Hour">
+                    </a>
                     </div>
                     <div class="column">
                         <h3 class="events-heading">Bowling Night</h3>
@@ -160,7 +168,9 @@
                         </a>
                     </div>
                     <div class="column">
+                    <a target="_blank" href="assets\hari_raya_poster.png">
                     <img class="events-img" src="assets\hari_raya_poster.png" width="100%" alt="Zoo">
+                    </a>
                     </div>
                 </div>
                 
