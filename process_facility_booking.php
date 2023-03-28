@@ -28,7 +28,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
                 crossorigin="anonymous">
         </script>
         <!-- custom JS, in local files -->
-        <script defer src="js/main.js" ></script> <!-- this line will auto func the document ready function in js-->
+        <script defer src="js/facility_booking.js" ></script> <!-- this line will auto func the document ready function in js-->
 
         <title>Placeholder</title>
         <meta charset="UTF-8">
@@ -44,11 +44,18 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this temp
              * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
              * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
              */
+            var_dump($_POST);
             $success = true;
             //the single facility selected
-            $selectedFacility = sanitize_input($_POST['selected_facility'], true);
+//            $selectedFacility = $selectedTimeSlots = "";
+            
+            $selectedFacility = sanitize_input($_POST["facility"]);
             //the array of time slots selected
-            $selectedTimeSlots = sanitize_input($_POST['selected_time_slots'], true);
+            $selectedTimeSlots = sanitize_input($_POST["timeslot"]);
+
+            
+//            $timeslots = $_POST['timeslot-white'];
+//            echo "Facility selected: " . $timeslots . "<br>";
 
             if($selectedFacility == ""){
                 echo "No facility selected";
