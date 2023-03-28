@@ -19,16 +19,27 @@ p, h5 {
    font-family: "Garamond", serif;
 }
 
+header{
+    position:relative;
+}
+
 body {
 background-color: #ffffff;
 }
 
 .hero-header{
-    font-size: 75px;
+    font-size: 5vw;
+}
+
+.hero-text{
+    position: absolute;A
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .hero-subheader{
-    font-size: 40px;
+    font-size: 4vw;
 }
 .container2 {
     width: max-content;
@@ -579,8 +590,8 @@ clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
 }
 
 .mySwiper{
-    width: 1000px;
-    height: 500px;
+/*    width: 1000px;
+    height: 500px;*/
     margin-bottom: 20px;
 }
 
