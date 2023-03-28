@@ -13,7 +13,7 @@
 		}
 	</style>
     </head>
-<body class="d-flex flex-column min-vh-100" onload="initMap()">
+<body class="d-flex flex-column min-vh-100">
     <?php 
         include "includes/nav.inc.php";
     ?>
