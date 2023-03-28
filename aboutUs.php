@@ -150,10 +150,11 @@
     </div>
     </div>
     </div>
-    </section>
-    
-   
+    </section>  
 </main>
+    
+    <button onclick="topFunction()" id="scroll-button" title="Go to top">Top</button>
+    
         <?php
             include "includes/footer.inc.php";
         ?>

@@ -674,7 +674,7 @@ End of awards img in about us
 }
 
 .events-button:hover {
-    background-color: #CEC3B2
+    background-color: #CEC3B2;
 }
 
 .contact-button{
@@ -690,7 +690,7 @@ End of awards img in about us
 }
 
 .contact-button:hover {
-    background-color: #CEC3B2
+    background-color: #CEC3B2;
 }
 
 /* room */
@@ -841,7 +841,7 @@ filter: brightness(70%);
 }
 
 .events-button2:hover {
-    background-color: #CEC3B2
+    background-color: #CEC3B2;
 }
 
 .events-button2.active {
@@ -927,3 +927,25 @@ hr{
 .facilities-heading{
     text-align: center;
 }
+
+/*Scroll to Top*/
+#scroll-button {    
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #DED8D1;
+  color: #53524E;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#scroll-button:hover {
+    background-color: #CEC3B2;
+}
+/*End of Scroll to Top*/
