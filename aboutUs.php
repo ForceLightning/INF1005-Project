@@ -54,7 +54,7 @@
     </div>
 </header>
 
-<main class="container">
+<main class="container container-maxheight">
     <section id="s1">
         <div class="row">
             <article class="col-sm">
