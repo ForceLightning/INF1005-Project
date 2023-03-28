@@ -93,7 +93,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
             if (count($user_bookings) == 0) {
                 http_response_code(400);
-                header("Location: facility_booking.php");
                 exit();
             }
             insert_bookings();
@@ -107,7 +106,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     } else {
         http_response_code(400);
-        echo "No booking slots selected.";
     }
 } else if (isset($_SESSION["temp_bookings"]) && isset($_SESSION["member_id"])) {
     $user_bookings = $_SESSION["temp_bookings"];
