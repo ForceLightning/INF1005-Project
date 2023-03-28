@@ -37,30 +37,9 @@ $(document).ready(function () {
 
     const form = document.querySelector('#booking-form');
     form.addEventListener('submit', (event) => {
-        event.preventDefault(); // prevent the form from submitting normally
-        const formData = new FormData(event.target, event.submitter); // create a FormData object from the form
-        // formData.append('facility', selectedFacility); // add the selectedFacility value to the form data
-        formData.append('booking-slots', JSON.stringify(selectedTimeSlots)); // add the selectedTimeSlots array to the form data
-        for (let pair of formData.entries()) {
-            console.log(pair[0] + ': ' + pair[1]);
-        }
-        console.log(formData);
-        fetch('process_facility_booking.php', {
-            method: 'POST',
-            body: formData
-        })
-                .then(response => {
-                    if (response.ok) {
-                        console.log('Form data submitted successfully');
-                        // do something here, such as redirect to a thank you page
-                        window.location.href = 'process_facility_booking.php';
-                    } else {
-                        console.error('Error submitting form data');
-                    }
-                })
-                .catch(error => {
-                    console.error(error);
-                });
+        // add the selected timeslots to the form
+        const timeslotInput = document.querySelector('#booking-slots');
+        timeslotInput.value = JSON.stringify(selectedTimeSlots);
     });
 });
 

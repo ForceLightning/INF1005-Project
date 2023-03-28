@@ -42,6 +42,10 @@
                     </div>
 
                     <div class="form-group">
+                        <input class="form-control" type="hidden" name="booking-slots" id="booking-slots">
+                    </div>
+
+                    <div class="form-group">
                         <button class="btn btn-primary" type="submit">Submit</button>
                     </div>
 

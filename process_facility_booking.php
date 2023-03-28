@@ -99,6 +99,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             insert_bookings();
         } else {
             $_SESSION["temp_bookings"] = $user_bookings;
+            if (headers_sent()) {
+                die("cannot redirect; headers already sent (output).");
+            }
             header("Location: login.php");
             exit();
         }
