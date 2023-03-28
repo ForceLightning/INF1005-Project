@@ -41,6 +41,10 @@ $(document).ready(function () {
         const formData = new FormData(event.target, event.submitter); // create a FormData object from the form
         // formData.append('facility', selectedFacility); // add the selectedFacility value to the form data
         formData.append('booking-slots', JSON.stringify(selectedTimeSlots)); // add the selectedTimeSlots array to the form data
+        for (let pair of formData.entries()) {
+            console.log(pair[0] + ': ' + pair[1]);
+        }
+        console.log(formData);
         fetch('process_facility_booking.php', {
             method: 'POST',
             body: formData
@@ -146,12 +150,14 @@ function displayBookingSlots(bookingSlots) {
                     if (!timeslotgroup[i].children[0].classList.contains("available")) {
                         timeslotgroup[i].children[0].classList.toggle("available");
                     }
+                    timeslotgroup[i].children[0].setAttribute("data-timeslot", timeslot["booking_id"]);
 
                 } else if (timeslot["booked"] === 1) {
                     timeslotgroup[i].children[0].setAttribute("disabled", "");
                     if (!timeslotgroup[i].children[0].classList.contains("disabled")) {
                         timeslotgroup[i].children[0].classList.toggle("disabled");
                     }
+                    timeslotgroup[i].children[0].setAttribute("data-timeslot", timeslot["booking_id"]);
 
                 }
             }
@@ -219,6 +225,8 @@ function addListeners(facilityElements, timeSlotElements, dateCardElements) {
                 document.getElementById('selectedFacility').value = selectedFacility;
                 $(".timeslot-group").filter("[facility-id!=" + selectionGroup.getAttribute('location-id') + "]").addClass("d-none");
                 $("[facility-id=" + selectionGroup.getAttribute('location-id') + "]").toggleClass("d-none");
+                //$(".form-group").filter("[facility-id!=" + selectionGroup.getAttribute('location-id') + "]").addClass("d-none");
+                //$("[facility-id=" + selectionGroup.getAttribute('location-id') + "]").toggleClass("d-none");
             }
         });
     });
@@ -238,7 +246,7 @@ function addListeners(facilityElements, timeSlotElements, dateCardElements) {
                 //checking if the data already exists in the array
                 const index = selectedTimeSlots.indexOf(timeSlot);
                 if (index === -1) {
-                    selectedTimeSlots.push(timeSlot); //add to the array if not already selected
+                    selectedTimeSlots.push(parseInt(timeSlot)); //add to the array if not already selected
                     document.getElementById('selectedTimeSlots').value = selectedTimeSlots.join(",");
                     //timeSlot.setAttribute("value", selectedTimeSlots);
                 } else {
@@ -269,7 +277,7 @@ function addListeners(facilityElements, timeSlotElements, dateCardElements) {
 //        //console.log(selectedTimeSlots); // test
     });
 
-    dateCardElements.forEach((element)=>{
+    dateCardElements.forEach((element) => {
         element.addEventListener('click', (event) => {
             //check if the clicked element is a child of the facility card element
             dateCardElements.forEach((card) => {
