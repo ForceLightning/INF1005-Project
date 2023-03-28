@@ -21,7 +21,6 @@
                     while ($row = $result->fetch_assoc()) {
                         $booking = array(
                             "booking_id" => $row["booking_id"],
-                            "location_name" => $row["location_name"],
                             "time_start" => $row["time_start"],
                             "time_end" => $row["time_end"],
                             "booked" => $row["booked"]
@@ -29,6 +28,7 @@
                         // add the booking to the array of bookings for the location
                         $bookings[$row["location_id"]]["bookings"][] = $booking;
                         $bookings[$row["location_id"]]["description"] = $row["description"];
+                        $bookings[$row["location_name"]]["bookings"][] = $row["location_name"];
                     }
                     echo json_encode($bookings);
                 } else {
