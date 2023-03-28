@@ -1,4 +1,7 @@
 <?php
+
+use function PHPSTORM_META\exitPoint;
+
 include_once "includes/util.php";
 session_start();
 
@@ -82,6 +85,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 exit();
             }
             insert_bookings();
+        } else if (isset($_SESSION["temp_bookings"])) {
+            $user_bookings = array_merge($user_bookings, $_SESSION["temp_bookings"]);
+            insert_bookings();
+            unset($_SESSION["temp_bookings"]);
         } else {
             $_SESSION["temp_bookings"] = $user_bookings;
             header("Location: login.php");
@@ -89,6 +96,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     } else {
         http_response_code(400);
     }
+} else if (isset($_SESSION["temp_bookings"])) {
+    $user_bookings = $_SESSION["temp_bookings"];
+    insert_bookings();
+    unset($_SESSION["temp_bookings"]);
 } else {
     http_response_code(405);
 }
