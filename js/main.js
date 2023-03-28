@@ -1,39 +1,8 @@
-//let slideIndex = 1;
-//showSlides(slideIndex);
-//
-//function plusSlides(n) {
-//  showSlides(slideIndex += n);
-//}
-//
-//function currentSlide(n) {
-//  showSlides(slideIndex = n);
-//}
-//
-//function showSlides(n) {
-//  let i;
-//  let slides = document.getElementsByClassName("mySlides");
-//  let dots = document.getElementsByClassName("dot");
-//  if (n > slides.length) {slideIndex = 1}    
-//  if (n < 1) {slideIndex = slides.length}
-//  for (i = 0; i < slides.length; i++) {
-//    slides[i].style.display = "none";  
-//  }
-//  for (i = 0; i < dots.length; i++) {
-//    slides[i].classList.remove("show", "fade");
-//    slides[i].classList.add("fade");
-//    dots[i].className = dots[i].className.replace(" active", "");
-//  }
-//  slides[slideIndex-1].classList.remove("fade");
-//  slides[slideIndex-1].classList.add("show", "fade");
-//  slides[slideIndex-1].style.display = "block";  
-//  dots[slideIndex-1].className += " active";
-//}
-
 var swiper = new Swiper('.gallery-slider', {
     spaceBetween: 10,
-    grabCursor:true,
-    loop:true,
-    centeredSlides:true,
+    grabCursor: true,
+    loop: true,
+    centeredSlides: true,
     autoplay: {
         delay: 1500,
         disableOnInteraction: false,
@@ -56,44 +25,44 @@ var swiper = new Swiper('.gallery-slider', {
 });
 
 var swiper = new Swiper(".mySwiper", {
-      spaceBetween: 30,
-      centeredSlides: true,
-      autoplay: {
+    spaceBetween: 30,
+    centeredSlides: true,
+    autoplay: {
         delay: 2500,
         disableOnInteraction: false,
-      },
-      pagination: {
+    },
+    pagination: {
         el: ".swiper-pagination",
         clickable: true,
-        
-      },
-      navigation: {
+
+    },
+    navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
-      },
-    });
-    
+    },
+});
+
 
 
 function Dropdown() {
-  document.getElementById("myDropdown").classList.toggle("show");
+    document.getElementById("myDropdown").classList.toggle("show");
 }
 
 function HideDropdown() {
-  document.getElementById("myDropdown").classList.remove("show");
+    document.getElementById("myDropdown").classList.remove("show");
 }
 
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
+window.onclick = function (event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+        }
     }
-  }
 }
 
 // Scroll to top button
@@ -101,19 +70,19 @@ window.onclick = function(event) {
 let mybutton = document.getElementById("scroll-button");
 
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
 }
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }
 // End of scroll to top button
