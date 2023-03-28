@@ -130,7 +130,7 @@
                         Don't miss out on this exciting event! Make sure to register early to secure your spot. 
                         We can't wait to see you at Mandai Country Club's Bowling Night!
                         </p>
-                        <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfwtzsoFaWlIe7n_cgtrt98nl-PgbRRGQ0GR0FTWGYFeZmkFQ/viewform">
+                        <a target="_blank" href="https://forms.gle/hzbxPfVS8A3zZowb6">
                             <button type="button" class="events-button">Reserve Now</button>
                         </a>
                     </div>
@@ -151,7 +151,7 @@
                         Our Hari Raya Bazaar promises to be a memorable event that you won't want to miss. 
                         See you there!
                         </p>
-                        <a href="index.php">
+                        <a target="_blank" href="https://forms.gle/XfHqjXXMonrYmqHN9">
                             <button type="button" class="events-button">Reserve Now</button>
                         </a>
                     </div>
