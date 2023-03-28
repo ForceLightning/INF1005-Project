@@ -76,6 +76,10 @@ function Dropdown() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
 
+function HideDropdown() {
+  document.getElementById("myDropdown").classList.remove("show");
+}
+
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
     var dropdowns = document.getElementsByClassName("dropdown-content");
