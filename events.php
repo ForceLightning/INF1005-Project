@@ -11,7 +11,7 @@
         <?php 
             include "includes/nav.inc.php";
         ?>
-        
+        <!-- Header Image -->
         <header>
             <div class="hero-image">
                   <img class="img" src="assets/event_hero.jpg" alt="home-page-img"/>
@@ -20,6 +20,7 @@
                 <h1 class="hero-header">Events</h1>
             </div>
         </header>
+        <!-- End of Header Image -->
         
         <!-- Event Button Months Filter -->
         <div id="myBtnContainer">
@@ -44,7 +45,7 @@
             <section id="events-s1">
                 <!-- Zoo -->
                 <div class ="row" id="Zoo">
-                    <div class="col-sm-6">
+                    <div class="col-sm">
                         <h3 class="events-heading">Family Day at the Zoo</h3>
                         <p class="events-desc">
                         Join us for a family day at the Zoo, brought to you by Mandai Country Club! 
@@ -57,7 +58,7 @@
                             <button type="button" class="events-button">Reserve Now</button>
                         </a>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm">
                         <a target="_blank" href="assets\zoo_poster.png">
                         <img class="events-img img-fluid" src="assets\zoo_poster.png" width="100%" alt="Zoo">
                     </a>
@@ -67,12 +68,12 @@
                 
                 <!-- Happy Hour -->
                 <div class ="row" id="Drinks">
-                    <div class="col-sm-6">
+                    <div class="col-sm">
                         <a target="_blank" href="assets\happy_hour_poster.png">
                         <img class="events-img img-fluid" src="assets\happy_hour_poster.png" width="100%" alt="Happy Hour">
                     </a>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm">
                         <h3 class="events-heading">Happy Hour</h3>
                         <p class="events-desc2">
                         Join us for a fun-filled Happy Hour at our Mandai country club Restaurant that is awarded 5 stars rating for its service! 
@@ -90,7 +91,7 @@
                 
                 <!-- Pool Party -->
                 <div class="row" id="Pool">
-                    <div class="col-sm-6">
+                    <div class="col-sm">
                         <h3 class="events-heading">Pool Party</h3>
                         <p class="events-desc">
                         Join us for a splashing good time at our annual Pool Party at Mandai Country Club! 
@@ -104,7 +105,7 @@
                             <button type="button" class="events-button">Reserve Now</button>
                         </a>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm">
                         <a target="_blank" href="assets\pool_party_poster.png">
                             <img class="events-img img-fluid" src="assets\pool_party_poster.png" width="100%" alt="Pool Party">
                         </a>
@@ -114,12 +115,12 @@
                
                 <!-- Bowling Night -->
                <div class ="row" id="Bowling">
-                    <div class="col-sm-6">
+                    <div class="col-sm">
                         <a target="_blank" href="assets\bowling_night_poster.png">
                         <img class="events-img img-fluid" src="assets\bowling_night_poster.png" width="100%" alt="Happy Hour">
                     </a>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm">
                         <h3 class="events-heading">Bowling Night</h3>
                         <p class="events-desc2">
                         We are excited to announce our upcoming event at Mandai Country Club: Bowling Night! Get ready for an evening of friendly competition, good food, and great company.
@@ -139,7 +140,7 @@
                 
                 <!-- Hari Raya -->
                 <div class ="row" id="Bazaar">
-                    <div class="col-sm-6">
+                    <div class="col-sm">
                         <h3 class="events-heading">Hari Raya Bazaar</h3>
                         <p class="events-desc">
                         Welcome to Mandai Country Club's very first Hari Raya event - the Hari Raya Bazaar! 
@@ -155,7 +156,7 @@
                             <button type="button" class="events-button">Reserve Now</button>
                         </a>
                     </div>
-                    <div class="col-sm-6">
+                    <div class="col-sm">
                         <a target="_blank" href="assets\hari_raya_poster.png">
                         <img class="events-img img-fluid" src="assets\hari_raya_poster.png" width="100%" alt="Zoo">
                     </a>
