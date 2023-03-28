@@ -1,7 +1,4 @@
 <?php
-
-use function PHPSTORM_META\exitPoint;
-
 include_once "includes/util.php";
 session_start();
 
@@ -90,15 +87,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }
         if (isset($_SESSION["member_id"])) {
+            if (isset($_SESSION["temp_bookings"])) {
+                $user_bookings = array_merge($user_bookings, $_SESSION["temp_bookings"]);
+                unset($_SESSION["temp_bookings"]);
+            }
             if (count($user_bookings) == 0) {
                 http_response_code(400);
                 exit();
             }
             insert_bookings();
-        } else if (isset($_SESSION["temp_bookings"])) {
-            $user_bookings = array_merge($user_bookings, $_SESSION["temp_bookings"]);
-            insert_bookings();
-            unset($_SESSION["temp_bookings"]);
         } else {
             $_SESSION["temp_bookings"] = $user_bookings;
             header("Location: login.php");
