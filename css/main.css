@@ -700,13 +700,14 @@ End of awards img in about us
 }
 .facility{
     margin: 45px 0;
-    padding-bottom: 25px;
+    padding: 50px;
     background: #ffffff;
     color: #fff;
 }
 .facility-text{
     padding: 5px 20px;
     color: #000000;
+    margin-left: 20px;
 }
 .facility-text h3{
     font-size: 24px;
@@ -851,6 +852,7 @@ filter: brightness(70%);
 /*End of event months*/
 .facilities-heading{
     margin-top:20px;
+    margin-right:20px;
 }
 
 .facilities-button{
@@ -870,7 +872,7 @@ filter: brightness(70%);
 
 hr{
     height: 2px;
-    width: 250px;
+    width: 20vw;
     margin-left:0px;
     background: #53524E;
 }
@@ -883,8 +885,8 @@ hr{
     margin-top: 50px;
 }
 
-.s2-facilities{
-    margin-top:50px;
+#s2-facilities{
+    margin-top: 100px;
 }
 
 .button-learn-more {
@@ -924,6 +926,7 @@ hr{
   right: 0;
 }
 
-.facilities-heading{
+.facilities-header{
     text-align: center;
+    margin-bottom: 20px;
 }
