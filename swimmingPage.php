@@ -45,7 +45,7 @@
                             For assistance: <br>
                             Call: (65)6457 9874 | Email: mandai@cc.com
                         </P>
-                        <a href="facilities-booking.php">
+                        <a href="/facility_booking.php">
                             <button type="button" class="facilities-button">Make a Booking</button>
                         </a>
                     </div>
