@@ -20,6 +20,7 @@
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
                         $booking = array(
+                            "booking_id" => $row["booking_id"],
                             "location_name" => $row["location_name"],
                             "time_start" => $row["time_start"],
                             "time_end" => $row["time_end"],
