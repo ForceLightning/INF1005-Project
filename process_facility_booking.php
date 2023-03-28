@@ -52,7 +52,7 @@ function insert_bookings() {
     if ($success) {
         $conn->begin_transaction();
         for ($i = 0; $i < count($user_bookings); $i++) {
-            $stmt = $conn->prepare("UPDATE bookings VALUES (booked = 1, member_id = ?, booked_at = NOW()) WHERE booking_id = ?");
+            $stmt = $conn->prepare("UPDATE bookings SET booked = 1, member_id = ?, booked_at = NOW() WHERE booking_id = ?");
             $member_id = $_SESSION["member_id"];
             $booking_id = $user_bookings[$i]["booking_id"];
             try {
