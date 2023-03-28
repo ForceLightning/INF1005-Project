@@ -39,9 +39,6 @@
                             Opening Hours:<br>
                             Monday to Sunday, 8.00 a.m. to 6.00 p.m.<br>
                             Last Booking ends at 4.00 p.m.<br> <br>
-                            Pricing:<br>
-                            Children: $10/hr<br>
-                            Adults: $15/hr<br><br>
                             For assistance: <br>
                             Call: (65)6457 9874 | Email: mandai@cc.com
                         </P>
@@ -50,7 +47,7 @@
                         </a>
                     </div>
                     <div class="col-sm-6">
-                    <img class="golf-facility-img img-fluid mt-3" src="assets\golf-booking-img.jpg" alt="golf courses">
+                    <img class="img-fluid mt-3" src="assets\swimming.jpg" alt="golf courses">
                     </div>
                 </div>
             </section>
@@ -64,7 +61,6 @@
                     <div class="swiper-slide">
                         <img class="img-fluid" src="assets/swimming-pool-2.jpg" alt="pool_photo2">
                     </div>
-<!--                    
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>

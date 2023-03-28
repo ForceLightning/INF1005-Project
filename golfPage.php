@@ -32,16 +32,13 @@
             </section>
             <section id="s1">
                 <div class="row facilities-info-row">
-                    <div class="column">
+                    <div class="col-sm-6">
                         <h3 class="facilities-heading">Information</h3>
                         <hr>
                         <p class="facilities-desc">
                             Opening Hours:<br>
                             Monday to Sunday, 8.00 a.m. to 6.00 p.m.<br>
                             Last Booking ends at 4.00 p.m.<br> <br>
-                            Pricing:<br>
-                            Weekdays: $40/hr<br>
-                            Weekends: $50/hr<br><br>
                             For assistance: <br>
                             Call: (65)6457 9874 | Email: mandai@cc.com
                         </p>
@@ -49,8 +46,8 @@
                             <button type="button" class="facilities-button">Make a Booking</button>
                         </a>
                     </div>
-                    <div class="column">
-                    <img class="golf-facility-img" src="assets\golf-booking-img.jpg" alt="golf courses">
+                    <div class="col-sm-6">
+                    <img class="img-fluid mt-3" src="assets\golf-booking-img.jpg" alt="golf courses">
                     </div>
                 </div>
             </section>

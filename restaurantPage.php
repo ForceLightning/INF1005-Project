@@ -46,7 +46,7 @@
                         </P>
                     </div>
                     <div class="column">
-                    <img class="golf-facility-img" src="assets\golf-booking-img.jpg" alt="golf courses">
+                    <img class="golf-facility-img" src="assets\restaurant1.jpg" alt="golf courses">
                     </div>
                 </div>
             </section>

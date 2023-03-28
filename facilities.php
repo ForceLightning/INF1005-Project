@@ -33,7 +33,7 @@
                 <!-- single room -->
                 <article class = "facility">
                     <div class = "facility-image">
-                        <img src = "assets/golf_course.jpg" alt = "facility image">
+                        <img class="img-fluid" src = "assets/golf_course.jpg" alt = "facility image">
                     </div>
                     <div class = "facility-text">
                         <hr>
@@ -53,7 +53,7 @@
                 <!-- single room -->
                 <article class = "facility">
                     <div class = "facility-image">
-                        <img src = "assets/swimming_pool.jpg" alt = "facility image">
+                        <img class="img-fluid" src = "assets/swimming_pool.jpg" alt = "facility image">
                     </div>
                     <div class = "facility-text">
                         <hr>
@@ -73,7 +73,7 @@
                 <!-- single room -->
                 <article class = "facility">
                     <div class = "facility-image">
-                        <img src = "assets/bowling_alley.jpg" alt = "facility image">
+                        <img class="img-fluid" src = "assets/bowling_alley.jpg" alt = "facility image">
                     </div>
                     <div class = "facility-text">
                         <hr>
@@ -93,7 +93,7 @@
                 <!-- single room -->
                 <article class = "facility">
                     <div class = "facility-image">
-                        <img src = "assets/restaurant.jpg" alt = "facility image">
+                        <img class="img-fluid" src = "assets/restaurant.jpg" alt = "facility image">
                     </div>
                     <div class = "facility-text">
                         <hr>
@@ -119,7 +119,7 @@
                 <!-- gallery -->
                 <section class="gallery" id="gallery">
 
-                    <h1 class="failities-header">Our Gallery</h1>
+                    <h2 class="facilities-header">Our Gallery</h2>
 
                     <div class="swiper gallery-slider">
 
