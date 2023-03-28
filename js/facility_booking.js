@@ -82,7 +82,7 @@ function displayBookingSlots(bookingSlots) {
             <div class="text-black-50">
             <div class="row">
             <div>
-                <img src="` + bookingSlots[location_id]["image_url"] + `" class="img">
+                <img src="` + bookingSlots[location_id]["image_url"] + `" class="img" alt=`+ bookingSlots[location_id]["image_url"] +`>
             </div>
             <div>
             <div>` + bookingSlots[location_id]["location_name"] + `</div>
