@@ -11,7 +11,7 @@
             $error_msg = "Connection failed: " . $conn->connect_error . "<br>";
             $success = false;
         } else {
-            $stmt = $conn->prepare("SELECT b.booking_id, b.location_id, b.location_name, b.time_start, b.time_end, b.booked, f.description FROM bookings as b JOIN facilities as f ON b.location_id = f.facility_id WHERE DATE(b.time_end) BETWEEN CURDATE() AND CURDATE() + INTERVAL 7 DAY ORDER BY location_id, time_start ASC");
+            $stmt = $conn->prepare("SELECT b.booking_id, b.location_id, b.location_name, b.time_start, b.time_end, b.booked, f.description, f.image_url FROM bookings as b JOIN facilities as f ON b.location_id = f.facility_id WHERE DATE(b.time_end) BETWEEN CURDATE() AND CURDATE() + INTERVAL 7 DAY ORDER BY location_id, time_start ASC");
             if ($stmt->execute()) {
                 $success = true;
                 $result = $stmt->get_result();
@@ -29,6 +29,7 @@
                         $bookings[$row["location_id"]]["bookings"][] = $booking;
                         $bookings[$row["location_id"]]["description"] = $row["description"];
                         $bookings[$row["location_id"]]["location_name"] = $row["location_name"];
+                        $bookings[$row["location_id"]]["image_url"] = $row["image_url"];
                     }
                     echo json_encode($bookings);
                 } else {
