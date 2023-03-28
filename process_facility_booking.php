@@ -1,22 +1,20 @@
 <?php
-
-use function PHPSTORM_META\exitPoint;
-
+ob_start();
 include_once "includes/util.php";
 session_start();
 
 function insert_bookings() {
     global $user_bookings, $branch, $bookings, $error_msg;
     $success = true;
+    $bookings = array();
     $config = parse_ini_file('../../private/project-db-config.ini', true);
     $conn = new mysqli($config[$branch]['servername'], $config[$branch]['username'], $config[$branch]['password'], $config[$branch]['dbname']);
     if ($conn->connect_error) {
         $error_msg[] = "Connection failed: " . $conn->connect_error;
         $success = false;
     } else {
-        $bookings = array();
         for ($i = 0; $i < count($user_bookings); $i++) {
-            $stmt = $conn->prepare("SELECT * FROM bookings WHERE booking_id = ? AND time_end > NOW() AND time_end < NOW() + INTERVAL 7 DAY AND booked = 0");
+            $stmt = $conn->prepare("SELECT * FROM bookings WHERE booking_id = ? AND time_end > NOW() AND booked = 0 AND DATE(time_end) BETWEEN CURDATE() AND CURDATE() + INTERVAL 7 DAY");
             $booking_id = $user_bookings[$i];
             // check that all booking_ids are valid
             $stmt->bind_param("i", $booking_id);
@@ -53,9 +51,9 @@ function insert_bookings() {
     if ($success) {
         $conn->begin_transaction();
         for ($i = 0; $i < count($user_bookings); $i++) {
-            $stmt = $conn->prepare("UPDATE bookings VALUES (booked = 1, member_id = ?, booked_at = NOW()) WHERE booking_id = ?");
+            $stmt = $conn->prepare("UPDATE bookings SET booked = 1, member_id = ?, booked_at = NOW() WHERE booking_id = ?");
             $member_id = $_SESSION["member_id"];
-            $booking_id = $user_bookings[$i]["booking_id"];
+            $booking_id = $user_bookings[$i];
             try {
                 $stmt->bind_param("ii", $member_id, $booking_id);
                 if ($stmt->execute()) {
@@ -89,23 +87,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }
         if (isset($_SESSION["member_id"])) {
+            if (isset($_SESSION["temp_bookings"])) {
+                $user_bookings = array_merge($user_bookings, $_SESSION["temp_bookings"]);
+                unset($_SESSION["temp_bookings"]);
+            }
             if (count($user_bookings) == 0) {
                 http_response_code(400);
                 exit();
             }
             insert_bookings();
-        } else if (isset($_SESSION["temp_bookings"])) {
-            $user_bookings = array_merge($user_bookings, $_SESSION["temp_bookings"]);
-            insert_bookings();
-            unset($_SESSION["temp_bookings"]);
         } else {
             $_SESSION["temp_bookings"] = $user_bookings;
+            if (headers_sent()) {
+                die("cannot redirect; headers already sent (output).");
+            }
             header("Location: login.php");
+            exit();
         }
     } else {
         http_response_code(400);
     }
-} else if (isset($_SESSION["temp_bookings"])) {
+} else if (isset($_SESSION["temp_bookings"]) && isset($_SESSION["member_id"])) {
     $user_bookings = $_SESSION["temp_bookings"];
     insert_bookings();
     unset($_SESSION["temp_bookings"]);
@@ -123,30 +125,33 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
-    <body>
+<body>
+    <?php
+    include "includes/nav.inc.php";
+    ?>
+    <main class="container">
         <?php
-        include "includes/nav.inc.php";
-        ?>
-        <main>
-            <?php
-            echo "<section>";
-            echo "<h2>Booking Summary</h2>";
-            if (isset($error_msg)) {
-                echo "<h4>Booking failed!</h4>";
-                echo "<p>" . implode("<br>", $error_msg) . "</p>";
-                echo "<a href='facility_booking.php' class='btn btn-primary'>Back to bookings</a>";
-            } else {
-                echo "<h4>Bookings successful!</h4>";
+        echo "<section>";
+        echo "<h2>Booking Summary</h2>";
+        if (isset($error_msg)) {
+            echo "<h4>Booking failed!</h4>";
+            echo "<p>" . implode("<br>", $error_msg) . "</p>";
+            echo "<a href='facility_booking.php' class='btn btn-primary'>Back to bookings</a>";
+        } else {
+            echo "<h4>Bookings successful!</h4>";
+            if (isset($bookings)) {
                 for ($i = 0; $i < count($bookings); $i++) {
-                    echo "<p>" . $bookings[$i]["facility_name"] . " on " . $bookings[$i]["date"] . " from " . $bookings[$i]["start_time"] . " to " . $bookings[$i]["end_time"] . "</p>";
+                    echo "<p>" . $bookings[$i]["facility_name"] . " on " . $bookings[$i]["date"] . " at " . $bookings[$i]["start_time"] . "</p>";
                 }
             }
-            echo "</section>";
-            ?>
-        </main>
-        <?php
-        include "includes/footer.inc.php";
+            // var_dump($bookings);
+        }
+        echo "</section>";
         ?>
-    </body>
+    </main>
+    <?php
+    include "includes/footer.inc.php";
+    ?>
+</body>
 
 </html>

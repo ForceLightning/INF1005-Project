@@ -19,16 +19,27 @@ p, h5 {
    font-family: "Garamond", serif;
 }
 
+header{
+    position:relative;
+}
+
 body {
 background-color: #ffffff;
 }
 
 .hero-header{
-    font-size: 75px;
+    font-size: 5vw;
+}
+
+.hero-text{
+    position: absolute;A
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .hero-subheader{
-    font-size: 40px;
+    font-size: 4vw;
 }
 .container2 {
     width: max-content;
@@ -188,7 +199,7 @@ footer {
 .hero-text {
   text-align: center;
   position: absolute;
-  top: 50%;
+  top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -210,10 +221,12 @@ h2{
 
 .index-desc{
     text-align: center;
+    font-size: 18px;
 }
 
 .section-text{
     margin-top: 30px;
+    margin-bottom: 20px;
 }
 
 .facilities{
@@ -557,20 +570,31 @@ clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
     height: 5rem;
     width: 5rem;
     line-height: 5rem;
-    background: var(--white);
-    color: var(--black);
+    background: transparent;
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover{
-    background: var(--primary);
+    background: transparent;
     color: var(--white);
 }
 
 .swiper-button-next::after,
 .swiper-button-prev::after{
     font-size: 2rem;
+    color: white;
 }
+
+.swiper-pagination-bullet-active{
+    color: white;
+}
+
+.mySwiper{
+/*    width: 1000px;
+    height: 500px;*/
+    margin-bottom: 20px;
+}
+
 /*html,
     body {
       position: relative;
@@ -626,6 +650,10 @@ End of awards img in about us
 
 .events-desc {
     text-align: left;
+    padding: 30px;
+}
+.events-desc2 {
+    text-align: right;
     padding: 30px;
 }
 
@@ -734,4 +762,124 @@ End of awards img in about us
     .facility:nth-child(even){
         flex-direction: row-reverse;
     }
+}
+
+/*About us links*/
+.a-about:link {
+  color: #F8FFA0;
+  background-color: transparent;
+  text-decoration: none;
+}
+.a-about:visited {
+  color: #FCDFF1;
+  background-color: transparent;
+  text-decoration: none;
+}
+.a-about:hover {
+  color: #F8FFA0;
+  background-color: transparent;
+/*  text-decoration: underline;*/
+}
+.a-about:active {
+  color: #DAF8D5;
+  background-color: transparent;
+/*  text-decoration: underline;*/
+}
+/*End of about us links*/
+
+/*About us Carousel*/
+.header_contrast {
+filter: brightness(70%);
+}
+/*End of about us Carousel*/
+
+/*Event Img*/
+.events-img {
+  border: 1px solid #ddd; /* Gray border */
+  border-radius: 4px;  /* Rounded border */
+  padding: 5px; /* Some padding */
+}
+
+/* Add a hover effect (blue shadow) */
+.events-img:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+/*End of event Img*/
+
+/*Event months*/
+.filterDiv {
+  float: left;
+  background-color: #2196F3;
+  color: #ffffff;
+  width: 200px;
+  line-height: 100px;
+  text-align: center;
+  margin: 2px;
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.container {
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+/* Style the buttons */
+.events-button2 {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.events-button2:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.events-button2.active {
+  background-color: black;
+  color: white;
+}
+/*End of event months*/
+.facilities-heading{
+    margin-top:20px;
+}
+
+.facilities-button{
+    color: #53524E;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    width: 300px;
+    border: none;
+    background-color: #DED8D1;
+    margin-top:20px;
+}
+
+.facilities-button:hover{
+    background-color: #CEC3B2
+}
+
+hr{
+    height: 2px;
+    width: 250px;
+    margin-left:0px;
+    background: #53524E;
+}
+
+.facilities-desc{
+    font-size: 18px;
+}
+
+.facilities-info-row{
+    margin-top: 50px;
+}
+
+.s2-facilities{
+    margin-top:50px;
 }

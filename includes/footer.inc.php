@@ -15,7 +15,7 @@
 	<div class="container">
             <div class="row">
 		<div class="col-md-4">
-                    <h5 class="mb-3">Navigation</h5>
+                    <h5>Navigation</h5>
 			<ul class="list-unstyled">
                             <li><a href="index.php" class="link-text">Home</a></li>
                             <li><a href="aboutUs.php" class="link-text">About Us</a></li>
@@ -24,7 +24,7 @@
 			</ul>
 		</div>
 		<div class="col-md-4">
-                    <h5 class="mb-3">Connect with us</h5>
+                    <h5>Connect with us</h5>
 			<ul class="list-unstyled list-inline">
                             <li class="list-inline-item"><a href="#" class="link-text"><i class="fab fa-facebook"></i></a></li>
                             <li class="list-inline-item"><a href="#" class="link-text"><i class="fab fa-twitter"></i></a></li>
@@ -33,15 +33,15 @@
                     
 		</div>
 		<div class="col-md-4">
-                    <h5 class="mb-3"><a href="contactUs.php" class="link-text">Contact Us</a></h5>
-			<p class=" mb-3">444 Mandai Road, Singapore 779564</p>
-			<p class=" mb-3">Phone: 6457 9874</p>
-			<p class=" mb-3">Email: mandai@cc.com</p>
+                    <h5><a href="contactUs.php" class="link-text">Contact Us</a></h5>
+			<p>444 Mandai Road, Singapore 779564</p>
+			<p>Phone: 6457 9874</p>
+			<p>Email: mandai@cc.com</p>
 		</div>
             </div>
             <div class="row mt-3">
 		<div class="col-md-12" >
-                    <p class="text-center mb-3">&copy; 2023 Mandai CC. All rights reserved.</p>
+                    <p class="text-center>&copy; 2023 Mandai CC. All rights reserved.</p>
 		</div>
             </div>
         </div>
