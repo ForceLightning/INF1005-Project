@@ -44,7 +44,7 @@
                             Weekends: $50/hr<br><br>
                             For assistance: <br>
                             Call: (65)6457 9874 | Email: mandai@cc.com
-                        </P>
+                        </p>
                         <a href="facilities-booking.php">
                             <button type="button" class="facilities-button">Make a Booking</button>
                         </a>

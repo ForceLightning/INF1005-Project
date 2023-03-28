@@ -701,11 +701,12 @@ End of awards img in about us
 .facility{
     margin: 45px 0;
     padding-bottom: 25px;
-    background: var(--dark);
+    background: #ffffff;
     color: #fff;
 }
 .facility-text{
     padding: 5px 20px;
+    color: #000000;
 }
 .facility-text h3{
     font-size: 24px;
@@ -882,4 +883,45 @@ hr{
 
 .s2-facilities{
     margin-top:50px;
+}
+
+.button-learn-more {
+  border-radius: 4px;
+  background-color: transparent;
+  border: none;
+  color: #A2967F;
+  text-align: center;
+  font-size: 17px;
+  transition: all 0.5s;
+  cursor: pointer;
+  padding-bottom: 20px;
+}
+
+.button-learn-more span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button-learn-more span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button-learn-more:hover span {
+  padding-right: 25px;
+}
+
+.button-learn-more:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.facilities-heading{
+    text-align: center;
 }
