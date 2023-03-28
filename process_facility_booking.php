@@ -6,13 +6,13 @@ session_start();
 function insert_bookings() {
     global $user_bookings, $branch, $bookings, $error_msg;
     $success = true;
+    $bookings = array();
     $config = parse_ini_file('../../private/project-db-config.ini', true);
     $conn = new mysqli($config[$branch]['servername'], $config[$branch]['username'], $config[$branch]['password'], $config[$branch]['dbname']);
     if ($conn->connect_error) {
         $error_msg[] = "Connection failed: " . $conn->connect_error;
         $success = false;
     } else {
-        $bookings = array();
         for ($i = 0; $i < count($user_bookings); $i++) {
             $stmt = $conn->prepare("SELECT * FROM bookings WHERE booking_id = ? AND time_end > NOW() AND time_end < NOW() + INTERVAL 7 DAY AND booked = 0");
             $booking_id = $user_bookings[$i];
@@ -138,9 +138,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "<a href='facility_booking.php' class='btn btn-primary'>Back to bookings</a>";
         } else {
             echo "<h4>Bookings successful!</h4>";
-            for ($i = 0; $i < count($bookings); $i++) {
-                echo "<p>" . $bookings[$i]["facility_name"] . " on " . $bookings[$i]["date"] . " from " . $bookings[$i]["start_time"] . " to " . $bookings[$i]["end_time"] . "</p>";
-            }
+            // for ($i = 0; $i < count($bookings); $i++) {
+            //     echo "<p>" . $bookings[$i]["facility_name"] . " on " . $bookings[$i]["date"] . " from " . $bookings[$i]["start_time"] . " to " . $bookings[$i]["end_time"] . "</p>";
+            // }
+            var_dump($bookings);
         }
         echo "</section>";
         ?>
