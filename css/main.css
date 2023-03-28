@@ -735,3 +735,32 @@ End of awards img in about us
         flex-direction: row-reverse;
     }
 }
+
+/*About us links*/
+.a-about:link {
+  color: #F8FFA0;
+  background-color: transparent;
+  text-decoration: none;
+}
+.a-about:visited {
+  color: #FCDFF1;
+  background-color: transparent;
+  text-decoration: none;
+}
+.a-about:hover {
+  color: #F8FFA0;
+  background-color: transparent;
+/*  text-decoration: underline;*/
+}
+.a-about:active {
+  color: #DAF8D5;
+  background-color: transparent;
+/*  text-decoration: underline;*/
+}
+/*End of about us links*/
+
+/*About us Carousel*/
+.header_contrast {
+filter: brightness(70%);
+}
+/*End of about us Carousel*/
