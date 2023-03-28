@@ -61,9 +61,10 @@ function getBookingSlots(debug) {
     return bookingSlots;
 }
 
-function bookingSlot(date, availability) {
+function bookingSlot(date, availability, booking_id) {
     this.date = date;
     this.availability = availability;
+    this.booking_id = booking_id;
 }
 
 function displayBookingSlots(bookingSlots) {
@@ -78,6 +79,9 @@ function displayBookingSlots(bookingSlots) {
         facilityCard.innerHTML = `
             <div class="text-black-50">
             <div class="row">
+            <div>
+                <img src="` + bookingSlots[location_id]["image_url"] + `" class="img">
+            </div>
             <div class="col-xl-6 col-lg-6 col-md-6 mb-0">
             <div>` + bookingSlots[location_id]["location_name"] + `</div>
             <hr>
@@ -86,70 +90,70 @@ function displayBookingSlots(bookingSlots) {
             </div>
             </div>
         `;
-        let timeslotContainer = document.createElement("div");
-        timeslotContainer.classList.add("timeslot-group", "col-xl-4", "col-lg-6", "col-sm-6", "col-xs-6", "mb-2", "d-none");
-        timeslotContainer.setAttribute("facility-id", location_id);
-        // Add the timeslots to the facility card
-        for (let timeslot of timeslots) {
-            // Create a new timeslot element
-            let timeslotElement = document.createElement("div");
-            timeslotElement.classList.add("timeslot-white", "d-sm-inline-block", "btn", "btn-sm", "bg-available-status", "w-100");
-            let startTime = timeslot["time_start"].split(/[- :]/);
-            var start = new Date(startTime[0], startTime[1] - 1, startTime[2], startTime[3], startTime[4], startTime[5]);
-            let endTime = timeslot["time_end"].split(/[- :]/);
-            var end = new Date(endTime[0], endTime[1] - 1, endTime[2], endTime[3], endTime[4], endTime[5]);
-            var timeslotText = start.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'}) + " - " + end.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
-            timeslotElement.setAttribute("booking-id", timeslot["booking_id"]);
-            timeslotElement.innerHTML = timeslotText;
-            // Add the timeslot element to the facility card
-            timeslotContainer.appendChild(timeslotElement);
-        }
 
-        //getting the blueprint section
-        let test = document.getElementById("timeslotBlueprint");
-        //clone
-        let testPrime = test.cloneNode(true);
-        //change the class to make it appear
-        testPrime.setAttribute("class", "");
-        //let timeslotgroup = testPrime.children[1].children;
-        let timeslotgroup = testPrime.getElementsByClassName("timeslot-row")[0].children;
+//        let timeslotContainer = document.createElement("div");
+//        timeslotContainer.classList.add("timeslot-group", "col-xl-4", "col-lg-6", "col-sm-6", "col-xs-6", "mb-2", "d-none");
+//        timeslotContainer.setAttribute("facility-id", location_id);
+//        // Add the timeslots to the facility card
+//        for (let timeslot of timeslots) {
+//            // Create a new timeslot element
+//            let timeslotElement = document.createElement("div");
+//            timeslotElement.classList.add("timeslot-white", "d-sm-inline-block", "btn", "btn-sm", "bg-available-status", "w-100");
+//            let startTime = timeslot["time_start"].split(/[- :]/);
+//            var start = new Date(startTime[0], startTime[1] - 1, startTime[2], startTime[3], startTime[4], startTime[5]);
+//            let endTime = timeslot["time_end"].split(/[- :]/);
+//            var end = new Date(endTime[0], endTime[1] - 1, endTime[2], endTime[3], endTime[4], endTime[5]);
+//            var timeslotText = start.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'}) + " - " + end.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
+//            timeslotElement.setAttribute("booking-id", timeslot["booking_id"]);
+//            timeslotElement.innerHTML = timeslotText;
+//            // Add the timeslot element to the facility card
+//            timeslotContainer.appendChild(timeslotElement);
+//        }
+//
+//        //getting the blueprint section
+//        let test = document.getElementById("timeslotBlueprint");
+//        //clone
+//        let testPrime = test.cloneNode(true);
+//        //change the class to make it appear
+//        testPrime.setAttribute("class", "");
+//        //let timeslotgroup = testPrime.children[1].children;
+//        let timeslotgroup = testPrime.getElementsByClassName("timeslot-row")[0].children;
 
-        let i = 0;
         // Add the timeslots to the facility card
         for (let timeslot of timeslots) {
             // Create a new timeslot element
             // /let timeslotElement = document.createElement("div");
             // timeslotElement.classList.add("timeslot-white", "d-sm-inline-block", "btn", "btn-sm", "bg-available-status", "w-100");
             let startTime = timeslot["time_start"].split(/[- :]/);
-            var start = new bookingSlot(new Date(startTime[0], startTime[1] - 1, startTime[2], startTime[3], startTime[4], startTime[5]), timeslot["booked"]);
+            var start = new bookingSlot(new Date(startTime[0], startTime[1] - 1, startTime[2], startTime[3], startTime[4], startTime[5]), timeslot["booked"], timeslot["booking_id"]);
             startTimeList.push(start);
 
-            if (i < timeslotgroup.length) {
-                if (timeslot["booked"] === 0) {
-                    if (!timeslotgroup[i].children[0].classList.contains("available")) {
-                        timeslotgroup[i].children[0].classList.toggle("available");
-                    }
-                    timeslotgroup[i].children[0].setAttribute("data-timeslot", timeslot["booking_id"]);
+//            if (i < timeslotgroup.length) {
+//                if (timeslot["booked"] === 0) {
+//                    if (!timeslotgroup[i].children[0].classList.contains("available")) {
+//                        timeslotgroup[i].children[0].classList.toggle("available");
+//                    }
+//                    timeslotgroup[i].children[0].setAttribute("data-timeslot", timeslot["booking_id"]);
+//
+//                } else if (timeslot["booked"] === 1) {
+//                    timeslotgroup[i].children[0].setAttribute("disabled", "");
+//                    if (!timeslotgroup[i].children[0].classList.contains("disabled")) {
+//                        timeslotgroup[i].children[0].classList.toggle("disabled");
+//                    }
+//                    timeslotgroup[i].children[0].setAttribute("data-timeslot", timeslot["booking_id"]);
+//
+//                }
+//            }
 
-                } else if (timeslot["booked"] === 1) {
-                    timeslotgroup[i].children[0].setAttribute("disabled", "");
-                    if (!timeslotgroup[i].children[0].classList.contains("disabled")) {
-                        timeslotgroup[i].children[0].classList.toggle("disabled");
-                    }
-                    timeslotgroup[i].children[0].setAttribute("data-timeslot", timeslot["booking_id"]);
-
-                }
-            }
-            let endTime = timeslot["time_end"].split(/[- :]/);
-            var end = new Date(endTime[0], endTime[1] - 1, endTime[2], endTime[3], endTime[4], endTime[5]);
-            var start = new bookingSlot(new Date(endTime[0], endTime[1] - 1, endTime[2], endTime[3], endTime[4], endTime[5]), timeslot["booked"]);
-            endTimeList.push(start);
+//            let endTime = timeslot["time_end"].split(/[- :]/);
+//            var end = new Date(endTime[0], endTime[1] - 1, endTime[2], endTime[3], endTime[4], endTime[5]);
+//            var start = new bookingSlot(new Date(endTime[0], endTime[1] - 1, endTime[2], endTime[3], endTime[4], endTime[5]), timeslot["booked"], timeslot["booking_id"]);
+//            endTimeList.push(start);
 //            var timeslotText = start.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'}) + " - " + end.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
 //            timeslotElement.setAttribute("booking-id", timeslot["booking_id"]);
 //            timeslotElement.innerHTMLx = timeslotText;
 //            // Add the timeslot element to the facility card
 //            timeslotContainer.appendChild(timeslotElement);
-            ++i;
         }
 //        console.log(i);
 
@@ -175,11 +179,121 @@ function displayBookingSlots(bookingSlots) {
 
         // add the facility card to the page
         document.getElementById("facility-cards").appendChild(facilityCard);
-        document.getElementsByClassName("timeslot-row")[0].appendChild(timeslotContainer);
-        document.getElementsByClassName("timeslot-row")[0].appendChild(testPrime);
+//        document.getElementsByClassName("timeslot-row")[0].appendChild(timeslotContainer);
+//        document.getElementsByClassName("timeslot-row")[0].appendChild(testPrime);
 
         // $("[facility-id=" + location_id + "]").toggleClass("d-none");
     }
+
+}
+
+function updateTimeslots(parentNode, facilityID, day) {
+    let offset = 0;
+    let iter = 0;
+    console.log(day);
+    if (parseInt(day) === 1) {
+        let now = new Date();
+        //-8 static value, as that is the start of the day 
+        let offset = now.toLocaleTimeString('en-US', {hour12: false}).split(/[- :]/)[0] - 8;
+        offset = Math.max(0, offset);
+        offset = Math.floor(offset / 2);
+        let blueprint = document.getElementById("timeslotBlueprint");
+        blueprint.setAttribute("class", "");
+        let timeslotRow = blueprint.children[1];
+        let timeslotGroup = timeslotRow.children;
+        for (let i = 0; i < 5; i++) {
+            let trav = iter + i;
+            //unselect it
+            if (timeslotGroup[i].children[0].classList.contains("selected")) {
+                timeslotGroup[i].children[0].classList.toggle("selected");
+            }
+            if (i < offset) { //if i less than offset, cfm disable it
+                //remove any possible avail codes
+                if (timeslotGroup[i].children[0].classList.contains("available")) {
+                    timeslotGroup[i].children[0].classList.toggle("available");
+                }
+                timeslotGroup[i].children[0].setAttribute("disabled", "");
+                //set to disabled
+                if (!timeslotGroup[i].children[0].classList.contains("disabled")) {
+                    timeslotGroup[i].children[0].classList.toggle("disabled");
+                }
+
+                timeslotGroup[i].children[0].setAttribute("data-timeslot", startTimeList[trav].booking_id);
+            } else { //normal checking
+                if (startTimeList[trav].availability === 0) {
+                    //remove any possible disabled codes
+                    if (timeslotGroup[i].children[0].classList.contains("disabled")) {
+                        timeslotGroup[i].children[0].classList.toggle("disabled");
+                    }
+                    timeslotGroup[i].children[0].removeAttribute("disabled");
+
+                    //set to avail
+                    if (!timeslotGroup[i].children[0].classList.contains("available")) {
+                        timeslotGroup[i].children[0].classList.toggle("available");
+                    }
+                    timeslotGroup[i].children[0].setAttribute("data-timeslot", startTimeList[trav].booking_id);
+
+                } else if (startTimeList[trav].availability === 1) {
+                    //remove any possible avail codes
+                    if (timeslotGroup[i].children[0].classList.contains("available")) {
+                        timeslotGroup[i].children[0].classList.toggle("available");
+                    }
+                    timeslotGroup[i].children[0].setAttribute("disabled", "");
+                    //set to disabled
+                    if (!timeslotGroup[i].children[0].classList.contains("disabled")) {
+                        timeslotGroup[i].children[0].classList.toggle("disabled");
+                    }
+                    timeslotGroup[i].children[0].setAttribute("data-timeslot", startTimeList[trav].booking_id);
+
+                }
+            }
+        }
+        parentNode.appendChild(blueprint);
+    } else {
+
+        //calculate based off the day and facility to obtain array position
+        iter = (facilityID - 1) * 30 + (day - 1) * 5;
+        let blueprint = document.getElementById("timeslotBlueprint");
+        blueprint.setAttribute("class", "");
+        let timeslotRow = blueprint.children[1];
+        let timeslotGroup = timeslotRow.children;
+
+        for (let i = 0; i < 5; i++) {
+            let trav = iter + i;
+            //unselect it
+            if (timeslotGroup[i].children[0].classList.contains("selected")) {
+                timeslotGroup[i].children[0].classList.toggle("selected");
+            }
+            if (startTimeList[trav].availability === 0) {
+                //remove any possible disabled codes
+                if (timeslotGroup[i].children[0].classList.contains("disabled")) {
+                    timeslotGroup[i].children[0].classList.toggle("disabled");
+                }
+                timeslotGroup[i].children[0].removeAttribute("disabled");
+
+                //set to avail
+                if (!timeslotGroup[i].children[0].classList.contains("available")) {
+                    timeslotGroup[i].children[0].classList.toggle("available");
+                }
+                timeslotGroup[i].children[0].setAttribute("data-timeslot", startTimeList[trav].booking_id);
+
+            } else if (startTimeList[trav].availability === 1) {
+                //remove any possible avail codes
+                if (timeslotGroup[i].children[0].classList.contains("available")) {
+                    timeslotGroup[i].children[0].classList.toggle("available");
+                }
+                timeslotGroup[i].children[0].setAttribute("disabled", "");
+                //set to disabled
+                if (!timeslotGroup[i].children[0].classList.contains("disabled")) {
+                    timeslotGroup[i].children[0].classList.toggle("disabled");
+                }
+                timeslotGroup[i].children[0].setAttribute("data-timeslot", startTimeList[trav].booking_id);
+
+            }
+        }
+        parentNode.appendChild(blueprint);
+    }
+
 }
 
 function addListeners(facilityElements, timeSlotElements, dateCardElements) {
@@ -202,10 +316,35 @@ function addListeners(facilityElements, timeSlotElements, dateCardElements) {
                 //store the value of the facility
                 selectedFacility = selectionGroup.getAttribute('facility-name');
                 document.getElementById('selectedFacility').value = selectedFacility;
-                $(".timeslot-group").filter("[facility-id!=" + selectionGroup.getAttribute('location-id') + "]").addClass("d-none");
-                $("[facility-id=" + selectionGroup.getAttribute('location-id') + "]").toggleClass("d-none");
+                //$(".timeslot-group").filter("[facility-id!=" + selectionGroup.getAttribute('location-id') + "]").addClass("d-none");
+                //$("[facility-id=" + selectionGroup.getAttribute('location-id') + "]").toggleClass("d-none");
                 //$(".form-group").filter("[facility-id!=" + selectionGroup.getAttribute('location-id') + "]").addClass("d-none");
                 //$("[facility-id=" + selectionGroup.getAttribute('location-id') + "]").toggleClass("d-none");
+                console.log(selectionGroup.parentNode);
+                //if the timeslots is currently not under the selected facility
+                if (selectionGroup.querySelector("#timeslotBlueprint") === null) {
+                    //update the timeslots
+                    updateTimeslots(selectionGroup, selectionGroup.getAttribute('location-id'), 1);
+                    unselectDays();
+                } else { //if the timeslots are currently under the selected facility
+                    //if it is invisible
+                    if (selectionGroup.querySelector("#timeslotBlueprint").classList.contains("d-none")) {
+                        //update the timeslots
+                        updateTimeslots(selectionGroup, selectionGroup.getAttribute('location-id'), 1);
+                        //make it appear
+                        selectionGroup.querySelector("#timeslotBlueprint").classList.remove("d-none");
+                        unselectDays();
+
+
+                    } else { //if it is currently visible
+                        //update the timeslots
+                        updateTimeslots(selectionGroup, selectionGroup.getAttribute('location-id'), 1);
+                        //hide the timeslots
+                        selectionGroup.querySelector("#timeslotBlueprint").classList.toggle("d-none");
+                        unselectDays();
+                    }
+                }
+                console.log(selectionGroup.querySelector("#timeslotBlueprint").querySelector(".date-row").children);
             }
         });
     });
@@ -215,6 +354,7 @@ function addListeners(facilityElements, timeSlotElements, dateCardElements) {
 
             element.addEventListener('click', (event) => {
 
+                event.stopPropagation();
                 //visual feedback portion
                 const selectionGroup = event.target;
                 //toggle an element, for css to reflect the changes
@@ -258,21 +398,46 @@ function addListeners(facilityElements, timeSlotElements, dateCardElements) {
 
     dateCardElements.forEach((element) => {
         element.addEventListener('click', (event) => {
+            event.stopPropagation();
             //check if the clicked element is a child of the facility card element
             dateCardElements.forEach((card) => {
                 if (card.classList.contains('selected') && card !== element) {
                     card.classList.remove('selected');
                 }
             });
-            ///visual feedback portion
-            const selectionGroup = event.target;
+            //visual feedback portion
+            const selectionGroup = event.target.closest('.date-card');
             //toggle an element, for css to reflect the changes
             selectionGroup.classList.toggle('selected');
             //store the value of the facility
             selectedDate = selectionGroup.getAttribute('date-data');
+            console.log(selectionGroup.parentNode);
+            updateTimeslots(selectionGroup.parentNode.parentNode.parentNode.parentNode,
+                    selectionGroup.parentNode.parentNode.parentNode.parentNode.getAttribute('location-id'),
+                    selectionGroup.getAttribute('day'));
             //document.getElementById('selectedFacility').value = selectedFacility;
             //$(".form-group").filter("[facility-id!=" + selectionGroup.getAttribute('location-id') + "]").addClass("d-none");
             //$("[facility-id=" + selectionGroup.getAttribute('location-id') + "]").toggleClass("d-none");
         });
     });
 }
+
+function unselectDays() {
+    //set all the days to unselected
+    for (let i = 0; i < document.querySelector("#timeslotBlueprint").querySelector(".date-row").children.length; i++) {
+        let element = document.querySelector("#timeslotBlueprint").querySelector(".date-row").children[i];
+        //if the 1st element isnt selected, make it selected, default to selected
+        if (i === 0) {
+            if (!element.children[0].classList.contains("selected")) {
+                console.log(element.children[0]);
+                element.children[0].classList.toggle("selected");
+            }
+
+        } else {
+            if (element.children[0].classList.contains("selected")) {
+                element.children[0].classList.remove("selected");
+            }
+        }
+    }
+}
+

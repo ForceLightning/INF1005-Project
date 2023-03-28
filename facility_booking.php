@@ -53,26 +53,26 @@
             </section>
 
 
-            <section id="timeslotBlueprint" class="d-none">
+            <section id="timeslotBlueprint" class="timeslotBlueprint d-none">
                 <div class="date-row row">
                     <div class="date-group col-xl-4 col-lg-6 col-sm-6 col-xs-6 mb-2 ">
                         <div name="date-card"
                              class="date-card d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
-                             date-data="">
+                             date-data="" day="1">
                             1st day
                         </div>
                     </div>
                     <div class="date-group col-xl-4 col-lg-6 col-sm-6 col-xs-6 mb-2 ">
                         <div name="date-card"
                              class="date-card d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
-                             date-data="">
+                             date-data="" day="2">
                             2nd day
                         </div>
                     </div>
                     <div class="date-group col-xl-4 col-lg-6 col-sm-6 col-xs-6 mb-2 ">
                         <div name="date-card"
                              class="date-card d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
-                             date-data="">
+                             date-data="" day="3">
                             3rd day
                         </div>
                     </div>
@@ -80,17 +80,31 @@
                     <div class="date-group col-xl-4 col-lg-6 col-sm-6 col-xs-6 mb-2 ">
                         <div name="date-card"
                              class="date-card d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
-                             date-data="">
+                             date-data="" day="4">
                             4th day
                         </div>
                     </div>
                     <div class="date-group col-xl-4 col-lg-6 col-sm-6 col-xs-6 mb-2 ">
                         <div name="date-card"
                              class="date-card d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
-                             date-data="">
+                             date-data="" day="5">
                             5th day
                         </div>
                     </div>
+                    <div class="date-group col-xl-4 col-lg-6 col-sm-6 col-xs-6 mb-2 ">
+                        <div name="date-card"
+                             class="date-card d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
+                             date-data="" day="6">
+                            6th day
+                        </div>
+                    </div>
+<!--                    <div class="date-group col-xl-4 col-lg-6 col-sm-6 col-xs-6 mb-2 ">
+                        <div name="date-card"
+                             class="date-card d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
+                             date-data="" day="">
+                            7th day
+                        </div>
+                    </div>-->
                 </div>
                 <div class="timeslot-row row">
                     <div class="timeslot-group col-xl-4 col-lg-6 col-sm-6 col-xs-6 mb-2 ">

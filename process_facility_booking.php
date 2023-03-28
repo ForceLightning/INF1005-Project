@@ -37,7 +37,6 @@ function insert_bookings() {
                             "date" => $date,
                             "start_time" => $start_time,
                             "end_time" => $end_time
-
                         );
                     }
                 }
@@ -115,17 +114,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
     http_response_code(405);
 }
-
 ?>
 <!DOCTYPE html>
 <html>
 
-<head>
-    <?php include_once "includes/header.inc.php"; ?>
-    <title>Bookings</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+    <head>
+        <?php include_once "includes/header.inc.php"; ?>
+        <title>Bookings</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
 
 <body>
     <?php
