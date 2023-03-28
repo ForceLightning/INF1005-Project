@@ -1,168 +1,154 @@
-<!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
--->
-<html>
-    <head>
-        <!-- bootstrap CDN(Content Delivery Network) - provides styles tied to keyword classes -->
-        <link rel="stylesheet"
-              href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-              integrity=
-              "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-              crossorigin="anonymous">
-        <!-- css file in local files -->
-        <link rel="stylesheet" href="css/main.css">
-        <!-- jQuery CDN-->
-        <!-- defer keyword to allow the browser to load the rest of the webpage first-->
-        <script defer
-                src="https://code.jquery.com/jquery-3.4.1.min.js"
-                integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-                crossorigin="anonymous">
-        </script>
-        <!--Bootstrap JS CDN-->
-        <!-- defer keyword to allow the browser to load the rest of the webpage first-->
-        <script defer 
-                src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
-                integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm"
-                crossorigin="anonymous">
-        </script>
-        <!-- custom JS, in local files -->
-        <script defer src="js/facility_booking.js" ></script> <!-- this line will auto func the document ready function in js-->
+<?php
 
-        <title>Placeholder</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>   
-        <?php
-        include "includes/nav.inc.php";
-        ?>
-        <main>
-            <?php
-            /*
-             * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-             * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
-             */
-            var_dump($_POST);
-            $success = true;
-            //the single facility selected
-//            $selectedFacility = $selectedTimeSlots = "";
-            $selectedTimeSlots = $_POST['timeslot'];
-            
-            $selectedFacility = sanitize_input($_POST['facility']);
-            //the array of time slots selected
+use function PHPSTORM_META\exitPoint;
 
-            
-//            $timeslots = $_POST['timeslot-white'];
-//            echo "Facility selected: " . $timeslots . "<br>";
+include_once "includes/util.php";
+session_start();
 
-            if($selectedFacility == ""){
-                echo "No facility selected";
-            }
-            else{
-                echo "Facility selected: " . $selectedFacility . "<br>";
-            }
-            
-            if (empty($selectedTimeSlots)) {
-                echo "No time slots selected";
-            } 
-            else {
-                foreach ($selectedTimeSlots as $timeSlot) {
-                    echo "Time slot selected: " . $timeSlot . "<br>";
+function insert_bookings() {
+    global $user_bookings, $branch, $bookings, $error_msg;
+    $success = true;
+    $config = parse_ini_file('../../private/project-db-config.ini', true);
+    $conn = new mysqli($config[$branch]['servername'], $config[$branch]['username'], $config[$branch]['password'], $config[$branch]['dbname']);
+    if ($conn->connect_error) {
+        $error_msg[] = "Connection failed: " . $conn->connect_error;
+        $success = false;
+    } else {
+        $bookings = array();
+        for ($i = 0; $i < count($user_bookings); $i++) {
+            $stmt = $conn->prepare("SELECT * FROM bookings WHERE booking_id = ? AND time_end > NOW() AND time_end < NOW() + INTERVAL 7 DAY AND booked = 0");
+            $booking_id = $user_bookings[$i];
+            // check that all booking_ids are valid
+            $stmt->bind_param("i", $booking_id);
+            if ($stmt->execute()) {
+                $result = $stmt->get_result();
+                if ($result->num_rows == 0) {
+                    $error_msg[] = "Booking " . $user_bookings[$i] . " is no longer valid.";
+                    $success = false;
+                    break;
+                } else {
+                    for ($j = 0; $j < $result->num_rows; $j++) {
+                        $start_time = new DateTime($result->fetch_assoc()["time_start"]);
+                        $end_time = new DateTime($result->fetch_assoc()["time_end"]);
+                        $date = $start_time->format("Y-m-d");
+                        $start_time = $start_time->format("H:i");
+                        $end_time = $end_time->format("H:i");
+                        $bookings[] = array(
+                            "facility_name" => $result->fetch_assoc()["facility_name"],
+                            "booking_id" => $result->fetch_assoc()["booking_id"],
+                            "date" => $date,
+                            "start_time" => $start_time,
+                            "end_time" => $end_time
+
+                        );
+                    }
                 }
+            } else {
+                $error_msg[] = "Execute Failed: (" . $stmt->errno . ") " . $stmt->error;
+                $success = false;
+                break;
             }
+        }
+    }
+    // set the bookings
+    if ($success) {
+        $conn->begin_transaction();
+        for ($i = 0; $i < count($user_bookings); $i++) {
+            $stmt = $conn->prepare("UPDATE bookings VALUES (booked = 1, member_id = ?, booked_at = NOW()) WHERE booking_id = ?");
+            $member_id = $_SESSION["member_id"];
+            $booking_id = $user_bookings[$i]["booking_id"];
+            try {
+                $stmt->bind_param("ii", $member_id, $booking_id);
+                if ($stmt->execute()) {
+                    $success = true;
+                } else {
+                    $error_msg[] = "Execute Failed: (" . $stmt->errno . ") " . $stmt->error;
+                    $success = false;
+                    break;
+                }
+            } catch (mysqli_sql_exception $e) {
+                $conn->rollback();
+                throw $e;
+            }
+        }
+    }
+    if ($success) {
+        $conn->commit();
+    } else {
+        $conn->rollback();
+    }
+}
 
-//                $lname = $pwd = $cfmpassword = $email = $errorMsg = "";
-//                $success = true;
-//
-//                //last name validation
-//                if(empty($_POST["lname"])){
-//                    $errorMsg .= "Last Name is required.<br>";
-//                    $success = false;
-//                }
-//                else{
-//                    $lname = sanitize_input($_POST["lname"]);        
-//                }
-//
-//                //email validation
-//                if (empty($_POST["email"])){
-//                    $errorMsg .= "Email is required.<br>";
-//                    $success = false;
-//                }
-//                else{
-//                    $email = sanitize_input($_POST["email"]);
-//                    // Additional check to make sure e-mail address is well-formed.
-//                    if (!filter_var($email, FILTER_VALIDATE_EMAIL))
-//                    {
-//                        $errorMsg .= "Invalid email format.";
-//                        $success = false;
-//                    }
-//                }
-//
-//                //password validation
-//                if(empty($_POST["pwd"])){
-//                    $errorMsg .= "Password is required.<br>";
-//                    $success = false;
-//                }
-//                else{
-//                    $password = $_POST["pwd"];
-//                    //cfm password validation
-//                    if(empty($_POST["pwd_confirm"])){
-//                        $errorMsg .= "Password confirmation is required.<br>";
-//                        $success = false;
-//                    }
-//                    else{
-//                        $cfmpassword = $_POST["pwd_confirm"];
-//                        //if passwords do not match, add to error message
-//                        if($password !== $cfmpassword){
-//                            $errorMsg.= "Passwords do not match";
-//                            $success = false;
-//                        }
-//                        else{
-//                            $password = password_hash($password, PASSWORD_DEFAULT);
-//                            $cfmpassword = $password; //this line might not be needed as it will not be used to login 
-//                        }
-//
-//                    }
-//                }
-//
-//
-//
-//
-//                if ($success)
-//                {
-//                    echo "<h4>Registration successful!</h4>";
-//                    echo "<p>Email: " . $email;                    
-//                    echo "<div class>"
-//                            ."<a href='register.php'>"
-//                                . "<button type='button'> "
-//                                        . "Return to Main Page"
-//                                . "</button>"
-//                            . "</a>"
-//                        ."</div>";
-//                }
-//                else
-//                {
-//                    echo "<h4>The following input errors were detected:</h4>";
-//                    echo "<p>" . $errorMsg . "</p>";
-//                    echo "<a href='register.php'>"
-//                            . "<button type='button'> "
-//                                    . "Return to Main Page"
-//                            . "</button>"
-//                        . "</a>";
-//                }
-            //Helper function that checks input for malicious or unwanted content.
-            function sanitize_input($data) {
-                $data = trim($data);
-                $data = stripslashes($data);
-                $data = htmlspecialchars($data);
-                return $data;
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST["booking-slots"])) {
+        // decode the booking slots from json format
+        $user_bookings = json_decode($_POST["booking-slots"], true);
+        foreach ($user_bookings as $booking_id) {
+            if (!is_numeric($booking_id)) {
+                http_response_code(400);
+                exit();
             }
-            ?>
-        </main>
+        }
+        if (isset($_SESSION["member_id"])) {
+            if (count($user_bookings) == 0) {
+                http_response_code(400);
+                exit();
+            }
+            insert_bookings();
+        } else if (isset($_SESSION["temp_bookings"])) {
+            $user_bookings = array_merge($user_bookings, $_SESSION["temp_bookings"]);
+            insert_bookings();
+            unset($_SESSION["temp_bookings"]);
+        } else {
+            $_SESSION["temp_bookings"] = $user_bookings;
+            header("Location: login.php");
+        }
+    } else {
+        http_response_code(400);
+    }
+} else if (isset($_SESSION["temp_bookings"])) {
+    $user_bookings = $_SESSION["temp_bookings"];
+    insert_bookings();
+    unset($_SESSION["temp_bookings"]);
+} else {
+    http_response_code(405);
+}
+
+?>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <?php include_once "includes/header.inc.php"; ?>
+    <title>Bookings</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <?php
+    include "includes/nav.inc.php";
+    ?>
+    <main>
         <?php
-        include "includes/footer.inc.php";
+        echo "<section>";
+        echo "<h2>Booking Summary</h2>";
+        if (isset($error_msg)) {
+            echo "<h4>Booking failed!</h4>";
+            echo "<p>" . implode("<br>", $error_msg) . "</p>";
+            echo "<a href='facility_booking.php' class='btn btn-primary'>Back to bookings</a>";
+        } else {
+            echo "<h4>Bookings successful!</h4>";
+            for ($i = 0; $i < count($bookings); $i++) {
+                echo "<p>" . $bookings[$i]["facility_name"] . " on " . $bookings[$i]["date"] . " from " . $bookings[$i]["start_time"] . " to " . $bookings[$i]["end_time"] . "</p>";
+            }
+        }
+        echo "</section>";
         ?>
-    </body>
+    </main>
+    <?php
+    include "includes/footer.inc.php";
+    ?>
+</body>
+
 </html>
