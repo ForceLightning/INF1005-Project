@@ -54,7 +54,8 @@
                         <hr>
                         <p class="facilities-desc">
                             Opening Hours:<br>
-                            Monday to Sunday, 10.30 a.m. to 10.00 p.m.<br> <br>
+                            Monday to Sunday, 8.00 a.m. to 6.00 p.m.<br>
+                            Last Booking ends at 4.00 p.m.<br> <br>
                             Pricing:<br>
                             Weekdays: $40/hr<br>
                             Weekends: $50/hr<br><br>

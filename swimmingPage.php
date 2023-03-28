@@ -36,7 +36,7 @@
             <h1 class="hero-header">Mandai Swimming Pool</h1>
         </div>
         </header>
-        <main class="container container-maxheight">
+        <main class="container container-maxheight container-fluid">
            <section id="s1">
                 <h2>Our Pools</h2>
                 <div class="row">
@@ -49,12 +49,13 @@
             </section>
             <section id="s1">
                 <div class="row facilities-info-row">
-                    <div class="column">
+                    <div class="col-sm-6">
                         <h3 class="facilities-heading">Information</h3>
                         <hr>
                         <p class="facilities-desc">
                             Opening Hours:<br>
-                            Monday to Sunday, 10.30 a.m. to 9.00 p.m.<br> <br>
+                            Monday to Sunday, 8.00 a.m. to 6.00 p.m.<br>
+                            Last Booking ends at 4.00 p.m.<br> <br>
                             Pricing:<br>
                             Children: $10/hr<br>
                             Adults: $15/hr<br><br>
@@ -65,8 +66,8 @@
                             <button type="button" class="facilities-button">Make a Booking</button>
                         </a>
                     </div>
-                    <div class="column">
-                    <img class="golf-facility-img" src="assets\golf-booking-img.jpg" alt="golf courses">
+                    <div class="col-sm-6">
+                    <img class="golf-facility-img img-fluid mt-3" src="assets\golf-booking-img.jpg" alt="golf courses">
                     </div>
                 </div>
             </section>
@@ -75,14 +76,12 @@
             <div class="swiper mySwiper swiperFacilities">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img src="assets/swimming-pool-1.jpg" alt="promo_photo1">
+                        <img class="img-fluid" src="assets/swimming-pool-1.jpg" alt="pool_photo1">
                     </div>
                     <div class="swiper-slide">
-                        <img src="assets/swimming-pool-2.jpg" alt="promo_photo1">
+                        <img class="img-fluid" src="assets/swimming-pool-2.jpg" alt="pool_photo2">
                     </div>
-                    <div class="swiper-slide">
-                        <img src="assets/swimming-pool-3.jpg" alt="promo_photo1">
-                    </div>
+<!--                    
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
