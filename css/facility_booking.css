@@ -29,3 +29,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
   border: 1px solid #007bff; /* add a border */
   color: #007bff; /* change the text color */
 }
+
+
+.date-card.selected {
+  background-color: #f8f9fa; /* change the background color */
+  border: 1px solid #007bff; /* add a border */
+  color: #007bff; /* change the text color */
+}

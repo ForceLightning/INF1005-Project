@@ -5,11 +5,18 @@
 
 let selectedTimeSlots = [];
 let selectedFacility = "";
+let selectedDate = "";
+
+let startTimeList = [];
+let endTimeList = [];
 $(document).ready(function () {
 //getting all facility elements 
     const facilityElements = document.querySelectorAll('.facility-card');
     //getting all timeslot elements
     const timeSlotElements = document.querySelectorAll('.timeslot-white');
+    //getting all date elements
+    const dateCardElements = document.querySelectorAll('.date-card');
+
     //to store the values to be passed into the database
     const bookingSlots = getBookingSlots(true);
     // TODO: Iterate through the dict that maps location_id => timeslots
@@ -64,7 +71,9 @@ function getBookingSlots(debug) {
         const facilityElements = document.querySelectorAll('.facility-card');
         //getting all timeslot elements
         const timeSlotElements = document.querySelectorAll('.timeslot-white');
-        addListeners(facilityElements, timeSlotElements);
+        //getting all date elements
+        const dateCardElements = document.querySelectorAll('.date-card');
+        addListeners(facilityElements, timeSlotElements, dateCardElements);
     });
     return bookingSlots;
 }
@@ -106,7 +115,7 @@ function displayBookingSlots(bookingSlots) {
             var start = new Date(startTime[0], startTime[1] - 1, startTime[2], startTime[3], startTime[4], startTime[5]);
             let endTime = timeslot["time_end"].split(/[- :]/);
             var end = new Date(endTime[0], endTime[1] - 1, endTime[2], endTime[3], endTime[4], endTime[5]);
-            var timeslotText = start.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + " - " + end.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            var timeslotText = start.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'}) + " - " + end.toLocaleTimeString([], {hour: '2-digit', minute: '2-digit'});
             timeslotElement.setAttribute("booking-id", timeslot["booking_id"]);
             timeslotElement.innerHTML = timeslotText;
             // Add the timeslot element to the facility card
@@ -119,10 +128,10 @@ function displayBookingSlots(bookingSlots) {
         let testPrime = test.cloneNode(true);
         //change the class to make it appear
         testPrime.setAttribute("class", "");
-        let timeslotgroup = testPrime.children[0].children;
-        startTimeList = [];
-        endTimeList = [];
-        let i =0;
+        //let timeslotgroup = testPrime.children[1].children;
+        let timeslotgroup = testPrime.getElementsByClassName("timeslot-row")[0].children;
+
+        let i = 0;
         // Add the timeslots to the facility card
         for (let timeslot of timeslots) {
             // Create a new timeslot element
@@ -131,15 +140,14 @@ function displayBookingSlots(bookingSlots) {
             let startTime = timeslot["time_start"].split(/[- :]/);
             var start = new bookingSlot(new Date(startTime[0], startTime[1] - 1, startTime[2], startTime[3], startTime[4], startTime[5]), timeslot["booked"]);
             startTimeList.push(start);
-            
-            if(i< timeslotgroup.length){
-                if(timeslot["booked"]=== 0){
+
+            if (i < timeslotgroup.length) {
+                if (timeslot["booked"] === 0) {
                     if (!timeslotgroup[i].children[0].classList.contains("available")) {
                         timeslotgroup[i].children[0].classList.toggle("available");
                     }
 
-                }
-                else if(timeslot["booked"] === 1){
+                } else if (timeslot["booked"] === 1) {
                     timeslotgroup[i].children[0].setAttribute("disabled", "");
                     if (!timeslotgroup[i].children[0].classList.contains("disabled")) {
                         timeslotgroup[i].children[0].classList.toggle("disabled");
@@ -189,7 +197,7 @@ function displayBookingSlots(bookingSlots) {
     }
 }
 
-function addListeners(facilityElements, timeSlotElements) {
+function addListeners(facilityElements, timeSlotElements, dateCardElements) {
 
     //add event listeners to the facility cards
     facilityElements.forEach((element) => {
@@ -228,19 +236,22 @@ function addListeners(facilityElements, timeSlotElements) {
                 //getting attribute from the clicked button
                 const timeSlot = selectionGroup.getAttribute('data-timeslot');
                 //checking if the data already exists in the array
-                // const index = selectedTimeSlots.indexOf(timeSlot);
+                const index = selectedTimeSlots.indexOf(timeSlot);
                 if (index === -1) {
-                    //selectedTimeSlots.push(timeSlot); //add to the array if not already selected
-                    //document.getElementById('selectedTimeSlots').value = selectedTimeSlots.join(",");
+                    selectedTimeSlots.push(timeSlot); //add to the array if not already selected
+                    document.getElementById('selectedTimeSlots').value = selectedTimeSlots.join(",");
                     //timeSlot.setAttribute("value", selectedTimeSlots);
                 } else {
-                    //selectedTimeSlots.splice(index, 1); //remove from the array if already selected
-                    //document.getElementById('selectedTimeSlots').value = selectedTimeSlots.join(",");
+                    selectedTimeSlots.splice(index, 1); //remove from the array if already selected
+                    document.getElementById('selectedTimeSlots').value = selectedTimeSlots.join(",");
                     //timeSlot.setAttribute("value", selectedTimeSlots);
                 }
                 //console.log(selectedTimeSlots); // test
             });
         }
+
+
+
 //        //data input portion
 //        //getting attribute from the clicked button
 //        const booking_id = selectionGroup.getAttribute('booking-id');
@@ -258,4 +269,23 @@ function addListeners(facilityElements, timeSlotElements) {
 //        //console.log(selectedTimeSlots); // test
     });
 
+    dateCardElements.forEach((element)=>{
+        element.addEventListener('click', (event) => {
+            //check if the clicked element is a child of the facility card element
+            dateCardElements.forEach((card) => {
+                if (card.classList.contains('selected') && card !== element) {
+                    card.classList.remove('selected');
+                }
+            });
+            ///visual feedback portion
+            const selectionGroup = event.target;
+            //toggle an element, for css to reflect the changes
+            selectionGroup.classList.toggle('selected');
+            //store the value of the facility
+            selectedDate = selectionGroup.getAttribute('date-data');
+            //document.getElementById('selectedFacility').value = selectedFacility;
+            //$(".form-group").filter("[facility-id!=" + selectionGroup.getAttribute('location-id') + "]").addClass("d-none");
+            //$("[facility-id=" + selectionGroup.getAttribute('location-id') + "]").toggleClass("d-none");
+        });
+    });
 }

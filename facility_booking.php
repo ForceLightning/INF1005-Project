@@ -30,7 +30,7 @@
             <section id="timeslots">
                 <div class="timeslot-row row">
                 </div>
-                <form action="process_facility_booking.php" method="post" novalidate>
+                <form id="booking-form" action="process_facility_booking.php" method="post" novalidate>
                     <!--used to pass in the array of timings selected in js into process_facility_booking-->
                     <!-- hidden input fields to store selected facility and timeslot -->
                     <div class="form-group">
@@ -50,6 +50,44 @@
 
 
             <section id="timeslotBlueprint" class="d-none">
+                <div class="date-row row">
+                    <div class="date-group col-xl-4 col-lg-6 col-sm-6 col-xs-6 mb-2 ">
+                        <div name="date-card"
+                             class="date-card d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
+                             date-data="">
+                            1st day
+                        </div>
+                    </div>
+                    <div class="date-group col-xl-4 col-lg-6 col-sm-6 col-xs-6 mb-2 ">
+                        <div name="date-card"
+                             class="date-card d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
+                             date-data="">
+                            2nd day
+                        </div>
+                    </div>
+                    <div class="date-group col-xl-4 col-lg-6 col-sm-6 col-xs-6 mb-2 ">
+                        <div name="date-card"
+                             class="date-card d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
+                             date-data="">
+                            3rd day
+                        </div>
+                    </div>
+
+                    <div class="date-group col-xl-4 col-lg-6 col-sm-6 col-xs-6 mb-2 ">
+                        <div name="date-card"
+                             class="date-card d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
+                             date-data="">
+                            4th day
+                        </div>
+                    </div>
+                    <div class="date-group col-xl-4 col-lg-6 col-sm-6 col-xs-6 mb-2 ">
+                        <div name="date-card"
+                             class="date-card d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
+                             date-data="">
+                            5th day
+                        </div>
+                    </div>
+                </div>
                 <div class="timeslot-row row">
                     <div class="timeslot-group col-xl-4 col-lg-6 col-sm-6 col-xs-6 mb-2 ">
                         <div name="timeslot-white"
@@ -83,7 +121,7 @@
                     <div class="timeslot-group col-xl-4 col-lg-6 col-sm-6 col-xs-6 mb-2 ">
                         <div name="timeslot-white"
                              class="timeslot-white d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
-                             data-timeslot="1500">
+                             data-timeslot="1600">
                             4:00 PM - 6:00 PM
                         </div>
                     </div>
