@@ -117,7 +117,7 @@
                 <!-- single room -->
                 <article class = "facility">
                     <div class = "facility-image">
-                        <a target="_blank" class="img-fluid" src = "assets/bowling_night_poster.png" alt = "facility image" id="Bowling">
+                        <a target="_blank" class="img-fluid" href = "assets/bowling_night_poster.png" alt = "facility image" id="Bowling">
                         <img class="events-img img-fluid" src="assets\bowling_night_poster.png" width="100%" alt="Zoo">                    
                         </a>
                     </div>
@@ -141,7 +141,7 @@
                 <!-- end of single room -->
                 <article class = "facility">
                     <div class = "facility-image">
-                        <a target="_blank" class="img-fluid" href = "assets/hari_raya_poster.jpg" alt = "facility image">
+                        <a target="_blank" class="img-fluid" href = "assets/hari_raya_poster.png" alt = "facility image">
                         <img class="events-img img-fluid" src="assets\hari_raya_poster.png" width="100%" alt="Zoo" id="Bazaar">                    
                         </a>
                     </div>
