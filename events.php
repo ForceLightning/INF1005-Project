@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <?php include "includes/header.inc.php"; ?>
-    <script defer src="js/events.js"></script>
-    <title>Events</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-
-<body class="d-flex flex-column min-vh-100">
-    <?php
-    include "includes/nav.inc.php";
-    ?>
-
-    <header>
-        <div class="hero-image">
-            <img class="img" src="assets/event_hero.jpg" alt="home-page-img" />
+    <head>
+        <?php include "includes/header.inc.php"; ?>
+        <script defer src="js/events.js"></script>
+        <title>Events</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">           
+    </head>
+    <body class="d-flex flex-column min-vh-100">
+        <?php 
+            include "includes/nav.inc.php";
+        ?>
+        <!-- Header Image -->
+        <header>
+            <div class="hero-image">
+                  <img class="img" src="assets/event_hero.jpg" alt="home-page-img"/>
+            </div>
+            <div class ="hero-text">
+                <h1 class="hero-header">Events</h1>
+            </div>
+        </header>
+        <!-- End of Header Image -->
+        
+        <!-- Event Button Months Filter -->
+        <div id="myBtnContainer">
+          <button class="events-button2 active" onclick="filterSelection('all')"> Show All</button>
+          <button class="events-button2" onclick="filterSelection('now')"> On-going</button>
+          <button class="events-button2" onclick="filterSelection('april')"> April</button>
+          <button class="events-button2" onclick="filterSelection('may')"> May</button>
+          <button class="events-button2" onclick="filterSelection('june')"> June</button>
         </div>
-        <div class="hero-text">
-            <h1 class="hero-header">Events</h1>
-        </div>
-    </header>
-
-    <!-- Event Button Months Filter -->
-    <div id="myBtnContainer">
-        <button class="events-button2 active" onclick="filterSelection('all')"> Show All</button>
-        <button class="events-button2" onclick="filterSelection('now')"> On-going</button>
-        <button class="events-button2" onclick="filterSelection('april')"> April</button>
-        <button class="events-button2" onclick="filterSelection('may')"> May</button>
-        <button class="events-button2" onclick="filterSelection('june')"> June</button>
-    </div>
 
         <div class="container">
           <a href="#Drinks"><img class="filterDiv now img-fluid" src="assets\happy_hour_poster.png" alt="happy_hour"/></a>
@@ -59,25 +58,20 @@
                         We've teamed up with the Mandai Zoo to provide a fun-filled day for members and their families.
                         We'll be offering a free shuttle service to and from the zoo. This means you can sit back, relax, and enjoy the ride to the Mandai Zoo without worrying about traffic or parking.
                         This is a great opportunity to spend quality time with your family and create memories that will last a lifetime. 
-                        So don't miss out on this special event – register today and get ready for a wild adventure at the Mandai Zoo!
+                        So don't miss out on this special event – register today and get ready for a wild adventure at the Mandai Zoo!                       
                         </p>
+                        <br><br>
                         <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdVuy9VMf1q7QDPX0LFBc43ErzjweIxUd3U3wbQ9icKhFpHBg/viewform?usp=sf_link">
                             <button type="button" class="events-button">Reserve Now</button>
                         </a>
                     </div>
-                    <div class="col-sm">
-                        <a target="_blank" href="assets\zoo_poster.png">
-                        <img class="events-img img-fluid" src="assets\zoo_poster.png" width="100%" alt="Zoo">
-                    </a>
-                    </div>
-                </div>
-                <!-- End of Zoo -->
-                
-                <!-- Happy Hour -->
-                <div class ="row" id="Drinks">
-                    <div class="col-sm">
-                        <a target="_blank" href="assets\happy_hour_poster.png">
-                        <img class="events-img img-fluid" src="assets\happy_hour_poster.png" width="100%" alt="Happy Hour">
+                </article>
+                <!-- end of single room -->
+                <!-- single room -->
+                <article class = "facility">
+                    <div class = "facility-image">
+                       <a target="_blank" href="assets\happy_hour_poster.png">
+                        <img class="events-img img-fluid" src="assets\happy_hour_poster.png" width="100%" alt="Zoo">                    
                     </a>
                     </div>
                     <div class = "facility-text">
