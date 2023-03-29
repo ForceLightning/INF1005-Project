@@ -47,7 +47,7 @@
                 <article class = "facility">
                     <div class = "facility-image">
                        <a target="_blank" href="assets\zoo_poster.png">
-                        <img class="events-img img-fluid" src="assets\zoo_poster.png" width="100%" alt="Zoo">                    
+                        <img class="events-img img-fluid" src="assets\zoo_poster.png" width="100%" alt="Zoo" id="Zoo">
                     </a>
                     </div>
                     <div class = "facility-text">
@@ -70,7 +70,7 @@
                 <!-- single room -->
                 <article class = "facility">
                     <div class = "facility-image">
-                       <a target="_blank" href="assets\happy_hour_poster.png">
+                       <a target="_blank" href="assets\happy_hour_poster.png" id="Drinks">
                         <img class="events-img img-fluid" src="assets\happy_hour_poster.png" width="100%" alt="Zoo">                    
                     </a>
                     </div>
@@ -94,7 +94,7 @@
                 <article class = "facility">
                     <div class = "facility-image">
                         <a target="_blank" class="img-fluid" src = "assets/pool_party_poster.jpg" alt = "facility image">
-                        <img class="events-img img-fluid" src="assets\pool_party_poster.png" width="100%" alt="Zoo">                    
+                        <img class="events-img img-fluid" src="assets\pool_party_poster.png" width="100%" alt="Zoo" id="Pool">
                         </a>
                     </div>
                     <div class = "facility-text">
@@ -117,7 +117,7 @@
                 <!-- single room -->
                 <article class = "facility">
                     <div class = "facility-image">
-                        <a target="_blank" class="img-fluid" src = "assets/bowling_night_poster.jpg" alt = "facility image">
+                        <a target="_blank" class="img-fluid" src = "assets/bowling_night_poster.jpg" alt = "facility image" id="Bowling">
                         <img class="events-img img-fluid" src="assets\bowling_night_poster.png" width="100%" alt="Zoo">                    
                         </a>
                     </div>
@@ -142,7 +142,7 @@
                 <article class = "facility">
                     <div class = "facility-image">
                         <a target="_blank" class="img-fluid" src = "assets/hari_raya_poster.jpg" alt = "facility image">
-                        <img class="events-img img-fluid" src="assets\hari_raya_poster.png" width="100%" alt="Zoo">                    
+                        <img class="events-img img-fluid" src="assets\hari_raya_poster.png" width="100%" alt="Zoo" id="Bazaar">                    
                         </a>
                     </div>
                     <div class = "facility-text">
