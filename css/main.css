@@ -638,15 +638,15 @@ End of awards img in about us
   margin-top: 200px;
 }
 
-.events-button {
-  color: #53524E;
-  cursor: pointer;
-  font-size: 18px;
-  height: 50px;
-  width: 130px;
-  border: none;
-  background-color: #DED8D1;
-  margin-left: 200px;
+.events-button{  
+    color: #53524E;
+    cursor: pointer;
+    font-size: 18px;
+    height: 50px;
+    width: 300px;
+    border: none;
+    background-color: #DED8D1;
+    margin-left: 200px;
 }
 
 .events-button:hover {
