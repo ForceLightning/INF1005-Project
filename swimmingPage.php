@@ -45,7 +45,7 @@
                     <hr>
                     <p class="facilities-desc">
                         Opening Hours:<br>
-                        Monday to Sunday, 8.00 a.m. to 6.00 p.m.<br>
+                        Monday to Friday, 8.00 a.m. to 6.00 p.m.<br>
                         Last Booking ends at 4.00 p.m.<br> <br>
                         For assistance: <br>
                         Call: (65)6457 9874 | Email: mandai@cc.com
