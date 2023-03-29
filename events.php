@@ -40,9 +40,9 @@
         </div>
         <!-- End of Event Button Months Filter -->
         
-        
+        <main class="containter">
         <section class = "facilitiesmain sec-width" id = "rooms">
-            <div class = "facilitiesmain-container">
+            <div class = "facilitiesmain-container container container-maxheight">
                 <!-- single room -->
                 <article class = "facility">
                     <div class = "facility-image">
@@ -62,7 +62,7 @@
                         </p>
                         <br><br>
                         <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSdVuy9VMf1q7QDPX0LFBc43ErzjweIxUd3U3wbQ9icKhFpHBg/viewform?usp=sf_link">
-                            <button type="button" class="events-button">Reserve Now</button>
+                            <button type="events-button btn" class="events-button">Reserve Now</button>
                         </a>
                     </div>
                 </article>
@@ -85,7 +85,7 @@
                         </p>
                         <br><br>
                         <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfaCz2IdEE34U9bTpbRrs21ub8wCAn7NoS10H61FRY4cc9W5Q/viewform?usp=sf_link">
-                            <button type="button" class="events-button">Reserve Now</button>
+                            <button type="events-button btn" class="events-button">Reserve Now</button>
                         </a>
                     </div>
                 </article>
@@ -108,7 +108,7 @@
                         This is an event you won't want to miss, so mark your calendars and join us for a fun-filled day by the pool.
                         </p>
                         <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeoFWgNXgxK4B-Mk5sSlNMdyrhVSqilZUe058Mu6UYsayirAg/viewform?usp=sf_link">
-                            <button type="button" class="events-button">Reserve Now</button>
+                            <button type="events-button btn" class="events-button">Reserve Now</button>
                         </a>
                         <br><br>
                     </div>
@@ -133,7 +133,7 @@
                         We can't wait to see you at Mandai Country Club's Bowling Night!
                         </p>
                         <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfwtzsoFaWlIe7n_cgtrt98nl-PgbRRGQ0GR0FTWGYFeZmkFQ/viewform">
-                            <button type="button" class="events-button">Reserve Now</button>
+                            <button type="events-button btn" class="events-button">Reserve Now</button>
                         </a>
                         <br><br>
                     </div>
@@ -158,7 +158,7 @@
                         See you there!
                         </p>
                         <a target="_blank" href="https://forms.gle/XfHqjXXMonrYmqHN9">
-                            <button type="button" class="events-button">Reserve Now</button>
+                            <button type="button" class="btn events-button">Reserve Now</button>
                         </a>
                         <br><br>
                     </div>
@@ -170,7 +170,6 @@
 
 
                 <br>
-            
         </main>
         
         <?php
