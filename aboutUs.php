@@ -84,7 +84,7 @@
 
         <div class="row">
             <div class="gallery">
-                <img src="assets\heritage.jpg" alt="1969" width="600" height="400">
+                <img src="assets\heritage.png" alt="1969" width="600" height="400">
                 <div class="desc">1969</div>
             </div>
 
