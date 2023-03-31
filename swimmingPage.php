@@ -35,7 +35,7 @@
             </article>
         </div>
         </section>
-        <section id="s1">
+        <div id="s1">
             <div class="row facilities-info-row">
                 <div class="col-sm-6">
                     <h3 class="facilities-heading">Information</h3>
@@ -54,7 +54,7 @@
                     <img class="img-fluid mt-3" src="assets\swimming.jpg" alt="golf courses">
                 </div>
             </div>
-        </section>
+        </div>
         <section id="s2-facilities">
             <h2 class="section-text">Check Out Our Pool Side</h2>
             <div class="swiper mySwiper swiperFacilities">

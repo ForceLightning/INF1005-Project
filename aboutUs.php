@@ -64,39 +64,38 @@
     </header>
 
     <main class="container container-maxheight" id="TH">
-        <section id="s1">
-            <div class="row">
-                <article class="col-sm">
-                    <h2>The heritage of Mandai Country Club</h2>
-                    <p class="index-desc">
-                        Established in 1988, Mandai Country Club was originally a modest club catering to the needs of
-                        the local community.
-                        Over the years, the club has grown and evolved into a world-class destination for sports,
-                        recreation, and entertainment.
-                        Today, we are proud to be one of the most popular country clubs in Singapore, offering a wide
-                        range of facilities and services for members and guests of all ages.
-                    </p>
-                </article>
-        </section>
+        <div class="row">
+            <article class="col-sm">
+                <h2>The heritage of Mandai Country Club</h2>
+                <p class="index-desc">
+                    Established in 1988, Mandai Country Club was originally a modest club catering to the needs of
+                    the local community.
+                    Over the years, the club has grown and evolved into a world-class destination for sports,
+                    recreation, and entertainment.
+                    Today, we are proud to be one of the most popular country clubs in Singapore, offering a wide
+                    range of facilities and services for members and guests of all ages.
+                </p>
+            </article>
+        </div>
 
         <div class="row">
             <div class="gallery">
-                <img src="assets\heritage.png" alt="1969" width="600" height="400">
+                <img src="assets/heritage.png" alt="1969" width="600" height="400">
                 <div class="desc">1969</div>
             </div>
 
             <div class="gallery">
-                <img src="assets\heritage2.png" alt="1985" width="600" height="400">
+                <img src="assets/heritage2.png" alt="1985" width="600" height="400">
                 <div class="desc">1985</div>
             </div>
 
             <div class="gallery">
-                <img src="assets\heritage3.png" alt="1985" width="600" height="400">
+                <img src="assets/heritage3.png" alt="1985" width="600" height="400">
                 <div class="desc">1999</div>
             </div>
 
             <div class="gallery">
-                <img src="assets\heritage4.png" alt="2023" width="600" height="400">
+                <img src="assets/heritage4.png" alt="2023" width="600" height="400">
                 <div class="desc">Today</div>
             </div>
         </div>
@@ -118,7 +117,7 @@
             <div class="row justify-content-center mt-2 pb-2">
                 <div class="col-4">
                     <div class="polaroid">
-                        <img src="assets\award.jpg" alt="travel agent award" style="width:100%">
+                        <img src="assets/award.jpg" alt="travel agent award" style="width:100%">
                         <div class="container">
                             <p>2023</p>
                         </div>
@@ -127,7 +126,7 @@
 
                 <div class="col-4">
                     <div class="polaroid">
-                        <img src="assets\award4.png" alt="mandai restaurant award" style="width:100%">
+                        <img src="assets/award4.png" alt="mandai restaurant award" style="width:100%">
                         <div class="container">
                             <p>2021</p>
                         </div>
@@ -138,7 +137,7 @@
             <div class="row justify-content-center mt-2 pb-2">
                 <div class="col-4">
                     <div class="polaroid">
-                        <img src="assets\award3.png" alt="golf course award" style="width:100%">
+                        <img src="assets/award3.png" alt="golf course award" style="width:100%">
                         <div class="container">
                             <p>2012</p>
                         </div>
@@ -147,7 +146,7 @@
 
                 <div class="col-4">
                     <div class="polaroid">
-                        <img src="assets\award2.png" alt="asia's best architecture" style="width:100%">
+                        <img src="assets/award2.png" alt="asia's best architecture" style="width:100%">
                         <div class="container">
                             <p>1999</p>
                         </div>
@@ -157,6 +156,7 @@
         </section>
         <?php include_once "includes/topButton.inc.php"; ?>
     </main>
-<?php include "includes/footer.inc.php"; ?>
+    <?php include "includes/footer.inc.php"; ?>
 </body>
+
 </html>

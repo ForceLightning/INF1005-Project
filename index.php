@@ -20,7 +20,7 @@
         </div>
     </header>
     <main class="container container-maxheight">
-        <section id="s1">
+        <div id="s1">
             <div class="row">
                 <article class="col-sm">
                     <h2>History of Mandai Country Club</h2>
@@ -33,7 +33,7 @@
                         Club is the perfect choice for those who demand nothing but the best.</p>
                 </article>
             </div>
-        </section>
+        </div>
 
         <section id="s2">
             <h2 class="section-text">Our Offers</h2>
