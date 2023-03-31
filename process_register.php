@@ -1,4 +1,4 @@
-<!-- TODO: Process register here -->
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -112,5 +112,6 @@
         }
         ?>
     </main>
-    <?php include "includes/footer.inc.php"; ?>
 </body>
+<?php include_once "includes/footer.inc.php"; ?>
+</html>

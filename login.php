@@ -38,8 +38,6 @@ if (isset($_SESSION['member_id'])) {
                 </div>
             </form>
     </main>
-    <?php
-    include "includes/footer.inc.php";
-    ?>
 </body>
+<?php include "includes/footer.inc.php"; ?>
 </html>

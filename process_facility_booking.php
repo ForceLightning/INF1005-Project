@@ -142,14 +142,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     echo "<p>" . $bookings[$i]["facility_name"] . " on " . $bookings[$i]["date"] . " at " . $bookings[$i]["start_time"] . "</p>";
                 }
             }
-            // var_dump($bookings);
         }
         echo "</section>";
         ?>
     </main>
-    <?php
-    include "includes/footer.inc.php";
-    ?>
 </body>
-
+<?php include "includes/footer.inc.php"; ?>
 </html>

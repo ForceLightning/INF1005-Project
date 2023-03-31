@@ -12,12 +12,8 @@
     </style>
 </head>
 
-<body>
-
-    <?php
-    include "includes/nav.inc.php";
-    ?>
-
+<body class="d-flex flex-column min-vh-100">
+    <?php include "includes/nav.inc.php"; ?>
     <main class="container contactUs">
         <div class="row">
             <div class="col-lg-6">
@@ -60,9 +56,7 @@
                     </div>
                 </form>
     </main>
-    <?php
-    include "includes/footer.inc.php";
-    ?>
 </body>
+<?php include "includes/footer.inc.php"; ?>
 
 </html>

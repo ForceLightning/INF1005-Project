@@ -211,9 +211,6 @@
             <br>
         </div>
     </main>
-    <?php
-    include "includes/footer.inc.php";
-    ?>
 </body>
-
+<?php include "includes/footer.inc.php"; ?>
 </html>

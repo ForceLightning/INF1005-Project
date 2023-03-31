@@ -204,9 +204,6 @@ include "includes/nav.inc.php";
     </section>
     <br>
 </main>
-<?php
-include "includes/footer.inc.php";
-?>
 </body>
-
+<?php include "includes/footer.inc.php"; ?>
 </html>

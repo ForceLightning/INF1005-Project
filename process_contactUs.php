@@ -115,12 +115,6 @@ include "includes/nav.inc.php"
     ?>
 </main>
 <br>
-
-<?php
-include "includes/footer.inc.php";
-?>
-
-
 </body>
-
+<?php include "includes/footer.inc.php"; ?>
 </html>
