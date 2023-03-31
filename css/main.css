@@ -717,7 +717,8 @@ End of awards img in about us
 }
 
 .facility-image:hover img {
-  transform: scale(1.1);
+  transform: scale(1.2);
+  transition: all ease-in-out 0.4s;
 }
 
 @media (min-width: 900px) {
@@ -897,7 +898,7 @@ hr {
   border-radius: 4px;
   background-color: transparent;
   border: none;
-  color: #A2967F;
+  color: #4A2511;
   text-align: center;
   font-size: 17px;
   transition: all 0.5s;
