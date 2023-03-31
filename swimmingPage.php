@@ -3,7 +3,7 @@
 
 <head>
     <?php include "includes/header.inc.php"; ?>
-    <title>Golf Course</title>
+    <title>Swimming Pool</title>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -20,9 +20,9 @@
         </div>
     </header>
     <main class="container container-maxheight container-fluid">
-        <h2>Our Pools</h2>
         <div class="row">
             <article class="col-sm">
+                <h2>Our Pools</h2>
                 <p class="index-desc">
                     The swimming pool at Mandai Golf Country Club is a top-notch facility that caters to both
                     recreational and competitive swimmers. With crystal clear waters and well-maintained
@@ -34,7 +34,6 @@
                 </p>
             </article>
         </div>
-        </section>
         <div id="s1">
             <div class="row facilities-info-row">
                 <div class="col-sm-6">
@@ -51,7 +50,7 @@
                         a Booking</button>
                 </div>
                 <div class="col-sm-6">
-                    <img class="img-fluid mt-3" src="assets\swimming.jpg" alt="golf courses">
+                    <img class="img-fluid mt-3" src="assets/swimming.jpg" alt="golf courses">
                 </div>
             </div>
         </div>
