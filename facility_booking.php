@@ -22,91 +22,86 @@
         <div class="row">
             <h1>Facility Bookings</h1>
         </div>
-        <section>
+        <div>
             <!-- facility portion -->
             <div class="facility-row row" id="facility-cards">
             </div>
-        </section>
+        </div>
         <!-- timeslot portion  -->
-        <section id="timeslots">
+        <div id="timeslots">
             <div class="timeslot-row row">
             </div>
-        </section>
+        </div>
 
 
-        <section id="timeslotBlueprint" class="timeslotBlueprint d-none">
+        <div id="timeslotBlueprint" class="timeslotBlueprint d-none">
             <div class="date-row row">
                 <div class="date-group col-xl-4 col-lg-6 col-sm-6 col-xs-6 mb-2 ">
-                    <div name="date-card" class="date-card d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
-                        date-data="" day="1">
+                    <div class="date-card d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
+                        data-date="" data-day="1">
                         1st day
                     </div>
                 </div>
                 <div class="date-group col-xl-4 col-lg-6 col-sm-6 col-xs-6 mb-2 ">
-                    <div name="date-card" class="date-card d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
-                        date-data="" day="2">
+                    <div class="date-card d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
+                        data-date="" data-day="2">
                         2nd day
                     </div>
                 </div>
                 <div class="date-group col-xl-4 col-lg-6 col-sm-6 col-xs-6 mb-2 ">
-                    <div name="date-card" class="date-card d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
-                        date-data="" day="3">
+                    <div class="date-card d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
+                        data-date="" data-day="3">
                         3rd day
                     </div>
                 </div>
 
                 <div class="date-group col-xl-4 col-lg-6 col-sm-6 col-xs-6 mb-2 ">
-                    <div name="date-card" class="date-card d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
-                        date-data="" day="4">
+                    <div class="date-card d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
+                        data-date="" data-day="4">
                         4th day
                     </div>
                 </div>
                 <div class="date-group col-xl-4 col-lg-6 col-sm-6 col-xs-6 mb-2 ">
-                    <div name="date-card" class="date-card d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
-                        date-data="" day="5">
+                    <div class="date-card d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
+                        data-date="" data-day="5">
                         5th day
                     </div>
                 </div>
                 <div class="date-group col-xl-4 col-lg-6 col-sm-6 col-xs-6 mb-2 ">
-                    <div name="date-card" class="date-card d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
-                        date-data="" day="6">
+                    <div class="date-card d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
+                        data-date="" data-day="6">
                         6th day
                     </div>
                 </div>
             </div>
             <div class="timeslot-row row">
                 <div class="timeslot-group col-xl-4 col-lg-6 col-sm-6 col-xs-6 mb-2 ">
-                    <div name="timeslot-white"
-                        class="timeslot-white d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
+                    <div class="timeslot-white d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
                         data-timeslot="0800">
                         8:00 AM - 10:00 AM
                     </div>
                 </div>
                 <div class="timeslot-group col-xl-4 col-lg-6 col-sm-6 col-xs-6 mb-2 ">
-                    <div name="timeslot-white"
-                        class="timeslot-white d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
+                    <div class="timeslot-white d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
                         data-timeslot="1000">
                         10:00 AM - 12:00 PM
                     </div>
                 </div>
                 <div class="timeslot-group col-xl-4 col-lg-6 col-sm-6 col-xs-6 mb-2 ">
-                    <div name="timeslot-white"
-                        class="timeslot-white d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
+                    <div class="timeslot-white d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
                         data-timeslot="1200">
                         12:00 PM - 2:00 PM
                     </div>
                 </div>
 
                 <div class="timeslot-group col-xl-4 col-lg-6 col-sm-6 col-xs-6 mb-2 ">
-                    <div name="timeslot-white"
-                        class="timeslot-white d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
+                    <div class="timeslot-white d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
                         data-timeslot="1400">
                         2:00 PM - 4:00 PM
                     </div>
                 </div>
                 <div class="timeslot-group col-xl-4 col-lg-6 col-sm-6 col-xs-6 mb-2 ">
-                    <div name="timeslot-white"
-                        class="timeslot-white d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
+                    <div class="timeslot-white d-sm-inline-block btn btn-sm bg-avaiable-status w-100"
                         data-timeslot="1600">
                         4:00 PM - 6:00 PM
                     </div>
@@ -129,7 +124,7 @@
                     <button class="btn btn-primary" type="submit">Submit</button>
                 </div>
             </form>
-        </section>
+        </div>
         <?php include_once "includes/topButton.inc.php"; ?>
     </main>
     <?php include_once "includes/footer.inc.php"; ?>
