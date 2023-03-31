@@ -35,47 +35,49 @@
                 </p>
             </article>
         </div>
-    </section>
-    <section id="s1">
-        <div class="row facilities-info-row">
-            <div class="column">
-                <h3 class="facilities-heading">Information</h3>
-                <hr>
-                <p class="facilities-desc">
-                    Opening Hours:<br>
-                    Monday to Friday, 8.00 a.m. to 6.00 p.m.<br> <br>
-                    Pricing:<br>
-                    Children: $30++<br>
-                    Adults: $50++<br><br>
-                    For reservation: <br>
-                    Call: (65)6457 9874 | Email: mandai@cc.com
-                </P>
-            </div>
-            <div class="column">
-                <img class="golf-facility-img" src="assets\restaurant1.jpg" alt="golf courses">
-            </div>
-        </div>
-    </section>
-    <section id="s2-facilities">
-        <h2 class="section-text">Check Out Our Menu Items</h2>
-        <div class="swiper mySwiper swiperFacilities">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <img src="assets/food-1.jpg" alt="promo_photo1">
+        </section>
+        <section id="s1">
+            <div class="row facilities-info-row">
+                <div class="column">
+                    <h3 class="facilities-heading">Information</h3>
+                    <hr>
+                    <p class="facilities-desc">
+                        Opening Hours:<br>
+                        Monday to Friday, 8.00 a.m. to 6.00 p.m.<br> <br>
+                        Pricing:<br>
+                        Children: $30++<br>
+                        Adults: $50++<br><br>
+                        For reservation: <br>
+                        Call: (65)6457 9874 | Email: mandai@cc.com
+                    </p>
+                    <button type="button" onclick="location.href='/facility_booking.php'" class="facilities-button">Make
+                        a Booking</button>
                 </div>
-                <div class="swiper-slide">
-                    <img src="assets/food-2.jpg" alt="promo_photo1">
-                </div>
-                <div class="swiper-slide">
-                    <img src="assets/food-3.jpg" alt="promo_photo1">
+                <div class="column">
+                    <img class="golf-facility-img" src="assets\restaurant1.jpg" alt="golf courses">
                 </div>
             </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-    </section>
-</main>
-    <?php
-    include "includes/footer.inc.php";
-    ?>
+        </section>
+        <section id="s2-facilities">
+            <h2 class="section-text">Check Out Our Menu Items</h2>
+            <div class="swiper mySwiper swiperFacilities">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="assets/food-1.jpg" alt="promo_photo1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/food-2.jpg" alt="promo_photo1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="assets/food-3.jpg" alt="promo_photo1">
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+        </section>
+        <?php include_once "includes/topButton.inc.php"; ?>
+    </main>
+    <?php include "includes/footer.inc.php"; ?>
 </body>
+
 </html>

@@ -18,6 +18,7 @@ if (isset($_SESSION['member_id'])) {
     include "includes/nav.inc.php";
     ?>
     <main class="container2">
+
         <body class="unique-background-1">
             <h1>Member Login</h1>
             <p>
@@ -31,15 +32,16 @@ if (isset($_SESSION['member_id'])) {
                 </div>
                 <div class="form-group">
                     <label for="pwd">Password:</label>
-                    <input class="form-control" type="password" id="pwd" name="pwd" required placeholder="Enter password">
+                    <input class="form-control" type="password" id="pwd" name="pwd" required
+                        placeholder="Enter password">
                 </div>
                 <div class="form-group">
                     <button class="btn btn-primary" type="submit">Log In</button>
                 </div>
             </form>
+            <?php include_once "includes/topButton.inc.php"; ?>
     </main>
-    <?php
-    include "includes/footer.inc.php";
-    ?>
+    <?php include "includes/footer.inc.php"; ?>
 </body>
+
 </html>

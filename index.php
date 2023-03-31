@@ -20,10 +20,10 @@
         </div>
     </header>
     <main class="container container-maxheight">
-        <section id="s1">
-            <h2>History of Mandai Country Club</h2>
+        <div id="s1">
             <div class="row">
                 <article class="col-sm">
+                    <h2>History of Mandai Country Club</h2>
                     <p class="index-desc">Mandai Country Club is a sprawling oasis nestled in the heart of a bustling
                         city. Its verdant greenery and tranquil surroundings make it an ideal place for business
                         retreats, corporate events, and even private functions. With state-of-the-art facilities and
@@ -33,7 +33,7 @@
                         Club is the perfect choice for those who demand nothing but the best.</p>
                 </article>
             </div>
-        </section>
+        </div>
 
         <section id="s2">
             <h2 class="section-text">Our Offers</h2>
@@ -59,8 +59,8 @@
                 <div class="column-home">
                     <div class="overlay">
                         <h2 class="facilities-text-home">Swimming Pool</h2>
-                        <a class="home-findout-button" href="swimmingPage.php">
-                            <button type="button">Find Out More</button>
+                        <a class="home-findout-button btn btn-outline-light" role="button" href="swimmingPage.php">
+                            Find Out More
                         </a>
                     </div>
                     <img src="assets/swimming_pool.jpg" alt="swimming-pool-img" class="img" />
@@ -68,8 +68,8 @@
                 <div class="column-home">
                     <div class="overlay">
                         <h2 class="facilities-text-home">Golf Course</h2>
-                        <a class="home-findout-button" href="golfPage.php">
-                            <button type="button">Find Out More</button>
+                        <a class="home-findout-button btn btn-outline-light" href="golfPage.php" role="button">
+                            Find Out More
                         </a>
                     </div>
                     <img src="assets/golf_course.jpg" alt="golf-course-img" class="img" />
@@ -79,8 +79,8 @@
                 <div class="column-home">
                     <div class="overlay">
                         <h2 class="facilities-text-home">Bowling Alley</h2>
-                        <a class="home-findout-button" href="bowlingPage.php">
-                            <button type="button">Find Out More</button>
+                        <a class="home-findout-button btn btn-outline-light" role="button" href="bowlingPage.php">
+                            Find Out More
                         </a>
                     </div>
                     <img src="assets/bowling_alley.jpg" alt="bowling_alley-img" class="img" />
@@ -88,18 +88,17 @@
                 <div class="column-home">
                     <div class="overlay">
                         <h2 class="facilities-text-home">Restaurant</h2>
-                        <a class="home-findout-button" href="restaurantPage.php">
-                            <button class="button-top" type="button">Find Out More</button>
+                        <a class="home-findout-button btn btn-outline-light" role="button" href="restaurantPage.php">
+                            Find Out More
                         </a>
                     </div>
                     <img src="assets/restaurant.jpg" alt="restaurant-img" class="img" />
                 </div>
             </div>
         </section>
+        <?php include_once "includes/topButton.inc.php"; ?>
     </main>
-    <?php
-    include "includes/footer.inc.php";
-    ?>
+<?php include "includes/footer.inc.php"; ?>
 </body>
 
 </html>

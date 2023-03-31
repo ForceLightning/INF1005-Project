@@ -958,3 +958,9 @@ hr {
 }
 
 /*End of Scroll to Top*/
+
+/* Map */
+#map {
+  height: 400px;
+  width: 100%;
+}

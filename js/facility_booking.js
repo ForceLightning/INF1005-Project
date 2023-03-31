@@ -306,12 +306,12 @@ function addListeners(facilityElements, timeSlotElements, dateCardElements) {
             //toggle an element, for css to reflect the changes
             selectionGroup.classList.toggle('selected');
             //store the value of the facility
-            selectedDate = selectionGroup.getAttribute('date-data');
+            selectedDate = selectionGroup.getAttribute('data-date');
             //console.log(selectionGroup.parentNode);
             if (same === false) {
                 updateTimeslots(selectionGroup.parentNode.parentNode.parentNode.parentNode,
                     selectionGroup.parentNode.parentNode.parentNode.parentNode.getAttribute('location-id'),
-                    selectionGroup.getAttribute('day'));
+                    selectionGroup.getAttribute('data-day'));
             }
         });
     });
