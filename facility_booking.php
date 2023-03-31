@@ -132,7 +132,7 @@
         </section>
         <?php include_once "includes/topButton.inc.php"; ?>
     </main>
+    <?php include_once "includes/footer.inc.php"; ?>
 </body>
-<?php include_once "includes/footer.inc.php"; ?>
 
 </html>

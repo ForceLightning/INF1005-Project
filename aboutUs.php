@@ -155,9 +155,8 @@
                 </div>
             </div>
         </section>
-        <!-- <button onclick="topFunction()" id="scroll-button" title="Go to top">Top</button> -->
         <?php include_once "includes/topButton.inc.php"; ?>
     </main>
-</body>
 <?php include "includes/footer.inc.php"; ?>
+</body>
 </html>

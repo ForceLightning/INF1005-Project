@@ -206,7 +206,7 @@ include "includes/nav.inc.php";
     <br>
     <?php include_once "includes/topButton.inc.php"; ?>
 </main>
-</body>
 <?php include "includes/footer.inc.php"; ?>
+</body>
 
 </html>

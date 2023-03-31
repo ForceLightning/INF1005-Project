@@ -115,8 +115,7 @@ include "includes/nav.inc.php"
     ?>
     <?php include_once "includes/topButton.inc.php"; ?>
 </main>
-<br>
-</body>
 <?php include "includes/footer.inc.php"; ?>
+</body>
 
 </html>

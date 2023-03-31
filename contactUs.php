@@ -57,7 +57,7 @@
                 </form>
         <?php include_once "includes/topButton.inc.php"; ?>
     </main>
+    <?php include "includes/footer.inc.php"; ?>
 </body>
-<?php include "includes/footer.inc.php"; ?>
 
 </html>

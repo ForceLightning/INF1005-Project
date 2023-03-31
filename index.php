@@ -98,7 +98,7 @@
         </section>
         <?php include_once "includes/topButton.inc.php"; ?>
     </main>
-</body>
 <?php include "includes/footer.inc.php"; ?>
+</body>
 
 </html>

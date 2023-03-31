@@ -48,7 +48,8 @@
                         For assistance: <br>
                         Call: (65)6457 9874 | Email: mandai@cc.com
                     </p>
-                    <button type="button" onclick="location.href='/facility_booking.php'" class="facilities-button">Make a Booking</button>
+                    <button type="button" onclick="location.href='/facility_booking.php'" class="facilities-button">Make
+                        a Booking</button>
                 </div>
                 <div class="col-sm-6">
                     <img class="img-fluid mt-3" src="assets\bowling1_edit.jpg" alt="golf courses">
@@ -76,7 +77,7 @@
         <?php include_once "includes/topButton.inc.php"; ?>
     </main>
     <button onclick="topFunction()" id="scroll-button" title="Go to top">Top</button>
+    <?php include "includes/footer.inc.php"; ?>
 </body>
-<?php include "includes/footer.inc.php"; ?>
 
 </html>
