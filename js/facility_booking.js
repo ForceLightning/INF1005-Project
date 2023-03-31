@@ -64,7 +64,7 @@ function displayBookingSlots(bookingSlots) {
         facilityCard.setAttribute("location-id", location_id);
         facilityCard.innerHTML = `
             <div class="text-black-50">
-            <div class="row">
+            <div class="col">
             <div>
                 <img src="` + bookingSlots[location_id]["image_url"] + `" class="img" alt=` + bookingSlots[location_id]["image_url"] + `>
             </div>
