@@ -21,7 +21,7 @@ $(document).ready(function () {
     const dateCardElements = document.querySelectorAll('.date-card');
     timeslotBlueprint = document.querySelector("#timeslotBlueprint");
     //to store the values to be passed into the database
-    const bookingSlots = getBookingSlots(false);
+    const bookingSlots = getBookingSlots(true);
     const form = document.querySelector('#booking-form');
     form.addEventListener('submit', (event) => {
         // add the selected timeslots to the form
@@ -70,11 +70,12 @@ function displayBookingSlots(bookingSlots) {
             </div>
             <div>
             <div>` + bookingSlots[location_id]["location_name"] + `</div>
-            <hr>
+            <hr class="facility-card">
             <div>` + bookingSlots[location_id]["description"] + `</div>
             </div>
             </div>
             </div>
+            <br>
         `;
         // Add the timeslots to the facility card
         for (let timeslot of timeslots) {
