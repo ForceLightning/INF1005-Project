@@ -20,9 +20,9 @@
         </div>
     </header>
     <main class="container container-maxheight">
-        <h2>Our Golf Courses</h2>
         <div class="row">
             <article class="col-sm">
+                <h2>Our Golf Courses</h2>
                 <p class="index-desc">
                     Mandai Golf Country Club offers a range of courses designed to improve the golfing skills of
                     players of all levels. The courses are led by experienced instructors and cover various aspects
@@ -33,8 +33,7 @@
                 </p>
             </article>
         </div>
-        </section>
-        <section id="s1">
+        <div id="s1">
             <div class="row facilities-info-row">
                 <div class="col-sm-6">
                     <h3 class="facilities-heading">Information</h3>
@@ -46,13 +45,14 @@
                         For assistance: <br>
                         Call: (65)6457 9874 | Email: mandai@cc.com
                     </P>
-                    <button type="button" onclick="location.href='/facility_booking.php'" class="facilities-button">Make a Booking</button>
+                    <button type="button" onclick="location.href='/facility_booking.php'" class="facilities-button">Make
+                        a Booking</button>
                 </div>
                 <div class="col-sm-6">
-                    <img class="img-fluid mt-3" src="assets\golf-booking-img.jpg" alt="golf courses">
+                    <img class="img-fluid mt-3" src="assets/golf-booking-img.jpg" alt="golf courses">
                 </div>
             </div>
-        </section>
+        </div>
         <section id="s2-facilities">
             <h2 class="section-text">Check Out Our Golf Courses</h2>
             <div class="swiper mySwiper swiperFacilities">
@@ -69,10 +69,11 @@
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
+            </div>
         </section>
         <?php include_once "includes/topButton.inc.php"; ?>
     </main>
-<?php include "includes/footer.inc.php"; ?>
+    <?php include "includes/footer.inc.php"; ?>
 </body>
 
 </html>
