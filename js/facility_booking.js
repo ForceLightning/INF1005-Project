@@ -21,7 +21,7 @@ $(document).ready(function () {
     const dateCardElements = document.querySelectorAll('.date-card');
     timeslotBlueprint = document.querySelector("#timeslotBlueprint");
     //to store the values to be passed into the database
-    const bookingSlots = getBookingSlots(true);
+    const bookingSlots = getBookingSlots(false);
     const form = document.querySelector('#booking-form');
     form.addEventListener('submit', (event) => {
         // add the selected timeslots to the form
