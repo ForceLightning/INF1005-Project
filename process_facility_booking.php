@@ -3,7 +3,8 @@ ob_start();
 include_once "includes/util.php";
 session_start();
 
-function insert_bookings() {
+function insert_bookings()
+{
     global $user_bookings, $branch, $bookings, $error_msg;
     $success = true;
     $bookings = array();
@@ -118,10 +119,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <?php include_once "includes/header.inc.php"; ?>
-        <title>Bookings</title>
-    </head>
+<head>
+    <?php include_once "includes/header.inc.php"; ?>
+    <title>Bookings</title>
+</head>
 
 <body>
     <?php
@@ -142,14 +143,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     echo "<p>" . $bookings[$i]["facility_name"] . " on " . $bookings[$i]["date"] . " at " . $bookings[$i]["start_time"] . "</p>";
                 }
             }
-            // var_dump($bookings);
         }
         echo "</section>";
         ?>
+        <?php include_once "includes/topButton.inc.php"; ?>
     </main>
-    <?php
-    include "includes/footer.inc.php";
-    ?>
+    <?php include "includes/footer.inc.php"; ?>
 </body>
 
 </html>

@@ -32,26 +32,26 @@
         </div>
 
         <div class="container">
-            <a href="#Drinks"><img class="filterDiv now img-fluid" src="assets\happy_hour_poster.png"
+            <a href="#Drinks"><img class="filterDiv now img-fluid" src="assets/happy_hour_poster.png"
                     alt="happy_hour" /></a>
-            <a href="#Bowling"><img class="filterDiv april img-fluid" src="assets\bowling_night_poster.png"
+            <a href="#Bowling"><img class="filterDiv april img-fluid" src="assets/bowling_night_poster.png"
                     alt="bowling_night" /></a>
-            <a href="#Bazaar"><img class="filterDiv april img-fluid" src="assets\hari_raya_poster.png"
+            <a href="#Bazaar"><img class="filterDiv april img-fluid" src="assets/hari_raya_poster.png"
                     alt="hari_raya" /></a>
-            <a href="#Pool"><img class="filterDiv may img-fluid" src="assets\pool_party_poster.png"
+            <a href="#Pool"><img class="filterDiv may img-fluid" src="assets/pool_party_poster.png"
                     alt="pool_party" /></a>
-            <a href="#Zoo"><img class="filterDiv june img-fluid" src="assets\zoo_poster.png" alt="Zoo" /></a>
+            <a href="#Zoo"><img class="filterDiv june img-fluid" src="assets/zoo_poster.png" alt="Zoo" /></a>
         </div>
         <!-- End of Event Button Months Filter -->
         <div class="container">
-            <section class="facilitiesmain sec-width" id="rooms">
+            <div class="facilitiesmain sec-width" id="rooms">
                 <div class="facilitiesmain-container container container-maxheight">
                     <!-- single room -->
                     <article class="facility">
                         <div class="facility-image">
-                            <a target="_blank" href="assets\zoo_poster.png">
-                                <img class="events-img img-fluid" src="assets\zoo_poster.png" width="100%" alt="Zoo"
-                                    id="Zoo">
+                            <a target="_blank" href="assets/zoo_poster.png">
+                                <img class="events-img img-fluid" src="assets/zoo_poster.png" style="width:100%"
+                                    alt="Zoo" id="Zoo">
                             </a>
                         </div>
                         <div class="facility-text">
@@ -71,8 +71,9 @@
                             </p>
                             <br><br>
                             <a target="_blank"
-                                href="https://docs.google.com/forms/d/e/1FAIpQLSdVuy9VMf1q7QDPX0LFBc43ErzjweIxUd3U3wbQ9icKhFpHBg/viewform?usp=sf_link">
-                                <button type="events-button btn" class="events-button">Reserve Now</button>
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSdVuy9VMf1q7QDPX0LFBc43ErzjweIxUd3U3wbQ9icKhFpHBg/viewform?usp=sf_link"
+                                class="btn events-button" role="button">
+                                Reserve Now
                             </a>
                         </div>
                     </article>
@@ -80,8 +81,8 @@
                     <!-- single room -->
                     <article class="facility">
                         <div class="facility-image">
-                            <a target="_blank" href="assets\happy_hour_poster.png" id="Drinks">
-                                <img class="events-img img-fluid" src="assets\happy_hour_poster.png" width="100%"
+                            <a target="_blank" href="assets/happy_hour_poster.png" id="Drinks">
+                                <img class="events-img img-fluid" src="assets/happy_hour_poster.png" style="width:100%"
                                     alt="Zoo">
                             </a>
                         </div>
@@ -101,8 +102,9 @@
                             </p>
                             <br><br>
                             <a target="_blank"
-                                href="https://docs.google.com/forms/d/e/1FAIpQLSfaCz2IdEE34U9bTpbRrs21ub8wCAn7NoS10H61FRY4cc9W5Q/viewform?usp=sf_link">
-                                <button type="events-button btn" class="events-button">Reserve Now</button>
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfaCz2IdEE34U9bTpbRrs21ub8wCAn7NoS10H61FRY4cc9W5Q/viewform?usp=sf_link"
+                                class="btn events-button" role="button">
+                                Reserve Now
                             </a>
                         </div>
                     </article>
@@ -110,9 +112,8 @@
                     <!-- single room -->
                     <article class="facility">
                         <div class="facility-image">
-                            <a target="_blank" class="img-fluid" href="assets/pool_party_poster.png"
-                                alt="facility image">
-                                <img class="events-img img-fluid" src="assets\pool_party_poster.png" width="100%"
+                            <a target="_blank" class="img-fluid" href="assets/pool_party_poster.png">
+                                <img class="events-img img-fluid" src="assets/pool_party_poster.png" style="width:100%"
                                     alt="Zoo" id="Pool">
                             </a>
                         </div>
@@ -131,8 +132,9 @@
                                 fun-filled day by the pool.
                             </p>
                             <a target="_blank"
-                                href="https://docs.google.com/forms/d/e/1FAIpQLSeoFWgNXgxK4B-Mk5sSlNMdyrhVSqilZUe058Mu6UYsayirAg/viewform?usp=sf_link">
-                                <button type="events-button btn" class="events-button">Reserve Now</button>
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSeoFWgNXgxK4B-Mk5sSlNMdyrhVSqilZUe058Mu6UYsayirAg/viewform?usp=sf_link"
+                                class="btn events-button" role="button">
+                                Reserve Now
                             </a>
                             <br><br>
                         </div>
@@ -141,10 +143,9 @@
                     <!-- single room -->
                     <article class="facility">
                         <div class="facility-image">
-                            <a target="_blank" class="img-fluid" href="assets/bowling_night_poster.png"
-                                alt="facility image" id="Bowling">
-                                <img class="events-img img-fluid" src="assets\bowling_night_poster.png" width="100%"
-                                    alt="Zoo">
+                            <a target="_blank" class="img-fluid" href="assets/bowling_night_poster.png" id="Bowling">
+                                <img class="events-img img-fluid" src="assets/bowling_night_poster.png"
+                                    style="width:100%" alt="Zoo">
                             </a>
                         </div>
                         <div class="facility-text">
@@ -164,8 +165,9 @@
                                 We can't wait to see you at Mandai Country Club's Bowling Night!
                             </p>
                             <a target="_blank"
-                                href="https://docs.google.com/forms/d/e/1FAIpQLSfwtzsoFaWlIe7n_cgtrt98nl-PgbRRGQ0GR0FTWGYFeZmkFQ/viewform">
-                                <button type="events-button btn" class="events-button">Reserve Now</button>
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfwtzsoFaWlIe7n_cgtrt98nl-PgbRRGQ0GR0FTWGYFeZmkFQ/viewform"
+                                class="btn events-button" role="button">
+                                Reserve Now
                             </a>
                             <br><br>
                         </div>
@@ -173,9 +175,8 @@
                     <!-- end of single room -->
                     <article class="facility">
                         <div class="facility-image">
-                            <a target="_blank" class="img-fluid" href="assets/hari_raya_poster.png"
-                                alt="facility image">
-                                <img class="events-img img-fluid" src="assets\hari_raya_poster.png" width="100%"
+                            <a target="_blank" class="img-fluid" href="assets/hari_raya_poster.png">
+                                <img class="events-img img-fluid" src="assets/hari_raya_poster.png" style="width:100%"
                                     alt="Zoo" id="Bazaar">
                             </a>
                         </div>
@@ -199,21 +200,21 @@
                                 Our Hari Raya Bazaar promises to be a memorable event that you won't want to miss.
                                 See you there!
                             </p>
-                            <a target="_blank" href="https://forms.gle/XfHqjXXMonrYmqHN9">
-                                <button type="button" class="btn events-button">Reserve Now</button>
+                            <a target="_blank" href="https://forms.gle/XfHqjXXMonrYmqHN9" class="btn events-button"
+                                role="button">
+                                Reserve Now
                             </a>
                             <br><br>
                         </div>
                     </article>
 
                 </div>
-            </section>
+            </div>
             <br>
         </div>
+        <?php include_once "includes/topButton.inc.php"; ?>
     </main>
-    <?php
-    include "includes/footer.inc.php";
-    ?>
+    <?php include "includes/footer.inc.php"; ?>
 </body>
 
 </html>

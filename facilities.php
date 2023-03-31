@@ -6,7 +6,7 @@
     <title>Facilities</title>
 </head>
 
-<body class="d-flex flex-column min-vh-100"></body>
+<body class="d-flex flex-column min-vh-100">
 <?php
 include "includes/nav.inc.php";
 ?>
@@ -21,10 +21,10 @@ include "includes/nav.inc.php";
 </header>
 
 <main class="container container-maxheight">
-    <section id="s1">
-        <h2>Our Facilities</h2>
+    <div id="s1">
         <div class="row">
             <article class="col-sm">
+                <h2>Our Facilities</h2>
                 <p class="index-desc">Mandai Country's Club cater to a diverse range of interests, including a pristine
                     golf course suitable for golfers of all levels, state-of-the-art bowling alleys, a luxurious
                     swimming pool, and world-class dining options. The staff is highly professional and dedicated to
@@ -34,7 +34,7 @@ include "includes/nav.inc.php";
                     entertainment, confident that visitors will return time and again for its exceptional facilities and
                     services.</p>
                 <!-- facilities -->
-                <section class="facilitiesmain sec-width" id="rooms">
+                <div class="facilitiesmain sec-width" id="rooms">
                     <div class="facilitiesmain-container">
                         <!-- single room -->
                         <article class="facility">
@@ -54,8 +54,8 @@ include "includes/nav.inc.php";
                                     game and meet like-minded golfers.
                                 </p>
                                 <br><br>
-                                <a href="golfPage.php">
-                                    <button class="button-learn-more"><span>Learn More </span></button>
+                                <a href="golfPage.php" class="button-learn-more" role="button">
+                                    <span>Learn More</span>
                                 </a>
                             </div>
                         </article>
@@ -78,8 +78,8 @@ include "includes/nav.inc.php";
                                     the sun, the pool area provides the perfect setting.
                                 </p>
                                 <br><br>
-                                <a href="swimmingPage.php">
-                                    <button class="button-learn-more"><span>Learn More </span></button>
+                                <a href="swimmingPage.php" class="button-learn-more" role="button">
+                                    <span>Learn More</span>
                                 </a>
                             </div>
                         </article>
@@ -103,8 +103,8 @@ include "includes/nav.inc.php";
                                     hone your skills and enjoy a fun night out.
                                 </p>
                                 <br><br>
-                                <a href="bowlingPage.php">
-                                    <button class="button-learn-more"><span>Learn More </span></button>
+                                <a href="bowlingPage.php" class="button-learn-more" role="button">
+                                    <span>Learn More</span>
                                 </a>
                             </div>
                         </article>
@@ -128,14 +128,14 @@ include "includes/nav.inc.php";
                                     something to satisfy your cravings.
                                 </p>
                                 <br><br>
-                                <a href="restaurantPage.php">
-                                    <button class="button-learn-more"><span>Learn More </span></button>
+                                <a href="restaurantPage.php" class="button-learn-more" role="button">
+                                    <span>Learn More</span>
                                 </a>
                             </div>
                         </article>
                         <!-- end of single room -->
                     </div>
-                </section>
+                </div>
                 <!-- gallery -->
                 <section class="gallery" id="gallery">
                     <h2 class="facilities-header">Our Gallery</h2>
@@ -200,13 +200,13 @@ include "includes/nav.inc.php";
                         </div>
                     </div>
                 </section>
+            </article>
         </div>
-    </section>
+    </div>
     <br>
+    <?php include_once "includes/topButton.inc.php"; ?>
 </main>
-<?php
-include "includes/footer.inc.php";
-?>
+<?php include "includes/footer.inc.php"; ?>
 </body>
 
 </html>
