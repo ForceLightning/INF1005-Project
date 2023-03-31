@@ -4,8 +4,6 @@
 <head>
     <?php include "includes/header.inc.php"; ?>
     <title>Contact Us</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style type="text/css">
         #map {
             height: 400px;
