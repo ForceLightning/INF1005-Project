@@ -216,7 +216,7 @@ include "includes/nav.inc.php";
     <br>
 
 </main>
-<button onclick="topFunction()" id="scroll-button" title="Go to top">Top</button>
+<!-- <button onclick="topFunction()" id="scroll-button" title="Go to top">Top</button> -->
 
 <?php
 include "includes/footer.inc.php";
