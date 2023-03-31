@@ -1,5 +1,3 @@
-<button onclick="topFunction()" id="scroll-button" title="Go to top">Top</button>
-
 <footer class="py-3 mt-auto bg-light">
     <div class="container">
         <div class="row">

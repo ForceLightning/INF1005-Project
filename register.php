@@ -54,7 +54,9 @@ if (isset($_SESSION["member_id"])) {
                 <button class="btn btn-primary" type="submit">Submit</button>
             </div>
         </form>
+        <?php include_once "includes/topButton.inc.php"; ?>
     </main>
 </body>
 <?php include "includes/footer.inc.php"; ?>
+
 </html>

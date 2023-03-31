@@ -128,13 +128,11 @@
                 <div class="form-group">
                     <button class="btn btn-primary" type="submit">Submit</button>
                 </div>
-
             </form>
         </section>
-
-
+        <?php include_once "includes/topButton.inc.php"; ?>
     </main>
 </body>
 <?php include_once "includes/footer.inc.php"; ?>
+
 </html>
-</form>

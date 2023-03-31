@@ -3,7 +3,8 @@ ob_start();
 include_once "includes/util.php";
 session_start();
 
-function insert_bookings() {
+function insert_bookings()
+{
     global $user_bookings, $branch, $bookings, $error_msg;
     $success = true;
     $bookings = array();
@@ -118,10 +119,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <?php include_once "includes/header.inc.php"; ?>
-        <title>Bookings</title>
-    </head>
+<head>
+    <?php include_once "includes/header.inc.php"; ?>
+    <title>Bookings</title>
+</head>
 
 <body>
     <?php
@@ -145,7 +146,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         echo "</section>";
         ?>
+        <?php include_once "includes/topButton.inc.php"; ?>
     </main>
 </body>
 <?php include "includes/footer.inc.php"; ?>
+
 </html>

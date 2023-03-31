@@ -55,6 +55,7 @@
                         <button type="submit" class="contact-button">Submit</button>
                     </div>
                 </form>
+        <?php include_once "includes/topButton.inc.php"; ?>
     </main>
 </body>
 <?php include "includes/footer.inc.php"; ?>

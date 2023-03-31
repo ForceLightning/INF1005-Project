@@ -113,8 +113,10 @@ include "includes/nav.inc.php"
         echo "<button onclick='history.go(-1)' class='contact-button'>Return</button>";
     }
     ?>
+    <?php include_once "includes/topButton.inc.php"; ?>
 </main>
 <br>
 </body>
 <?php include "includes/footer.inc.php"; ?>
+
 </html>

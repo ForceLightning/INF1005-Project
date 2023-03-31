@@ -21,9 +21,9 @@
     </header>
     <main class="container container-maxheight">
         <section id="s1">
-            <h2>History of Mandai Country Club</h2>
             <div class="row">
                 <article class="col-sm">
+                    <h2>History of Mandai Country Club</h2>
                     <p class="index-desc">Mandai Country Club is a sprawling oasis nestled in the heart of a bustling
                         city. Its verdant greenery and tranquil surroundings make it an ideal place for business
                         retreats, corporate events, and even private functions. With state-of-the-art facilities and
@@ -60,7 +60,6 @@
                     <div class="overlay">
                         <h2 class="facilities-text-home">Swimming Pool</h2>
                         <a class="home-findout-button btn btn-outline-light" role="button" href="swimmingPage.php">
-                            <!-- <button type="button">Find Out More</button> -->
                             Find Out More
                         </a>
                     </div>
@@ -70,7 +69,6 @@
                     <div class="overlay">
                         <h2 class="facilities-text-home">Golf Course</h2>
                         <a class="home-findout-button btn btn-outline-light" href="golfPage.php" role="button">
-                            <!-- <button type="button">Find Out More</button> -->
                             Find Out More
                         </a>
                     </div>
@@ -82,7 +80,6 @@
                     <div class="overlay">
                         <h2 class="facilities-text-home">Bowling Alley</h2>
                         <a class="home-findout-button btn btn-outline-light" role="button" href="bowlingPage.php">
-                            <!-- <button type="button">Find Out More</button> -->
                             Find Out More
                         </a>
                     </div>
@@ -92,7 +89,6 @@
                     <div class="overlay">
                         <h2 class="facilities-text-home">Restaurant</h2>
                         <a class="home-findout-button btn btn-outline-light" role="button" href="restaurantPage.php">
-                            <!-- <button class="button-top" type="button">Find Out More</button> -->
                             Find Out More
                         </a>
                     </div>
@@ -100,6 +96,7 @@
                 </div>
             </div>
         </section>
+        <?php include_once "includes/topButton.inc.php"; ?>
     </main>
 </body>
 <?php include "includes/footer.inc.php"; ?>

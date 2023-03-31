@@ -95,7 +95,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "</section>";
         }
         ?>
+        <?php include_once "includes/topButton.inc.php"; ?>
     </main>
 </body>
 <?php include "includes/footer.inc.php"; ?>
+
 </html>

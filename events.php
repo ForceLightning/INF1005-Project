@@ -71,8 +71,8 @@
                             </p>
                             <br><br>
                             <a target="_blank"
-                                href="https://docs.google.com/forms/d/e/1FAIpQLSdVuy9VMf1q7QDPX0LFBc43ErzjweIxUd3U3wbQ9icKhFpHBg/viewform?usp=sf_link">
-                                <button type="events-button btn" class="events-button">Reserve Now</button>
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSdVuy9VMf1q7QDPX0LFBc43ErzjweIxUd3U3wbQ9icKhFpHBg/viewform?usp=sf_link" class="btn events-button" role="button">
+                                Reserve Now
                             </a>
                         </div>
                     </article>
@@ -101,8 +101,8 @@
                             </p>
                             <br><br>
                             <a target="_blank"
-                                href="https://docs.google.com/forms/d/e/1FAIpQLSfaCz2IdEE34U9bTpbRrs21ub8wCAn7NoS10H61FRY4cc9W5Q/viewform?usp=sf_link">
-                                <button type="events-button btn" class="events-button">Reserve Now</button>
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfaCz2IdEE34U9bTpbRrs21ub8wCAn7NoS10H61FRY4cc9W5Q/viewform?usp=sf_link" class="btn events-button" role="button">
+                                Reserve Now
                             </a>
                         </div>
                     </article>
@@ -131,8 +131,8 @@
                                 fun-filled day by the pool.
                             </p>
                             <a target="_blank"
-                                href="https://docs.google.com/forms/d/e/1FAIpQLSeoFWgNXgxK4B-Mk5sSlNMdyrhVSqilZUe058Mu6UYsayirAg/viewform?usp=sf_link">
-                                <button type="events-button btn" class="events-button">Reserve Now</button>
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSeoFWgNXgxK4B-Mk5sSlNMdyrhVSqilZUe058Mu6UYsayirAg/viewform?usp=sf_link" class="btn events-button" role="button">
+                                Reserve Now
                             </a>
                             <br><br>
                         </div>
@@ -164,8 +164,8 @@
                                 We can't wait to see you at Mandai Country Club's Bowling Night!
                             </p>
                             <a target="_blank"
-                                href="https://docs.google.com/forms/d/e/1FAIpQLSfwtzsoFaWlIe7n_cgtrt98nl-PgbRRGQ0GR0FTWGYFeZmkFQ/viewform">
-                                <button type="events-button btn" class="events-button">Reserve Now</button>
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSfwtzsoFaWlIe7n_cgtrt98nl-PgbRRGQ0GR0FTWGYFeZmkFQ/viewform" class="btn events-button" role="button">
+                                Reserve Now
                             </a>
                             <br><br>
                         </div>
@@ -199,8 +199,8 @@
                                 Our Hari Raya Bazaar promises to be a memorable event that you won't want to miss.
                                 See you there!
                             </p>
-                            <a target="_blank" href="https://forms.gle/XfHqjXXMonrYmqHN9">
-                                <button type="button" class="btn events-button">Reserve Now</button>
+                            <a target="_blank" href="https://forms.gle/XfHqjXXMonrYmqHN9" class="btn events-button" role="button">
+                                Reserve Now
                             </a>
                             <br><br>
                         </div>
@@ -210,7 +210,9 @@
             </section>
             <br>
         </div>
+        <?php include_once "includes/topButton.inc.php"; ?>
     </main>
 </body>
 <?php include "includes/footer.inc.php"; ?>
+
 </html>
