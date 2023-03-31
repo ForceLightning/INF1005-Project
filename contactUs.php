@@ -4,12 +4,6 @@
 <head>
     <?php include "includes/header.inc.php"; ?>
     <title>Contact Us</title>
-    <style type="text/css">
-        #map {
-            height: 400px;
-            width: 100%;
-        }
-    </style>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -23,7 +17,6 @@
                     width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"
                     title="Map of Mandai Executive Golf Course, Singapore"></iframe>
-
             </div>
             <div class="col-lg-6">
                 <h1>Contact Us</h1>
@@ -55,6 +48,8 @@
                         <button type="submit" class="contact-button">Submit</button>
                     </div>
                 </form>
+            </div>
+        </div>
         <?php include_once "includes/topButton.inc.php"; ?>
     </main>
     <?php include "includes/footer.inc.php"; ?>
