@@ -36,3 +36,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
   border: 1px solid #007bff; /* add a border */
   color: #007bff; /* change the text color */
 }
+
+.facility-card hr {
+  width: inherit;
+}
