@@ -14,7 +14,7 @@
     </style>
 </head>
 
-<body onload="initMap()">
+<body>
 
     <?php
     include "includes/nav.inc.php";

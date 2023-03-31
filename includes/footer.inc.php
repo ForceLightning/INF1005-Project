@@ -1,3 +1,5 @@
+<button onclick="topFunction()" id="scroll-button" title="Go to top">Top</button>
+
 <!DOCTYPE html>
 <html lang="en">
 
