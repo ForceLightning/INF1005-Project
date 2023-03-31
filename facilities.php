@@ -136,16 +136,12 @@ include "includes/nav.inc.php";
                             </div>
                         </article>
                         <!-- end of single room -->
-
                     </div>
                 </section>
                 <!-- gallery -->
                 <section class="gallery" id="gallery">
-
                     <h2 class="facilities-header">Our Gallery</h2>
-
                     <div class="swiper gallery-slider">
-
                         <div class="swiper-wrapper">
 
                             <div class="swiper-slide slide">
@@ -203,21 +199,13 @@ include "includes/nav.inc.php";
                                     <i class="fas fa-magnifying-glass-plus"></i>
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
-
                 </section>
         </div>
     </section>
-
-
     <br>
-
 </main>
-<!-- <button onclick="topFunction()" id="scroll-button" title="Go to top">Top</button> -->
-
 <?php
 include "includes/footer.inc.php";
 ?>

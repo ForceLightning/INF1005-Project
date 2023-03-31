@@ -6,11 +6,6 @@ if (isset($_SESSION['member_id'])) {
 }
 ?>
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html lang="en">
 
 <head>
@@ -36,21 +31,17 @@ and open the template in the editor.
                     <label for="email">Email:</label>
                     <input class="form-control" type="email" id="email" name="email" required placeholder="Enter email">
                 </div>
-
                 <div class="form-group">
                     <label for="pwd">Password:</label>
                     <input class="form-control" type="password" id="pwd" name="pwd" required placeholder="Enter password">
                 </div>
-
                 <div class="form-group">
                     <button class="btn btn-primary" type="submit">Log In</button>
                 </div>
-
             </form>
     </main>
     <?php
     include "includes/footer.inc.php";
     ?>
 </body>
-
 </html>
