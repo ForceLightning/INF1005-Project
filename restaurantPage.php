@@ -74,12 +74,10 @@
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
-
     </section>
 </main>
     <?php
     include "includes/footer.inc.php";
     ?>
 </body>
-
 </html>

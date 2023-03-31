@@ -23,8 +23,6 @@
         </div>
     </header>
     <!-- End of Header Image -->
-
-
     <main>
         <!-- Event Button Months Filter -->
         <div id="myBtnContainer">
@@ -212,13 +210,9 @@
 
                 </div>
             </section>
-            <!-- Page will scroll to top, when you click it -->
-
-
             <br>
         </div>
     </main>
-    <!-- <button onclick="topFunction()" id="scroll-button" title="Go to top">Top</button> -->
     <?php
     include "includes/footer.inc.php";
     ?>
