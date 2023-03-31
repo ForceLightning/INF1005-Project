@@ -6,7 +6,7 @@
     <title>Facilities</title>
 </head>
 
-<body class="d-flex flex-column min-vh-100"></body>
+<body class="d-flex flex-column min-vh-100">
 <?php
 include "includes/nav.inc.php";
 ?>
@@ -21,7 +21,7 @@ include "includes/nav.inc.php";
 </header>
 
 <main class="container container-maxheight">
-    <section id="s1">
+    <div id="s1">
         <div class="row">
             <article class="col-sm">
                 <h2>Our Facilities</h2>
@@ -34,7 +34,7 @@ include "includes/nav.inc.php";
                     entertainment, confident that visitors will return time and again for its exceptional facilities and
                     services.</p>
                 <!-- facilities -->
-                <section class="facilitiesmain sec-width" id="rooms">
+                <div class="facilitiesmain sec-width" id="rooms">
                     <div class="facilitiesmain-container">
                         <!-- single room -->
                         <article class="facility">
@@ -135,7 +135,7 @@ include "includes/nav.inc.php";
                         </article>
                         <!-- end of single room -->
                     </div>
-                </section>
+                </div>
                 <!-- gallery -->
                 <section class="gallery" id="gallery">
                     <h2 class="facilities-header">Our Gallery</h2>
@@ -202,7 +202,7 @@ include "includes/nav.inc.php";
                 </section>
             </article>
         </div>
-    </section>
+    </div>
     <br>
     <?php include_once "includes/topButton.inc.php"; ?>
 </main>
