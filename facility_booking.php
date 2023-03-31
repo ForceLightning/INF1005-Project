@@ -8,15 +8,12 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/facility_booking.css">
     <?php include_once "includes/header.inc.php"; ?>
-    <!-- custom JS, in local files -->
+    <!-- custom CSS/JS, in local files -->
+    <link rel="stylesheet" href="css/facility_booking.css">
     <script src="js/facility_booking.js"></script>
     <!-- this line will auto func the document ready function in js-->
     <title>Bookings</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body class="d-flex flex-column min-vh-100">
