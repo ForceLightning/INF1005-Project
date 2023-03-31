@@ -3,7 +3,7 @@
 
 <head>
     <?php include "includes/header.inc.php"; ?>
-    <title>Golf Course</title>
+    <title>Bowling Alley</title>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
@@ -20,9 +20,9 @@
         </div>
     </header>
     <main class="container container-maxheight container-fluid">
-        <h2>Our Bowling Alley</h2>
         <div class="row">
             <article class="col-sm">
+                <h2>Our Bowling Alley</h2>
                 <p class="index-desc">
                     Mandai Golf Country Club boasts a world-class bowling alley that offers members and guests a
                     unique and enjoyable experience. The alley features state-of-the-art lanes and equipment, as
@@ -35,8 +35,7 @@
                 </p>
             </article>
         </div>
-        </section>
-        <section id="s1">
+        <div id="s1">
             <div class="row facilities-info-row">
                 <div class="col-sm-6">
                     <h3 class="facilities-heading">Information</h3>
@@ -52,31 +51,30 @@
                         a Booking</button>
                 </div>
                 <div class="col-sm-6">
-                    <img class="img-fluid mt-3" src="assets\bowling1_edit.jpg" alt="golf courses">
+                    <img class="img-fluid mt-3" src="assets/bowling1_edit.jpg" alt="golf courses">
                 </div>
             </div>
-        </section>
+        </div>
         <section id="s2-facilities">
             <h2 class="section-text">Check Out Our Bowling Alley</h2>
             <div class="swiper mySwiper swiperFacilities">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img class="img-fluid" src="assets\bowling2.jpg" alt="pool_photo1">
+                        <img class="img-fluid" src="assets/bowling2.jpg" alt="pool_photo1">
                     </div>
                     <div class="swiper-slide">
-                        <img class="img-fluid" src="assets\bowling3.jpg" alt="pool_photo2">
+                        <img class="img-fluid" src="assets/bowling3.jpg" alt="pool_photo2">
                     </div>
                     <div class="swiper-slide">
-                        <img class="img-fluid" src="assets\bowling4.jpg" alt="pool_photo2">
+                        <img class="img-fluid" src="assets/bowling4.jpg" alt="pool_photo2">
                     </div>
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
-
+            </div>
         </section>
         <?php include_once "includes/topButton.inc.php"; ?>
     </main>
-    <button onclick="topFunction()" id="scroll-button" title="Go to top">Top</button>
     <?php include "includes/footer.inc.php"; ?>
 </body>
 
